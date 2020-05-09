@@ -1,0 +1,37 @@
+
+
+
+
+
+# Register your lib to Unikraft's build system
+$(eval $(call addlib_s,libjsonc,$(CONFIG_LIBJSONC)))
+
+# Add library source code to compilation
+LIBJSONC_SRCS-y += $(LIBJSONC_BASE)/jjc/arraylist.c
+LIBJSONC_SRCS-y += $(LIBJSONC_BASE)/jjc/debug.c
+LIBJSONC_SRCS-y += $(LIBJSONC_BASE)/jjc/json_c_version.c
+LIBJSONC_SRCS-y += $(LIBJSONC_BASE)/jjc/json_object.c
+LIBJSONC_SRCS-y += $(LIBJSONC_BASE)/jjc/json_object_iterator.c
+LIBJSONC_SRCS-y += $(LIBJSONC_BASE)/jjc/json_pointer.c
+LIBJSONC_SRCS-y += $(LIBJSONC_BASE)/jjc/json_tokener.c
+LIBJSONC_SRCS-y += $(LIBJSONC_BASE)/jjc/json_util.c
+LIBJSONC_SRCS-y += $(LIBJSONC_BASE)/jjc/json_visit.c
+LIBJSONC_SRCS-y += $(LIBJSONC_BASE)/jjc/linkhash.c
+LIBJSONC_SRCS-y += $(LIBJSONC_BASE)/jjc/printbuf.c
+LIBJSONC_SRCS-y += $(LIBJSONC_BASE)/jjc/random_seed.c
+LIBJSONC_SRCS-y += $(LIBJSONC_BASE)/jjc/strerror_override.c
+
+# Extend the global include paths with library's folder
+CINCLUDES-$(CONFIG_LIBJSONC) += -I$(LIBJSONC_BASE)
+CINCLUDES-$(CONFIG_LIBJSONC) += -I$(LIBJSONC_BASE)/jjc
+
+
+LIBJSONC_FLAGS = -D_GNU_SOURCE 
+
+# Suppress some warnings to make the build process look neater
+#LIBSQLITE_SUPPRESS_FLAGS-y += -Wno-unused-parameter -Wno-unused-variable		\
+-Wno-cast-function-type -Wno-char-subscripts
+
+LIBJSONC_CFLAGS-y += $(LIBJSONC_FLAGS)
+LIBJSONC_CFLAGS-y += $(LIBJSONC_SUPPRESS_FLAGS-y)
+
