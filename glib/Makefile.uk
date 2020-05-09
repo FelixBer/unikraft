@@ -1,0 +1,135 @@
+# Register lib to Unikraft's build system
+#$(eval $(call addlib_s,libjsonc,$(CONFIG_LIBJSONC)))
+$(eval $(call addlib_s,libglib,$(CONFIG_LIBGLIB)))
+
+#LIBJSONC_VERSION = 0.14-20200419
+#LIBJSONC_BASENAME = json-c-$(LIBJSONC_VERSION)
+#LIBJSONC_URL = https://github.com/json-c/json-c/archive/$(LIBJSONC_BASENAME).zip
+#LIBJSONC_PATCHDIR = $(LIBJSONC_BASE)/patches
+#$(eval $(call fetch,libjsonc,$(LIBJSONC_URL)))
+#$(eval $(call patch,libjsonc,$(LIBJSONC_PATCHDIR),$(LIBJSONC_BASENAME)))
+
+
+
+LIBGLIB_VERSION = 2.62.6
+LIBGLIB_BASENAME = glib-$(LIBGLIB_VERSION)
+LIBGLIB_URL = https://download.gnome.org/sources/glib/2.62/$(LIBGLIB_BASENAME).tar.xz
+LIBGLIB_PATCHDIR = $(LIBGLIB_BASE)/patches
+$(eval $(call fetch,libglib,$(LIBGLIB_URL)))
+$(eval $(call patch,libglib,$(LIBGLIB_PATCHDIR),$(LIBGLIB_BASENAME)))
+
+
+#LIBJSONC_SRC = $(LIBJSONC_ORIGIN)/json-c-$(LIBJSONC_BASENAME)
+LIBGLIB_SRC = $(LIBGLIB_ORIGIN)/$(LIBGLIB_BASENAME)
+
+
+# Add library source code to compilation
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/garcbox.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/garray.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gasyncqueue.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gatomic.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gbacktrace.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gbase64.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gbitlock.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gbookmarkfile.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gbytes.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gcharset.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gchecksum.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gconvert.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gdataset.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gdate.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gdatetime.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gdir.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/genviron.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gerror.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gfileutils.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/ggettext.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/ghash.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/ghmac.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/ghook.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/ghostutils.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/giochannel.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gkeyfile.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/glib-init.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/glib-private.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/glist.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gmain.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gmappedfile.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gmarkup.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gmem.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gmessages.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gnode.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/goption.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gpattern.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gpoll.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gprimes.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gqsort.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gquark.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gqueue.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/grand.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/grcbox.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/grefcount.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/grefstring.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gregex.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gscanner.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gsequence.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gshell.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gslice.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gslist.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gstdio.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gstrfuncs.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gstring.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gstringchunk.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gtestutils.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gthread.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gthreadpool.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gtimer.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gtimezone.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gtranslit.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gtrashstack.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gtree.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/guniprop.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gutf8.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gunibreak.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gunicollate.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gunidecomp.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gurifuncs.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gutils.c
+#LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gutilsprivate.h
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/guuid.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gvariant.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gvariant-core.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gvariant-parser.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gvariant-serialiser.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gvarianttypeinfo.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gvarianttype.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gversion.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gwakeup.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gprintf.c
+
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/glib-unix.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gspawn.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/giounix.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gthread-posix.c 
+
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/pcre/*.c
+
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/libcharset/localcharset.c
+
+
+
+# Extend the global include paths with library's folder
+CINCLUDES-$(CONFIG_LIBGLIB) += -I$(LIBGLIB_BASE)
+CINCLUDES-$(CONFIG_LIBGLIB) += -I$(LIBGLIB_SRC)
+CINCLUDES-$(CONFIG_LIBGLIB) += -I$(LIBGLIB_SRC)/glib
+CINCLUDES-$(CONFIG_LIBGLIB) += -I$(LIBGLIB_SRC)/glib/pcre
+
+LIBGLIB_FLAGS = -D_GNU_SOURCE -DHAVE_MEMMOVE -DSUPPORT_UCP -DSUPPORT_UTF -DSUPPORT_UTF8 -DNEWLINE=-1 -DMATCH_LIMIT=10000000 -DMATCH_LIMIT_RECURSION=8192 -DMAX_NAME_SIZE=32 -DMAX_NAME_COUNT=10000 -DMAX_DUPLENGTH=30000 -DLINK_SIZE=2 -DPOSIX_MALLOC_THRESHOLD=10 -DPCRE_STATIC -UBSR_ANYCRLF -UEBCDIC -DGLIB_COMPILATION -DGLIB_CHARSETALIAS_DIR=$(LIB_GLIBSRC)/glib/libcharset
+
+# Suppress some warnings to make the build process look neater
+#LIBJSONC_SUPPRESS_FLAGS-y += -Wcast-qual -Wno-error=deprecated-declarations -Wextra  \
+ -Wwrite-strings -Wno-unused-parameter -Wstrict-prototypes
+
+LIBGLIB_CFLAGS-y += $(LIBGLIB_FLAGS)
+LIBGLIB_CFLAGS-y += $(LIBGLIB_SUPPRESS_FLAGS-y)
+

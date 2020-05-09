@@ -1,0 +1,5 @@
+config LIBGLIB
+           bool "glib 2.62"
+           default y
+           select LIBNOLIBC if !HAVE_LIBC
+           select LIBPTHREAD_EMBEDDED
