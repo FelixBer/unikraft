@@ -112,9 +112,29 @@ LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gspawn.c
 LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/giounix.c
 LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/gthread-posix.c 
 
-LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/pcre/*.c
+#LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/pcre/*.c
 
 LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/libcharset/localcharset.c
+
+
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/pcre/pcre_byte_order.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/pcre/pcre_chartables.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/pcre/pcre_compile.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/pcre/pcre_config.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/pcre/pcre_dfa_exec.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/pcre/pcre_exec.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/pcre/pcre_fullinfo.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/pcre/pcre_get.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/pcre/pcre_globals.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/pcre/pcre_jit_compile.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/pcre/pcre_newline.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/pcre/pcre_ord2utf8.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/pcre/pcre_string_utils.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/pcre/pcre_study.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/pcre/pcre_tables.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/pcre/pcre_valid_utf8.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/pcre/pcre_version.c
+LIBGLIB_SRCS-y += $(LIBGLIB_SRC)/glib/pcre/pcre_xclass.c
 
 
 
