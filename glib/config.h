@@ -11,7 +11,7 @@
 
 #define ALIGNOF_UNSIGNED_LONG 8
 
-#define ENABLE_NLS 1
+//#define ENABLE_NLS 1
 
 #define EXEEXT 
 
@@ -147,7 +147,7 @@
 
 #define HAVE_MKOSTEMP 1
 
-#define HAVE_MMAP 1
+//#define HAVE_MMAP 1
 
 #define HAVE_MNTENT_H 1
 
@@ -165,7 +165,7 @@
 
 #define HAVE_POSIX_MEMALIGN 1
 
-#define HAVE_POSIX_SPAWN 1
+//#define HAVE_POSIX_SPAWN 1
 
 #define HAVE_PRLIMIT 1
 
@@ -219,7 +219,7 @@
 
 #define HAVE_SNPRINTF 1
 
-#define HAVE_SPAWN_H 1
+//#define HAVE_SPAWN_H 1
 
 #define HAVE_SPLICE 1
 
@@ -273,7 +273,7 @@
 
 #define HAVE_SYMLINK 1
 
-#define HAVE_SYS_AUXV_H 1
+//#define HAVE_SYS_AUXV_H 1
 
 #define HAVE_SYS_INOTIFY_H 1
 
