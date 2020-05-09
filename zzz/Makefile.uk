@@ -1,0 +1,15 @@
+$(eval $(call addlib,appzzz))
+
+APPZZZ_SRCS-y += $(APPZZZ_BASE)/main.c
+
+# Include paths
+APPNAME_ASINCLUDES  += -I$(APPNAME_BASE)/path_to_include/include
+APPNAME_CINCLUDES   += -I$(APPNAME_BASE)/path_to_include/include
+APPNAME_CXXINCLUDES += -I$(APPNAME_BASE)/path_to_include/include
+
+# Flags for application sources
+APPNAME_ASFLAGS-y   += -DFLAG_NAME1 -DFLAG_NAMEN
+APPNAME_CFLAGS-y    += -DFLAG_NAME1 -DFLAG_NAMEN
+APPNAME_CXXFLAGS-y  += -DFLAG_NAME1 -DFLAG_NAME
+
+
