@@ -1,35 +1,38 @@
-
-
-
-
-
-# Register your lib to Unikraft's build system
+# Register lib to Unikraft's build system
 $(eval $(call addlib_s,libjsonc,$(CONFIG_LIBJSONC)))
 
+LIBJSONC_VERSION = 0.14-20200419
+LIBJSONC_BASENAME = json-c-$(LIBJSONC_VERSION)
+LIBJSONC_URL = https://github.com/json-c/json-c/archive/$(LIBJSONC_BASENAME).zip
+LIBJSONC_PATCHDIR = $(LIBJSONC_BASE)/patches
+$(eval $(call fetch,libjsonc,$(LIBJSONC_URL)))
+$(eval $(call patch,libjsonc,$(LIBJSONC_PATCHDIR),$(LIBJSONC_BASENAME)))
+
+LIBJSONC_SRC = $(LIBJSONC_ORIGIN)/json-c-$(LIBJSONC_BASENAME)
+
 # Add library source code to compilation
-LIBJSONC_SRCS-y += $(LIBJSONC_BASE)/jjc/arraylist.c
-LIBJSONC_SRCS-y += $(LIBJSONC_BASE)/jjc/debug.c
-LIBJSONC_SRCS-y += $(LIBJSONC_BASE)/jjc/json_c_version.c
-LIBJSONC_SRCS-y += $(LIBJSONC_BASE)/jjc/json_object.c
-LIBJSONC_SRCS-y += $(LIBJSONC_BASE)/jjc/json_object_iterator.c
-LIBJSONC_SRCS-y += $(LIBJSONC_BASE)/jjc/json_pointer.c
-LIBJSONC_SRCS-y += $(LIBJSONC_BASE)/jjc/json_tokener.c
-LIBJSONC_SRCS-y += $(LIBJSONC_BASE)/jjc/json_util.c
-LIBJSONC_SRCS-y += $(LIBJSONC_BASE)/jjc/json_visit.c
-LIBJSONC_SRCS-y += $(LIBJSONC_BASE)/jjc/linkhash.c
-LIBJSONC_SRCS-y += $(LIBJSONC_BASE)/jjc/printbuf.c
-LIBJSONC_SRCS-y += $(LIBJSONC_BASE)/jjc/random_seed.c
-LIBJSONC_SRCS-y += $(LIBJSONC_BASE)/jjc/strerror_override.c
+LIBJSONC_SRCS-y += $(LIBJSONC_SRC)/arraylist.c
+LIBJSONC_SRCS-y += $(LIBJSONC_SRC)/debug.c
+LIBJSONC_SRCS-y += $(LIBJSONC_SRC)/json_c_version.c
+LIBJSONC_SRCS-y += $(LIBJSONC_SRC)/json_object.c
+LIBJSONC_SRCS-y += $(LIBJSONC_SRC)/json_object_iterator.c
+LIBJSONC_SRCS-y += $(LIBJSONC_SRC)/json_pointer.c
+LIBJSONC_SRCS-y += $(LIBJSONC_SRC)/json_tokener.c
+LIBJSONC_SRCS-y += $(LIBJSONC_SRC)/json_util.c
+LIBJSONC_SRCS-y += $(LIBJSONC_SRC)/json_visit.c
+LIBJSONC_SRCS-y += $(LIBJSONC_SRC)/linkhash.c
+LIBJSONC_SRCS-y += $(LIBJSONC_SRC)/printbuf.c
+LIBJSONC_SRCS-y += $(LIBJSONC_SRC)/random_seed.c
+LIBJSONC_SRCS-y += $(LIBJSONC_SRC)/strerror_override.c
 
 # Extend the global include paths with library's folder
 CINCLUDES-$(CONFIG_LIBJSONC) += -I$(LIBJSONC_BASE)
-CINCLUDES-$(CONFIG_LIBJSONC) += -I$(LIBJSONC_BASE)/jjc
-
+CINCLUDES-$(CONFIG_LIBJSONC) += -I$(LIBJSONC_SRC)
 
 LIBJSONC_FLAGS = -D_GNU_SOURCE 
 
 # Suppress some warnings to make the build process look neater
-#LIBSQLITE_SUPPRESS_FLAGS-y += -Wno-unused-parameter -Wno-unused-variable		\
+#LIBJSONC_SUPPRESS_FLAGS-y += -Wno-unused-parameter -Wno-unused-variable		\
 -Wno-cast-function-type -Wno-char-subscripts
 
 LIBJSONC_CFLAGS-y += $(LIBJSONC_FLAGS)
