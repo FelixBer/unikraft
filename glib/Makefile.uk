@@ -150,6 +150,8 @@ LIBGLIB_FLAGS = -D_GNU_SOURCE -DHAVE_MEMMOVE -DSUPPORT_UCP -DSUPPORT_UTF -DSUPPO
 #LIBJSONC_SUPPRESS_FLAGS-y += -Wcast-qual -Wno-error=deprecated-declarations -Wextra  \
  -Wwrite-strings -Wno-unused-parameter -Wstrict-prototypes
 
+LIBGLIB_SUPPRESS_FLAGS-y += -Wno-unused-parameter
+
 LIBGLIB_CFLAGS-y += $(LIBGLIB_FLAGS)
 LIBGLIB_CFLAGS-y += $(LIBGLIB_SUPPRESS_FLAGS-y)
 
