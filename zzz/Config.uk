@@ -1,6 +1,10 @@
 ### Invisible option for dependencies
-config APPHELLOWORLD_DEPENDENCIES
+config APPZZZ_DEPENDENCIES
 	bool
 	default y
-	select LIBNOLIBC if !HAVE_LIBC
+    select LIBGLIB
+    select LIBJSONC
+    select LIBZZZ
+    select LIBVMI
+	select LIBNEWLIB if !HAVE_LIBC
 
