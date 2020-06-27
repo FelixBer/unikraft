@@ -11,20 +11,26 @@ $(eval $(call patch,libvmi,$(LIBVMI_PATCHDIR),$(LIBVMI_BASENAME)))
 LIBVMI_SRC = $(LIBVMI_ORIGIN)/$(LIBVMI_BASENAME)
 
 # Add library source code to compilation
-LIBVMI_SRCS-y += $(LIBVMI_SRC)/arraylist.c
-LIBVMI_SRCS-y += $(LIBVMI_SRC)/debug.c
-LIBVMI_SRCS-y += $(LIBVMI_SRC)/json_c_version.c
-LIBVMI_SRCS-y += $(LIBVMI_SRC)/json_object.c
-LIBVMI_SRCS-y += $(LIBVMI_SRC)/json_object_iterator.c
-LIBVMI_SRCS-y += $(LIBVMI_SRC)/json_pointer.c
-LIBVMI_SRCS-y += $(LIBVMI_SRC)/json_tokener.c
-LIBVMI_SRCS-y += $(LIBVMI_SRC)/json_util.c
-LIBVMI_SRCS-y += $(LIBVMI_SRC)/json_visit.c
-LIBVMI_SRCS-y += $(LIBVMI_SRC)/linkhash.c
-LIBVMI_SRCS-y += $(LIBVMI_SRC)/printbuf.c
-LIBVMI_SRCS-y += $(LIBVMI_SRC)/random_seed.c
-LIBVMI_SRCS-y += $(LIBVMI_SRC)/strerror_override.c
 
+# core files
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/accessors.c
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/convenience.c
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/core.c
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/events.c
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/performance.c
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/pretty_print.c
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/read.c
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/slat.c
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/strmatch.c
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/write.c
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/arch/arch_interface.c
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/arch/intel.c
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/arch/amd64.c
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/arch/arm_aarch32.c
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/arch/arm_aarch64.c
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/driver/driver_interface.c
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/driver/memory_cache.c
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/os/os_interface.c
 
 
 
