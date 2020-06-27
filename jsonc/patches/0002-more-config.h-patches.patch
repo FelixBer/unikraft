@@ -1,0 +1,162 @@
+diff --git a/arraylist.c b/arraylist.c
+index 12ad8af..d078a71 100644
+--- a/arraylist.c
++++ b/arraylist.c
+@@ -9,7 +9,7 @@
+  *
+  */
+ 
+-#include "config.h"
++#include "config_jsonc.h"
+ 
+ #include <limits.h>
+ 
+diff --git a/debug.c b/debug.c
+index 7971744..9288cf7 100644
+--- a/debug.c
++++ b/debug.c
+@@ -9,7 +9,7 @@
+  *
+  */
+ 
+-#include "config.h"
++#include "config_jsonc.h"
+ 
+ #include <stdarg.h>
+ #include <stdio.h>
+diff --git a/strerror_override.h b/strerror_override.h
+index 0b04eb4..803aa5f 100644
+--- a/strerror_override.h
++++ b/strerror_override.h
+@@ -6,7 +6,7 @@
+  * @brief Do not use, json-c internal, may be changed or removed at any time.
+  */
+ 
+-#include "config.h"
++#include "config_jsonc.h"
+ #include <errno.h>
+ 
+ #include "json_object.h" /* for JSON_EXPORT */
+diff --git a/tests/parse_flags.c b/tests/parse_flags.c
+index d0a71bc..7b59e7b 100644
+--- a/tests/parse_flags.c
++++ b/tests/parse_flags.c
+@@ -1,4 +1,4 @@
+-#include "config.h"
++#include "config_jsonc.h"
+ 
+ #include <stdio.h>
+ #include <string.h>
+diff --git a/tests/test4.c b/tests/test4.c
+index bd964ec..a720316 100644
+--- a/tests/test4.c
++++ b/tests/test4.c
+@@ -2,7 +2,7 @@
+  * gcc -o utf8 utf8.c -I/home/y/include -L./.libs -ljson
+  */
+ 
+-#include "config.h"
++#include "config_jsonc.h"
+ #include <stdio.h>
+ #include <string.h>
+ 
+diff --git a/tests/test_cast.c b/tests/test_cast.c
+index fb63e0d..d1d3086 100644
+--- a/tests/test_cast.c
++++ b/tests/test_cast.c
+@@ -3,7 +3,7 @@
+  * Also checks the json_object_get_type and json_object_is_type functions.
+  */
+ 
+-#include "config.h"
++#include "config_jsonc.h"
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+diff --git a/tests/test_compare.c b/tests/test_compare.c
+index 25cecdb..e3e810b 100644
+--- a/tests/test_compare.c
++++ b/tests/test_compare.c
+@@ -2,7 +2,7 @@
+ * Tests if json_object_equal behaves correct.
+ */
+ 
+-#include "config.h"
++#include "config_jsonc.h"
+ #include <stdio.h>
+ #include <string.h>
+ 
+diff --git a/tests/test_double_serializer.c b/tests/test_double_serializer.c
+index 71ec8ec..1946ad2 100644
+--- a/tests/test_double_serializer.c
++++ b/tests/test_double_serializer.c
+@@ -2,7 +2,7 @@
+ * Tests if the format string for double serialization is handled correctly
+ */
+ 
+-#include "config.h"
++#include "config_jsonc.h"
+ #include <stdio.h>
+ 
+ #include "json_object.h"
+diff --git a/tests/test_float.c b/tests/test_float.c
+index 99b2b1c..a58361c 100644
+--- a/tests/test_float.c
++++ b/tests/test_float.c
+@@ -1,6 +1,6 @@
+ /* Copyright (C) 2016 by Rainer Gerhards
+  * Released under ASL 2.0 */
+-#include "config.h"
++#include "config_jsonc.h"
+ #include "json_object.h"
+ #include "json_tokener.h"
+ #include <stdio.h>
+diff --git a/tests/test_locale.c b/tests/test_locale.c
+index 55c9cc6..0ba55c2 100644
+--- a/tests/test_locale.c
++++ b/tests/test_locale.c
+@@ -4,7 +4,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ 
+-#include "config.h"
++#include "config_jsonc.h"
+ #include "json.h"
+ #include "json_tokener.h"
+ #include "snprintf_compat.h"
+diff --git a/tests/test_null.c b/tests/test_null.c
+index 0a2275b..208f109 100644
+--- a/tests/test_null.c
++++ b/tests/test_null.c
+@@ -2,7 +2,7 @@
+  * Tests if binary strings are supported.
+  */
+ 
+-#include "config.h"
++#include "config_jsonc.h"
+ #include <stdio.h>
+ #include <string.h>
+ 
+diff --git a/tests/test_object_iterator.c b/tests/test_object_iterator.c
+index da5192a..53986e9 100644
+--- a/tests/test_object_iterator.c
++++ b/tests/test_object_iterator.c
+@@ -1,4 +1,4 @@
+-#include "config.h"
++#include "config_jsonc.h"
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+diff --git a/tests/test_parse_int64.c b/tests/test_parse_int64.c
+index 6c20d75..2b2d283 100644
+--- a/tests/test_parse_int64.c
++++ b/tests/test_parse_int64.c
+@@ -2,7 +2,7 @@
+ #include <stdio.h>
+ #include <string.h>
+ 
+-#include "config.h"
++#include "config_jsonc.h"
+ 
+ #include "json_inttypes.h"
+ #include "json_util.h"
