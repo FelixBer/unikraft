@@ -25,9 +25,18 @@ LIBVMI_SRCS-y += $(LIBVMI_SRC)/printbuf.c
 LIBVMI_SRCS-y += $(LIBVMI_SRC)/random_seed.c
 LIBVMI_SRCS-y += $(LIBVMI_SRC)/strerror_override.c
 
+
+
+
+
+
 # Extend the global include paths with library's folder
 CINCLUDES-$(CONFIG_LIBVMI) += -I$(LIBVMI_BASE)
 CINCLUDES-$(CONFIG_LIBVMI) += -I$(LIBVMI_SRC)
+CINCLUDES-$(CONFIG_LIBVMI) += -I$(LIBVMI_SRC)/libvmi
+CINCLUDES-$(CONFIG_LIBVMI) += -I$(LIBVMI_SRC)/libvmi/arch
+CINCLUDES-$(CONFIG_LIBVMI) += -I$(LIBVMI_SRC)/libvmi/os
+CINCLUDES-$(CONFIG_LIBVMI) += -I$(LIBVMI_SRC)/libvmi/driver
 
 LIBVMI_FLAGS = -D_GNU_SOURCE 
 
