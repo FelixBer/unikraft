@@ -1,0 +1,40 @@
+# Register lib to Unikraft's build system
+$(eval $(call addlib_s,libvmi,$(CONFIG_LIBVMI)))
+
+LIBVMI_VERSION = 0.14-20200419
+LIBVMI_BASENAME = json-c-$(LIBVMI_VERSION)
+LIBVMI_URL = https://github.com/json-c/json-c/archive/$(LIBVMI_BASENAME).zip
+LIBVMI_PATCHDIR = $(LIBVMI_BASE)/patches
+$(eval $(call fetch,libvmi,$(LIBVMI_URL)))
+$(eval $(call patch,libvmi,$(LIBVMI_PATCHDIR),json-c-$(LIBVMI_BASENAME)))
+
+LIBVMI_SRC = $(LIBVMI_ORIGIN)/json-c-$(LIBVMI_BASENAME)
+
+# Add library source code to compilation
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/arraylist.c
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/debug.c
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/json_c_version.c
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/json_object.c
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/json_object_iterator.c
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/json_pointer.c
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/json_tokener.c
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/json_util.c
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/json_visit.c
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/linkhash.c
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/printbuf.c
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/random_seed.c
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/strerror_override.c
+
+# Extend the global include paths with library's folder
+CINCLUDES-$(CONFIG_LIBVMI) += -I$(LIBVMI_BASE)
+CINCLUDES-$(CONFIG_LIBVMI) += -I$(LIBVMI_SRC)
+
+LIBVMI_FLAGS = -D_GNU_SOURCE 
+
+# Suppress some warnings to make the build process look neater
+LIBVMI_SUPPRESS_FLAGS-y += -Wcast-qual -Wno-error=deprecated-declarations -Wextra  \
+ -Wwrite-strings -Wno-unused-parameter -Wstrict-prototypes
+
+LIBVMI_CFLAGS-y += $(LIBVMI_FLAGS)
+LIBVMI_CFLAGS-y += $(LIBVMI_SUPPRESS_FLAGS-y)
+

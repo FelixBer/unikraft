@@ -1,0 +1,5 @@
+config LIBVMI
+           bool "libvmi"
+           select LIBNEWLIB if !HAVE_LIBC
+           select LIBGLIB
+           default y
