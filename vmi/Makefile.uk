@@ -32,10 +32,6 @@ LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/driver/driver_interface.c
 LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/driver/memory_cache.c
 LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/os/os_interface.c
 
-
-
-
-
 # Extend the global include paths with library's folder
 CINCLUDES-$(CONFIG_LIBVMI) += -I$(LIBVMI_BASE)
 CINCLUDES-$(CONFIG_LIBVMI) += -I$(LIBVMI_SRC)
@@ -44,11 +40,57 @@ CINCLUDES-$(CONFIG_LIBVMI) += -I$(LIBVMI_SRC)/libvmi/arch
 CINCLUDES-$(CONFIG_LIBVMI) += -I$(LIBVMI_SRC)/libvmi/os
 CINCLUDES-$(CONFIG_LIBVMI) += -I$(LIBVMI_SRC)/libvmi/driver
 
-LIBVMI_FLAGS = -D_GNU_SOURCE 
+
+# if ENABLE_ADDRESS_CACHE
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/cache.c
+CINCLUDES-$(CONFIG_LIBVMI) += -I$(LIBVMI_SRC)/libvmi
+LIBVMI_CFLAGS-y += -DENABLE_ADDRESS_CACHE
+#endif
+
+# if ENABLE_JSON_PROFILES
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/json_profiles/json_profiles.c
+CINCLUDES-$(CONFIG_LIBVMI) += -I$(LIBVMI_SRC)/libvmi/json_profiles
+LIBVMI_CFLAGS-y += -DENABLE_JSON_PROFILES
+#endif
+
+# if ENABLE_VOLATILITY_IST
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/json_profiles/volatility_ist.c
+CINCLUDES-$(CONFIG_LIBVMI) += -I$(LIBVMI_SRC)/libvmi/json_profiles
+LIBVMI_CFLAGS-y += -DENABLE_VOLATILITY_IST -DVOLATILITY_IST
+#endif
+
+# if ENABLE_REKALL_PROFILES
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/json_profiles/rekall.c
+CINCLUDES-$(CONFIG_LIBVMI) += -I$(LIBVMI_SRC)/libvmi/json_profiles
+LIBVMI_CFLAGS-y += -DENABLE_REKALL_PROFILES -DREKALL_PROFILES
+#endif
+
+
+# drivers
+
+# if WITH_FILE
+CINCLUDES-$(CONFIG_LIBVMI) += -I$(LIBVMI_SRC)/libvmi/driver/file
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/driver/file/file.c
+LIBVMI_FLAGS += -DWITH_FILE
+#endif
+
+# if WITH_KVM
+# KVM not supported - requires massive libvirt!
+# /home/usar/.unikraft/apps/zzz/build/libvmi/origin/libvmi-master/libvmi/driver/kvm/kvm.c:37:10: fatal error: sys/socket.h: No such file or directory
+# CINCLUDES-$(CONFIG_LIBVMI) += -I$(LIBVMI_SRC)/libvmi/driver/kvm
+#LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/driver/kvm/kvm.c
+#LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/driver/kvm/libvirt_wrapper.c
+#LIBVMI_FLAGS += -DWITH_KVM
+#endif
+
+
+
+
 
 # Suppress some warnings to make the build process look neater
 LIBVMI_SUPPRESS_FLAGS-y += -Wno-cast-qual -Wno-error=deprecated-declarations \
  -Wno-write-strings -Wno-unused-parameter -Wno-strict-prototypes
+LIBVMI_FLAGS = #-D_GNU_SOURCE 
 
 LIBVMI_CFLAGS-y += $(LIBVMI_FLAGS)
 LIBVMI_CFLAGS-y += $(LIBVMI_SUPPRESS_FLAGS-y)
