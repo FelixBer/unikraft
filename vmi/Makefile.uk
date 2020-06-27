@@ -84,7 +84,34 @@ LIBVMI_FLAGS += -DWITH_FILE
 #endif
 
 
+# os
 
+# if WINDOWS
+#CINCLUDES-$(CONFIG_LIBVMI) += -I$(LIBVMI_SRC)/libvmi/os/windows
+#LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/os/windows/core.c
+#LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/os/windows/kdbg.c
+#LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/os/windows/memory.c
+#LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/os/windows/peparse.c
+#LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/os/windows/process.c
+#LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/os/windows/unicode.c
+#LIBVMI_CFLAGS-y += -DENABLE_WINDOWS -DWINDOWS
+# endif
+
+# if LINUX
+#CINCLUDES-$(CONFIG_LIBVMI) += -I$(LIBVMI_SRC)/libvmi/os/linux
+#LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/os/linux/core.c
+#LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/os/linux/memory.c
+#LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/os/linux/symbols.c
+#LIBVMI_CFLAGS-y += -DENABLE_LINUX -DLINUX
+# endif 
+
+# if FREEBSD
+#CINCLUDES-$(CONFIG_LIBVMI) += -I$(LIBVMI_SRC)/libvmi/os/freebsd
+#LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/os/freebsd/core.c
+#LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/os/freebsd/memory.c
+#LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/os/freebsd/symbols.c
+#LIBVMI_CFLAGS-y += -DENABLE_FREEBSD -DFREEBSD
+# endif
 
 
 # Suppress some warnings to make the build process look neater
