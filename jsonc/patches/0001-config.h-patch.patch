@@ -1,0 +1,131 @@
+diff --git a/json_c_version.c b/json_c_version.c
+index 9b21db4..9ff585c 100644
+--- a/json_c_version.c
++++ b/json_c_version.c
+@@ -4,7 +4,7 @@
+  * This library is free software; you can redistribute it and/or modify
+  * it under the terms of the MIT license. See COPYING for details.
+  */
+-#include "config.h"
++#include "config_jsonc.h"
+ 
+ #include "json_c_version.h"
+ 
+diff --git a/json_object.c b/json_object.c
+index d5ac465..2ca09ee 100644
+--- a/json_object.c
++++ b/json_object.c
+@@ -10,7 +10,7 @@
+  *
+  */
+ 
+-#include "config.h"
++#include <config_jsonc.h>
+ 
+ #include "strerror_override.h"
+ 
+diff --git a/json_pointer.c b/json_pointer.c
+index 99cc542..f6a1fe3 100644
+--- a/json_pointer.c
++++ b/json_pointer.c
+@@ -6,7 +6,7 @@
+  *
+  */
+ 
+-#include "config.h"
++#include "config_jsonc.h"
+ 
+ #include "strerror_override.h"
+ 
+diff --git a/json_tokener.c b/json_tokener.c
+index 840ad12..968dd1f 100644
+--- a/json_tokener.c
++++ b/json_tokener.c
+@@ -13,7 +13,7 @@
+  * (http://www.opensource.org/licenses/mit-license.php)
+  */
+ 
+-#include "config.h"
++#include "config_jsonc.h"
+ 
+ #include "math_compat.h"
+ #include <assert.h>
+diff --git a/json_util.c b/json_util.c
+index d3ee47d..1f92674 100644
+--- a/json_util.c
++++ b/json_util.c
+@@ -9,7 +9,7 @@
+  *
+  */
+ 
+-#include "config.h"
++#include "config_jsonc.h"
+ #undef realloc
+ 
+ #include "strerror_override.h"
+diff --git a/json_visit.c b/json_visit.c
+index fb16fa6..65a4735 100644
+--- a/json_visit.c
++++ b/json_visit.c
+@@ -7,7 +7,7 @@
+ 
+ #include <stdio.h>
+ 
+-#include "config.h"
++#include "config_jsonc.h"
+ #include "json_inttypes.h"
+ #include "json_object.h"
+ #include "json_visit.h"
+diff --git a/linkhash.c b/linkhash.c
+index 7ea58c0..dc55ef9 100644
+--- a/linkhash.c
++++ b/linkhash.c
+@@ -10,7 +10,7 @@
+  *
+  */
+ 
+-#include "config.h"
++#include "config_jsonc.h"
+ 
+ #include <limits.h>
+ #include <stdarg.h>
+diff --git a/printbuf.c b/printbuf.c
+index 976c12d..13e83b1 100644
+--- a/printbuf.c
++++ b/printbuf.c
+@@ -13,7 +13,7 @@
+  * (http://www.opensource.org/licenses/mit-license.php)
+  */
+ 
+-#include "config.h"
++#include "config_jsonc.h"
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
+diff --git a/random_seed.c b/random_seed.c
+index fc19e26..1eb6c6a 100644
+--- a/random_seed.c
++++ b/random_seed.c
+@@ -10,7 +10,7 @@
+  */
+ 
+ #include "random_seed.h"
+-#include "config.h"
++#include <config_jsonc.h>
+ #include "strerror_override.h"
+ #include <stdio.h>
+ 
+diff --git a/strdup_compat.h b/strdup_compat.h
+index 2f2df65..0cbf7b6 100644
+--- a/strdup_compat.h
++++ b/strdup_compat.h
+@@ -6,6 +6,9 @@
+  * @brief Do not use, json-c internal, may be changed or removed at any time.
+  */
+ 
++
++#define HAVE_STRDUP
++
+ #if !defined(HAVE_STRDUP) && defined(_MSC_VER)
+ /* MSC has the version as _strdup */
+ #define strdup _strdup
