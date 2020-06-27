@@ -2,6 +2,8 @@ config LIBGLIB
            bool "glib 2.62"
            default y
            select LIBMUSL if !HAVE_LIBC
-           select LIBPTHREAD-EMBEDDED
+           select LIBUKMMAP       
            select LIBPOSIX_SYSINFO
+           select LIBNEWLIBC      
+           select LIBPTHREAD-EMBEDDED
 
