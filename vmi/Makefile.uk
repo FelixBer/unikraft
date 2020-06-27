@@ -1,14 +1,14 @@
 # Register lib to Unikraft's build system
 $(eval $(call addlib_s,libvmi,$(CONFIG_LIBVMI)))
 
-LIBVMI_VERSION = 0.14-20200419
-LIBVMI_BASENAME = json-c-$(LIBVMI_VERSION)
-LIBVMI_URL = https://github.com/json-c/json-c/archive/$(LIBVMI_BASENAME).zip
+LIBVMI_VERSION = 2.0
+LIBVMI_BASENAME = master
+LIBVMI_URL = https://github.com/libvmi/libvmi/archive/$(LIBVMI_BASENAME).zip
 LIBVMI_PATCHDIR = $(LIBVMI_BASE)/patches
 $(eval $(call fetch,libvmi,$(LIBVMI_URL)))
-$(eval $(call patch,libvmi,$(LIBVMI_PATCHDIR),json-c-$(LIBVMI_BASENAME)))
+$(eval $(call patch,libvmi,$(LIBVMI_PATCHDIR),$(LIBVMI_BASENAME)))
 
-LIBVMI_SRC = $(LIBVMI_ORIGIN)/json-c-$(LIBVMI_BASENAME)
+LIBVMI_SRC = $(LIBVMI_ORIGIN)/$(LIBVMI_BASENAME)
 
 # Add library source code to compilation
 LIBVMI_SRCS-y += $(LIBVMI_SRC)/arraylist.c
