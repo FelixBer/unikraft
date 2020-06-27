@@ -1,14 +1,20 @@
 #include <stdio.h>
 #include <json.h>
 
+#include <glib.h>
+
 /* Import user configuration: */
 #include <uk/config.h>
-//#include  <zzz.h>
+#include  <zzz.h>
+
+
+#include <libvmi/libvmi.h>
 
 int main(int argc, char *argv[])
 {
+main_2(argc, argv);
 	printf("Hello world!\n");
-libmylib_api_func();
+//libmylib_api_func();
 
 #if CONFIG_APPHELLOWORLD_PRINTARGS
 	int i;
@@ -35,6 +41,9 @@ libmylib_api_func();
 
 	jobj = json_tokener_parse(str);
 	printf("jobj from str:\n---\n%s\n---\n", json_object_to_json_string_ext(jobj, JSON_C_TO_STRING_SPACED | JSON_C_TO_STRING_PRETTY));
+
+g_print ("Some string\n");
+g_print ("Hello world from Glib2!\n");
 
 	return 0;
 }
