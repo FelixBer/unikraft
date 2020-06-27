@@ -1,0 +1,5774 @@
+diff --git a/docs/reference/gobject/glib-mkenums.xml b/docs/reference/gobject/glib-mkenums.xml
+index 4c86416..bb9123a 100644
+--- a/docs/reference/gobject/glib-mkenums.xml
++++ b/docs/reference/gobject/glib-mkenums.xml
+@@ -467,7 +467,7 @@ file, similar to this:
+ </para>
+ <informalexample><programlisting>
+ /*** BEGIN file-header ***/
+-#include "config.h"
++#include <config_gg.h>
+ #include "enum-types.h"
+ 
+ /*** END file-header ***/
+diff --git a/gio/fam/gfamfilemonitor.c b/gio/fam/gfamfilemonitor.c
+index d9518a6..206d59b 100644
+--- a/gio/fam/gfamfilemonitor.c
++++ b/gio/fam/gfamfilemonitor.c
+@@ -17,7 +17,7 @@
+  * Author: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <gio/glocalfilemonitor.h>
+ #include <gio/giomodule.h>
+diff --git a/gio/gaction.c b/gio/gaction.c
+index c3748a9..43b1a90 100644
+--- a/gio/gaction.c
++++ b/gio/gaction.c
+@@ -17,7 +17,7 @@
+  * Authors: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "gaction.h"
+ #include "glibintl.h"
+ 
+diff --git a/gio/gactiongroup.c b/gio/gactiongroup.c
+index 2345ce3..3d93c11 100644
+--- a/gio/gactiongroup.c
++++ b/gio/gactiongroup.c
+@@ -17,7 +17,7 @@
+  * Authors: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "gactiongroup.h"
+ #include "gaction.h"
+ #include "glibintl.h"
+diff --git a/gio/gactiongroupexporter.c b/gio/gactiongroupexporter.c
+index 17111ff..90ab303 100644
+--- a/gio/gactiongroupexporter.c
++++ b/gio/gactiongroupexporter.c
+@@ -18,7 +18,7 @@
+  * Authors: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gactiongroupexporter.h"
+ 
+diff --git a/gio/gactionmap.c b/gio/gactionmap.c
+index bfcda8d..2e5ff89 100644
+--- a/gio/gactionmap.c
++++ b/gio/gactionmap.c
+@@ -17,7 +17,7 @@
+  * Authors: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gsimpleaction.h"
+ #include "gactionmap.h"
+diff --git a/gio/gappinfo.c b/gio/gappinfo.c
+index 1dafc78..64691b6 100644
+--- a/gio/gappinfo.c
++++ b/gio/gappinfo.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gappinfo.h"
+ #include "gappinfoprivate.h"
+diff --git a/gio/gapplication-tool.c b/gio/gapplication-tool.c
+index 68a7424..741fc6e 100644
+--- a/gio/gapplication-tool.c
++++ b/gio/gapplication-tool.c
+@@ -17,7 +17,7 @@
+  * Author: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <gio/gdesktopappinfo.h>
+ 
+diff --git a/gio/gapplication.c b/gio/gapplication.c
+index 02ab2b0..fd7c4be 100644
+--- a/gio/gapplication.c
++++ b/gio/gapplication.c
+@@ -18,7 +18,7 @@
+  */
+ 
+ /* Prologue {{{1 */
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gapplication.h"
+ 
+diff --git a/gio/gapplicationcommandline.c b/gio/gapplicationcommandline.c
+index d6c5c45..2a1983d 100644
+--- a/gio/gapplicationcommandline.c
++++ b/gio/gapplicationcommandline.c
+@@ -17,7 +17,7 @@
+  * Authors: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gapplicationcommandline.h"
+ 
+diff --git a/gio/gapplicationimpl-dbus.c b/gio/gapplicationimpl-dbus.c
+index fd9d046..92f591c 100644
+--- a/gio/gapplicationimpl-dbus.c
++++ b/gio/gapplicationimpl-dbus.c
+@@ -17,7 +17,7 @@
+  * Authors: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gapplicationimpl.h"
+ 
+diff --git a/gio/gasynchelper.c b/gio/gasynchelper.c
+index 41bbb2a..ef3bd08 100644
+--- a/gio/gasynchelper.c
++++ b/gio/gasynchelper.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gasynchelper.h"
+ 
+diff --git a/gio/gasyncinitable.c b/gio/gasyncinitable.c
+index 8936f98..123e5b3 100644
+--- a/gio/gasyncinitable.c
++++ b/gio/gasyncinitable.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "gasyncinitable.h"
+ #include "gasyncresult.h"
+ #include "gsimpleasyncresult.h"
+diff --git a/gio/gasyncresult.c b/gio/gasyncresult.c
+index b96f1ee..ba1a160 100644
+--- a/gio/gasyncresult.c
++++ b/gio/gasyncresult.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "gasyncresult.h"
+ #include "gsimpleasyncresult.h"
+ #include "glibintl.h"
+diff --git a/gio/gbufferedinputstream.c b/gio/gbufferedinputstream.c
+index f5090d0..60d7699 100644
+--- a/gio/gbufferedinputstream.c
++++ b/gio/gbufferedinputstream.c
+@@ -19,7 +19,7 @@
+  * Author: Christian Kellner <gicmo@gnome.org>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "gbufferedinputstream.h"
+ #include "ginputstream.h"
+ #include "gcancellable.h"
+diff --git a/gio/gbufferedoutputstream.c b/gio/gbufferedoutputstream.c
+index 98bda50..d5b4b60 100644
+--- a/gio/gbufferedoutputstream.c
++++ b/gio/gbufferedoutputstream.c
+@@ -18,7 +18,7 @@
+  * Author: Christian Kellner <gicmo@gnome.org> 
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "gbufferedoutputstream.h"
+ #include "goutputstream.h"
+ #include "gseekable.h"
+diff --git a/gio/gbytesicon.c b/gio/gbytesicon.c
+index ca78be1..e1972b3 100644
+--- a/gio/gbytesicon.c
++++ b/gio/gbytesicon.c
+@@ -18,7 +18,7 @@
+  * Author: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gbytesicon.h"
+ #include "gbytes.h"
+diff --git a/gio/gcancellable.c b/gio/gcancellable.c
+index 0cfa91c..2e4467b 100644
+--- a/gio/gcancellable.c
++++ b/gio/gcancellable.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "glib.h"
+ #include <gioerror.h>
+ #include "glib-private.h"
+diff --git a/gio/gcharsetconverter.c b/gio/gcharsetconverter.c
+index d529cbc..1f7744e 100644
+--- a/gio/gcharsetconverter.c
++++ b/gio/gcharsetconverter.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gcharsetconverter.h"
+ 
+diff --git a/gio/gcocoanotificationbackend.m b/gio/gcocoanotificationbackend.m
+index 42cf8ab..29d84fc 100644
+--- a/gio/gcocoanotificationbackend.m
++++ b/gio/gcocoanotificationbackend.m
+@@ -17,7 +17,7 @@
+  * Authors: Patrick Griffis
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #import <Cocoa/Cocoa.h>
+ #include "gnotificationbackend.h"
+diff --git a/gio/gcontenttype-win32.c b/gio/gcontenttype-win32.c
+index 2f07fa3..138f6e7 100644
+--- a/gio/gcontenttype-win32.c
++++ b/gio/gcontenttype-win32.c
+@@ -20,7 +20,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include <sys/types.h>
+ #include <stdlib.h>
+ #include <string.h>
+diff --git a/gio/gcontenttype.c b/gio/gcontenttype.c
+index 04d278d..e678e68 100644
+--- a/gio/gcontenttype.c
++++ b/gio/gcontenttype.c
+@@ -20,7 +20,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include <sys/types.h>
+ #include <stdlib.h>
+ #include <string.h>
+diff --git a/gio/gcontextspecificgroup.c b/gio/gcontextspecificgroup.c
+index ffd1307..dcc2a8c 100644
+--- a/gio/gcontextspecificgroup.c
++++ b/gio/gcontextspecificgroup.c
+@@ -17,7 +17,7 @@
+  * Author: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gcontextspecificgroup.h"
+ 
+diff --git a/gio/gconverter.c b/gio/gconverter.c
+index 7e5d308..9beb1e6 100644
+--- a/gio/gconverter.c
++++ b/gio/gconverter.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "gconverter.h"
+ #include "glibintl.h"
+ 
+diff --git a/gio/gconverterinputstream.c b/gio/gconverterinputstream.c
+index dd84b34..0a3fc1b 100644
+--- a/gio/gconverterinputstream.c
++++ b/gio/gconverterinputstream.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ 
+diff --git a/gio/gconverteroutputstream.c b/gio/gconverteroutputstream.c
+index bb3d94a..a6ad9df 100644
+--- a/gio/gconverteroutputstream.c
++++ b/gio/gconverteroutputstream.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ 
+diff --git a/gio/gcredentials.c b/gio/gcredentials.c
+index ff9b7e0..281b637 100644
+--- a/gio/gcredentials.c
++++ b/gio/gcredentials.c
+@@ -18,7 +18,7 @@
+  * Author: David Zeuthen <davidz@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <stdlib.h>
+ #include <string.h>
+diff --git a/gio/gdatagrambased.c b/gio/gdatagrambased.c
+index 1e1c051..c85f44a 100644
+--- a/gio/gdatagrambased.c
++++ b/gio/gdatagrambased.c
+@@ -18,7 +18,7 @@
+  * Authors: Philip Withnall <philip.withnall@collabora.co.uk>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gdatagrambased.h"
+ 
+diff --git a/gio/gdatainputstream.c b/gio/gdatainputstream.c
+index 2e7750c..fe32f16 100644
+--- a/gio/gdatainputstream.c
++++ b/gio/gdatainputstream.c
+@@ -20,7 +20,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "gdatainputstream.h"
+ #include "gtask.h"
+ #include "gcancellable.h"
+diff --git a/gio/gdataoutputstream.c b/gio/gdataoutputstream.c
+index 4c2d251..d2ce7e8 100644
+--- a/gio/gdataoutputstream.c
++++ b/gio/gdataoutputstream.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include <string.h>
+ #include "gdataoutputstream.h"
+ #include "gseekable.h"
+diff --git a/gio/gdbus-tool.c b/gio/gdbus-tool.c
+index 57978f1..f33a34d 100644
+--- a/gio/gdbus-tool.c
++++ b/gio/gdbus-tool.c
+@@ -18,7 +18,7 @@
+  * Author: David Zeuthen <davidz@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <stdlib.h>
+ #include <string.h>
+diff --git a/gio/gdbusactiongroup.c b/gio/gdbusactiongroup.c
+index 894b482..47154da 100644
+--- a/gio/gdbusactiongroup.c
++++ b/gio/gdbusactiongroup.c
+@@ -18,7 +18,7 @@
+  * Authors: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gdbusactiongroup-private.h"
+ 
+diff --git a/gio/gdbusaddress.c b/gio/gdbusaddress.c
+index 3015457..802bf29 100644
+--- a/gio/gdbusaddress.c
++++ b/gio/gdbusaddress.c
+@@ -18,7 +18,7 @@
+  * Author: David Zeuthen <davidz@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <stdlib.h>
+ #include <string.h>
+diff --git a/gio/gdbusauth.c b/gio/gdbusauth.c
+index 14cc5d7..cc6abfb 100644
+--- a/gio/gdbusauth.c
++++ b/gio/gdbusauth.c
+@@ -18,7 +18,7 @@
+  * Author: David Zeuthen <davidz@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gdbusauth.h"
+ 
+diff --git a/gio/gdbusauthmechanism.c b/gio/gdbusauthmechanism.c
+index 897d414..82d7acf 100644
+--- a/gio/gdbusauthmechanism.c
++++ b/gio/gdbusauthmechanism.c
+@@ -18,7 +18,7 @@
+  * Author: David Zeuthen <davidz@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gdbusauthmechanism.h"
+ #include "gcredentials.h"
+diff --git a/gio/gdbusauthmechanismanon.c b/gio/gdbusauthmechanismanon.c
+index dd57826..0835db7 100644
+--- a/gio/gdbusauthmechanismanon.c
++++ b/gio/gdbusauthmechanismanon.c
+@@ -18,7 +18,7 @@
+  * Author: David Zeuthen <davidz@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gdbusauthmechanismanon.h"
+ #include "gdbuserror.h"
+diff --git a/gio/gdbusauthmechanismexternal.c b/gio/gdbusauthmechanismexternal.c
+index 182c572..42da727 100644
+--- a/gio/gdbusauthmechanismexternal.c
++++ b/gio/gdbusauthmechanismexternal.c
+@@ -18,7 +18,7 @@
+  * Author: David Zeuthen <davidz@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ 
+diff --git a/gio/gdbusauthmechanismsha1.c b/gio/gdbusauthmechanismsha1.c
+index 2754d3c..83d9a96 100644
+--- a/gio/gdbusauthmechanismsha1.c
++++ b/gio/gdbusauthmechanismsha1.c
+@@ -18,7 +18,7 @@
+  * Author: David Zeuthen <davidz@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ #include <fcntl.h>
+diff --git a/gio/gdbusauthobserver.c b/gio/gdbusauthobserver.c
+index be36c9d..7152533 100644
+--- a/gio/gdbusauthobserver.c
++++ b/gio/gdbusauthobserver.c
+@@ -18,7 +18,7 @@
+  * Author: David Zeuthen <davidz@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gdbusauthobserver.h"
+ #include "gcredentials.h"
+diff --git a/gio/gdbusconnection.c b/gio/gdbusconnection.c
+index f1f0921..7050202 100644
+--- a/gio/gdbusconnection.c
++++ b/gio/gdbusconnection.c
+@@ -90,7 +90,7 @@
+  *    - Talk about auto-starting services (cf. GBusNameWatcherFlags)
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <stdlib.h>
+ #include <string.h>
+diff --git a/gio/gdbusdaemon.c b/gio/gdbusdaemon.c
+index 0d5058f..debcc7b 100644
+--- a/gio/gdbusdaemon.c
++++ b/gio/gdbusdaemon.c
+@@ -1,4 +1,4 @@
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ #include <stdlib.h>
+diff --git a/gio/gdbuserror.c b/gio/gdbuserror.c
+index 6826773..9c73ff6 100644
+--- a/gio/gdbuserror.c
++++ b/gio/gdbuserror.c
+@@ -18,7 +18,7 @@
+  * Author: David Zeuthen <davidz@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <stdlib.h>
+ #include <string.h>
+diff --git a/gio/gdbusinterface.c b/gio/gdbusinterface.c
+index fa03115..5582978 100644
+--- a/gio/gdbusinterface.c
++++ b/gio/gdbusinterface.c
+@@ -18,7 +18,7 @@
+  * Author: David Zeuthen <davidz@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gdbusobject.h"
+ #include "gdbusinterface.h"
+diff --git a/gio/gdbusinterfaceskeleton.c b/gio/gdbusinterfaceskeleton.c
+index 4a06516..b10e7c6 100644
+--- a/gio/gdbusinterfaceskeleton.c
++++ b/gio/gdbusinterfaceskeleton.c
+@@ -18,7 +18,7 @@
+  * Author: David Zeuthen <davidz@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gdbusinterface.h"
+ #include "gdbusinterfaceskeleton.h"
+diff --git a/gio/gdbusintrospection.c b/gio/gdbusintrospection.c
+index dde0642..3162ddf 100644
+--- a/gio/gdbusintrospection.c
++++ b/gio/gdbusintrospection.c
+@@ -18,7 +18,7 @@
+  * Author: David Zeuthen <davidz@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <stdlib.h>
+ #include <string.h>
+diff --git a/gio/gdbusmenumodel.c b/gio/gdbusmenumodel.c
+index e29614a..291d144 100644
+--- a/gio/gdbusmenumodel.c
++++ b/gio/gdbusmenumodel.c
+@@ -17,7 +17,7 @@
+  * Author: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gdbusmenumodel.h"
+ 
+diff --git a/gio/gdbusmessage.c b/gio/gdbusmessage.c
+index 6e3bd8b..e9f1232 100644
+--- a/gio/gdbusmessage.c
++++ b/gio/gdbusmessage.c
+@@ -21,7 +21,7 @@
+ /* Uncomment to debug serializer code */
+ /* #define DEBUG_SERIALIZER */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ #include <errno.h>
+diff --git a/gio/gdbusmethodinvocation.c b/gio/gdbusmethodinvocation.c
+index 18ae9d1..1a10752 100644
+--- a/gio/gdbusmethodinvocation.c
++++ b/gio/gdbusmethodinvocation.c
+@@ -18,7 +18,7 @@
+  * Author: David Zeuthen <davidz@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <stdlib.h>
+ 
+diff --git a/gio/gdbusnameowning.c b/gio/gdbusnameowning.c
+index 9764f24..a0cf08d 100644
+--- a/gio/gdbusnameowning.c
++++ b/gio/gdbusnameowning.c
+@@ -18,7 +18,7 @@
+  * Author: David Zeuthen <davidz@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <stdlib.h>
+ 
+diff --git a/gio/gdbusnamewatching.c b/gio/gdbusnamewatching.c
+index 3a97c50..38f2ec2 100644
+--- a/gio/gdbusnamewatching.c
++++ b/gio/gdbusnamewatching.c
+@@ -18,7 +18,7 @@
+  * Author: David Zeuthen <davidz@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <stdlib.h>
+ #include <string.h>
+diff --git a/gio/gdbusobject.c b/gio/gdbusobject.c
+index 32393ed..0796847 100644
+--- a/gio/gdbusobject.c
++++ b/gio/gdbusobject.c
+@@ -18,7 +18,7 @@
+  * Author: David Zeuthen <davidz@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gdbusobject.h"
+ #include "gdbusinterface.h"
+diff --git a/gio/gdbusobjectmanager.c b/gio/gdbusobjectmanager.c
+index 87634cd..2c9ddc7 100644
+--- a/gio/gdbusobjectmanager.c
++++ b/gio/gdbusobjectmanager.c
+@@ -18,7 +18,7 @@
+  * Author: David Zeuthen <davidz@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gdbusobject.h"
+ #include "gdbusobjectmanager.h"
+diff --git a/gio/gdbusobjectmanagerclient.c b/gio/gdbusobjectmanagerclient.c
+index 38e6f53..e446149 100644
+--- a/gio/gdbusobjectmanagerclient.c
++++ b/gio/gdbusobjectmanagerclient.c
+@@ -18,7 +18,7 @@
+  * Author: David Zeuthen <davidz@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gdbusobjectmanager.h"
+ #include "gdbusobjectmanagerclient.h"
+diff --git a/gio/gdbusobjectmanagerserver.c b/gio/gdbusobjectmanagerserver.c
+index 273629d..166ea86 100644
+--- a/gio/gdbusobjectmanagerserver.c
++++ b/gio/gdbusobjectmanagerserver.c
+@@ -18,7 +18,7 @@
+  * Author: David Zeuthen <davidz@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gdbusobjectmanager.h"
+ #include "gdbusobjectmanagerserver.h"
+diff --git a/gio/gdbusobjectproxy.c b/gio/gdbusobjectproxy.c
+index ae87b42..2741a9d 100644
+--- a/gio/gdbusobjectproxy.c
++++ b/gio/gdbusobjectproxy.c
+@@ -18,7 +18,7 @@
+  * Author: David Zeuthen <davidz@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gdbusobject.h"
+ #include "gdbusobjectproxy.h"
+diff --git a/gio/gdbusobjectskeleton.c b/gio/gdbusobjectskeleton.c
+index c0e5611..8aa1660 100644
+--- a/gio/gdbusobjectskeleton.c
++++ b/gio/gdbusobjectskeleton.c
+@@ -18,7 +18,7 @@
+  * Author: David Zeuthen <davidz@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gdbusobject.h"
+ #include "gdbusobjectskeleton.h"
+diff --git a/gio/gdbusprivate.c b/gio/gdbusprivate.c
+index 302c30b..7904979 100644
+--- a/gio/gdbusprivate.c
++++ b/gio/gdbusprivate.c
+@@ -18,7 +18,7 @@
+  * Author: David Zeuthen <davidz@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <stdlib.h>
+ #include <string.h>
+diff --git a/gio/gdbusproxy.c b/gio/gdbusproxy.c
+index 39eed16..59bebe0 100644
+--- a/gio/gdbusproxy.c
++++ b/gio/gdbusproxy.c
+@@ -18,7 +18,7 @@
+  * Author: David Zeuthen <davidz@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <stdlib.h>
+ #include <string.h>
+diff --git a/gio/gdbusserver.c b/gio/gdbusserver.c
+index 4a8dab0..34c2418 100644
+--- a/gio/gdbusserver.c
++++ b/gio/gdbusserver.c
+@@ -18,7 +18,7 @@
+  * Author: David Zeuthen <davidz@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <stdlib.h>
+ #include <string.h>
+diff --git a/gio/gdbusutils.c b/gio/gdbusutils.c
+index ff9b441..9c4c259 100644
+--- a/gio/gdbusutils.c
++++ b/gio/gdbusutils.c
+@@ -18,7 +18,7 @@
+  * Author: David Zeuthen <davidz@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <stdlib.h>
+ #include <string.h>
+diff --git a/gio/gdelayedsettingsbackend.c b/gio/gdelayedsettingsbackend.c
+index 9ba3c5b..b520b62 100644
+--- a/gio/gdelayedsettingsbackend.c
++++ b/gio/gdelayedsettingsbackend.c
+@@ -17,7 +17,7 @@
+  * Author: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gdelayedsettingsbackend.h"
+ #include "gsettingsbackendinternal.h"
+diff --git a/gio/gdesktopappinfo.c b/gio/gdesktopappinfo.c
+index f1e2fdd..29511cf 100644
+--- a/gio/gdesktopappinfo.c
++++ b/gio/gdesktopappinfo.c
+@@ -22,7 +22,7 @@
+ 
+ /* Prelude {{{1 */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ /* For the #GDesktopAppInfoLookup macros; since macro deprecation is implemented
+  * in the preprocessor, we need to define this before including glib.h*/
+diff --git a/gio/gdocumentportal.c b/gio/gdocumentportal.c
+index 154cc74..99a7906 100644
+--- a/gio/gdocumentportal.c
++++ b/gio/gdocumentportal.c
+@@ -16,7 +16,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <sys/stat.h>
+ #include <fcntl.h>
+diff --git a/gio/gdrive.c b/gio/gdrive.c
+index 08f72b2..929e95c 100644
+--- a/gio/gdrive.c
++++ b/gio/gdrive.c
+@@ -19,7 +19,7 @@
+  *         David Zeuthen <davidz@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "gdrive.h"
+ #include "gtask.h"
+ #include "gthemedicon.h"
+diff --git a/gio/gdtlsclientconnection.c b/gio/gdtlsclientconnection.c
+index 1ce97d3..05532c1 100644
+--- a/gio/gdtlsclientconnection.c
++++ b/gio/gdtlsclientconnection.c
+@@ -17,7 +17,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "glib.h"
+ 
+ #include "gdtlsclientconnection.h"
+diff --git a/gio/gdtlsconnection.c b/gio/gdtlsconnection.c
+index 1a74e3c..a3efdbd 100644
+--- a/gio/gdtlsconnection.c
++++ b/gio/gdtlsconnection.c
+@@ -17,7 +17,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "glib.h"
+ 
+ #include "gdtlsconnection.h"
+diff --git a/gio/gdtlsserverconnection.c b/gio/gdtlsserverconnection.c
+index 51074e2..a400ca5 100644
+--- a/gio/gdtlsserverconnection.c
++++ b/gio/gdtlsserverconnection.c
+@@ -17,7 +17,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "glib.h"
+ 
+ #include "gdtlsserverconnection.h"
+diff --git a/gio/gdummyfile.c b/gio/gdummyfile.c
+index cd4acd0..5983553 100644
+--- a/gio/gdummyfile.c
++++ b/gio/gdummyfile.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <sys/types.h>
+ #include <sys/stat.h>
+diff --git a/gio/gdummyproxyresolver.c b/gio/gdummyproxyresolver.c
+index 893f97d..2125a50 100644
+--- a/gio/gdummyproxyresolver.c
++++ b/gio/gdummyproxyresolver.c
+@@ -18,7 +18,7 @@
+  * Author: Nicolas Dufresne <nicolas.dufresne@collabora.co.uk>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gdummyproxyresolver.h"
+ 
+diff --git a/gio/gdummytlsbackend.c b/gio/gdummytlsbackend.c
+index 52342d9..0617172 100644
+--- a/gio/gdummytlsbackend.c
++++ b/gio/gdummytlsbackend.c
+@@ -17,7 +17,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gdummytlsbackend.h"
+ 
+diff --git a/gio/gfdonotificationbackend.c b/gio/gfdonotificationbackend.c
+index c4fa0dc..4f57acb 100644
+--- a/gio/gfdonotificationbackend.c
++++ b/gio/gfdonotificationbackend.c
+@@ -17,7 +17,7 @@
+  * Authors: Lars Uebernickel <lars@uebernic.de>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gnotificationbackend.h"
+ 
+diff --git a/gio/gfile.c b/gio/gfile.c
+index ba93f7c..8fe3dbe 100644
+--- a/gio/gfile.c
++++ b/gio/gfile.c
+@@ -20,7 +20,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #ifdef __linux__
+ #include <sys/ioctl.h>
+diff --git a/gio/gfileattribute.c b/gio/gfileattribute.c
+index 0e4bfc2..3a2e65d 100644
+--- a/gio/gfileattribute.c
++++ b/gio/gfileattribute.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ 
+diff --git a/gio/gfiledescriptorbased.c b/gio/gfiledescriptorbased.c
+index 54655dd..1b45ad5 100644
+--- a/gio/gfiledescriptorbased.c
++++ b/gio/gfiledescriptorbased.c
+@@ -18,7 +18,7 @@
+  * Author: Christian Kellner <gicmo@gnome.org>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "gfiledescriptorbased.h"
+ #include "glibintl.h"
+ 
+diff --git a/gio/gfileenumerator.c b/gio/gfileenumerator.c
+index d96a798..598c215 100644
+--- a/gio/gfileenumerator.c
++++ b/gio/gfileenumerator.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "gfileenumerator.h"
+ #include "gfile.h"
+ #include "gioscheduler.h"
+diff --git a/gio/gfileicon.c b/gio/gfileicon.c
+index 48d4c82..a4c8f8a 100644
+--- a/gio/gfileicon.c
++++ b/gio/gfileicon.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gfileicon.h"
+ #include "gfile.h"
+diff --git a/gio/gfileinfo.c b/gio/gfileinfo.c
+index 032d211..bff7e87 100644
+--- a/gio/gfileinfo.c
++++ b/gio/gfileinfo.c
+@@ -50,7 +50,7 @@
+  * attributes.
+  **/
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ 
+diff --git a/gio/gfileinputstream.c b/gio/gfileinputstream.c
+index df956ae..d0715cd 100644
+--- a/gio/gfileinputstream.c
++++ b/gio/gfileinputstream.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <glib.h>
+ #include <gfileinputstream.h>
+diff --git a/gio/gfileiostream.c b/gio/gfileiostream.c
+index 5919c28..b96464f 100644
+--- a/gio/gfileiostream.c
++++ b/gio/gfileiostream.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <glib.h>
+ #include <gfileiostream.h>
+diff --git a/gio/gfilemonitor.c b/gio/gfilemonitor.c
+index 9b9c0ea..05a20cf 100644
+--- a/gio/gfilemonitor.c
++++ b/gio/gfilemonitor.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include <string.h>
+ 
+ #include "gfilemonitor.h"
+diff --git a/gio/gfilenamecompleter.c b/gio/gfilenamecompleter.c
+index 5883b80..36ce566 100644
+--- a/gio/gfilenamecompleter.c
++++ b/gio/gfilenamecompleter.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "gfilenamecompleter.h"
+ #include "gfileenumerator.h"
+ #include "gfileattribute.h"
+diff --git a/gio/gfileoutputstream.c b/gio/gfileoutputstream.c
+index d0839c2..f370b70 100644
+--- a/gio/gfileoutputstream.c
++++ b/gio/gfileoutputstream.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <glib.h>
+ #include <gfileoutputstream.h>
+diff --git a/gio/gfilterinputstream.c b/gio/gfilterinputstream.c
+index 05e511c..fcf6db6 100644
+--- a/gio/gfilterinputstream.c
++++ b/gio/gfilterinputstream.c
+@@ -18,7 +18,7 @@
+  * Author: Christian Kellner <gicmo@gnome.org> 
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "gfilterinputstream.h"
+ #include "ginputstream.h"
+ #include "glibintl.h"
+diff --git a/gio/gfilteroutputstream.c b/gio/gfilteroutputstream.c
+index 9d86493..206153d 100644
+--- a/gio/gfilteroutputstream.c
++++ b/gio/gfilteroutputstream.c
+@@ -18,7 +18,7 @@
+  * Author: Christian Kellner <gicmo@gnome.org> 
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "gfilteroutputstream.h"
+ #include "goutputstream.h"
+ #include "glibintl.h"
+diff --git a/gio/ggtknotificationbackend.c b/gio/ggtknotificationbackend.c
+index 8d6eab2..43dab3d 100644
+--- a/gio/ggtknotificationbackend.c
++++ b/gio/ggtknotificationbackend.c
+@@ -17,7 +17,7 @@
+ * Authors: Lars Uebernickel <lars@uebernic.de>
+ */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "gnotificationbackend.h"
+ 
+ #include "giomodule-priv.h"
+diff --git a/gio/ghttpproxy.c b/gio/ghttpproxy.c
+index 554e85e..2365464 100644
+--- a/gio/ghttpproxy.c
++++ b/gio/ghttpproxy.c
+@@ -20,7 +20,7 @@
+  *          Marc-André Lureau <marcandre.lureau@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "ghttpproxy.h"
+ 
+diff --git a/gio/gicon.c b/gio/gicon.c
+index 4f73d75..89050fd 100644
+--- a/gio/gicon.c
++++ b/gio/gicon.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include <stdlib.h>
+ #include <string.h>
+ 
+diff --git a/gio/ginitable.c b/gio/ginitable.c
+index f3fd76f..b2b4b47 100644
+--- a/gio/ginitable.c
++++ b/gio/ginitable.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "ginitable.h"
+ #include "glibintl.h"
+ 
+diff --git a/gio/ginputstream.c b/gio/ginputstream.c
+index 20cece5..6e5a4a9 100644
+--- a/gio/ginputstream.c
++++ b/gio/ginputstream.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include <glib.h>
+ #include "glibintl.h"
+ 
+diff --git a/gio/gio-querymodules.c b/gio/gio-querymodules.c
+index eb5094f..2c488f3 100644
+--- a/gio/gio-querymodules.c
++++ b/gio/gio-querymodules.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "giomodule.h"
+ #include "giomodule-priv.h"
+ 
+diff --git a/gio/gio-tool-cat.c b/gio/gio-tool-cat.c
+index 66841dd..03c7d11 100644
+--- a/gio/gio-tool-cat.c
++++ b/gio/gio-tool-cat.c
+@@ -17,7 +17,7 @@
+  * Author: Matthias Clasen <mclasen@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <gio/gio.h>
+ #include <gi18n.h>
+diff --git a/gio/gio-tool-copy.c b/gio/gio-tool-copy.c
+index 4cc4a9d..d7aa475 100644
+--- a/gio/gio-tool-copy.c
++++ b/gio/gio-tool-copy.c
+@@ -17,7 +17,7 @@
+  * Author: Matthias Clasen <mclasen@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <gio/gio.h>
+ #include <gi18n.h>
+diff --git a/gio/gio-tool-info.c b/gio/gio-tool-info.c
+index d6fc6b4..9090495 100644
+--- a/gio/gio-tool-info.c
++++ b/gio/gio-tool-info.c
+@@ -17,7 +17,7 @@
+  * Author: Matthias Clasen <mclasen@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <gio/gio.h>
+ #include <gi18n.h>
+diff --git a/gio/gio-tool-list.c b/gio/gio-tool-list.c
+index d1501b8..6e8c56c 100644
+--- a/gio/gio-tool-list.c
++++ b/gio/gio-tool-list.c
+@@ -17,7 +17,7 @@
+  * Author: Matthias Clasen <mclasen@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <gio/gio.h>
+ #include <gi18n.h>
+diff --git a/gio/gio-tool-mime.c b/gio/gio-tool-mime.c
+index f564b1f..de376f6 100644
+--- a/gio/gio-tool-mime.c
++++ b/gio/gio-tool-mime.c
+@@ -17,7 +17,7 @@
+  * Author: Matthias Clasen <mclasen@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <gio/gio.h>
+ #include <gi18n.h>
+diff --git a/gio/gio-tool-mkdir.c b/gio/gio-tool-mkdir.c
+index 7900704..a36051c 100644
+--- a/gio/gio-tool-mkdir.c
++++ b/gio/gio-tool-mkdir.c
+@@ -17,7 +17,7 @@
+  * Author: Matthias Clasen <mclasen@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <gio/gio.h>
+ #include <gi18n.h>
+diff --git a/gio/gio-tool-monitor.c b/gio/gio-tool-monitor.c
+index f2ffb33..150843b 100644
+--- a/gio/gio-tool-monitor.c
++++ b/gio/gio-tool-monitor.c
+@@ -17,7 +17,7 @@
+  * Author: Matthias Clasen <mclasen@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <gio/gio.h>
+ #include <gi18n.h>
+diff --git a/gio/gio-tool-mount.c b/gio/gio-tool-mount.c
+index 05647d9..de0123b 100644
+--- a/gio/gio-tool-mount.c
++++ b/gio/gio-tool-mount.c
+@@ -17,7 +17,7 @@
+  * Author: Matthias Clasen <mclasen@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <gio/gio.h>
+ #include <gi18n.h>
+diff --git a/gio/gio-tool-move.c b/gio/gio-tool-move.c
+index 5755f59..91fb0d8 100644
+--- a/gio/gio-tool-move.c
++++ b/gio/gio-tool-move.c
+@@ -17,7 +17,7 @@
+  * Author: Matthias Clasen <mclasen@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <gio/gio.h>
+ #include <gi18n.h>
+diff --git a/gio/gio-tool-open.c b/gio/gio-tool-open.c
+index ac6764a..fd1a23e 100644
+--- a/gio/gio-tool-open.c
++++ b/gio/gio-tool-open.c
+@@ -17,7 +17,7 @@
+  * Author: Matthias Clasen <mclasen@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <gio/gio.h>
+ 
+diff --git a/gio/gio-tool-remove.c b/gio/gio-tool-remove.c
+index 8748b46..85e9879 100644
+--- a/gio/gio-tool-remove.c
++++ b/gio/gio-tool-remove.c
+@@ -17,7 +17,7 @@
+  * Author: Matthias Clasen <mclasen@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <gio/gio.h>
+ #include <gi18n.h>
+diff --git a/gio/gio-tool-rename.c b/gio/gio-tool-rename.c
+index 36e4a8e..e72573d 100644
+--- a/gio/gio-tool-rename.c
++++ b/gio/gio-tool-rename.c
+@@ -17,7 +17,7 @@
+  * Author: Matthias Clasen <mclasen@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <gio/gio.h>
+ #include <gi18n.h>
+diff --git a/gio/gio-tool-save.c b/gio/gio-tool-save.c
+index ddf085f..b47dd24 100644
+--- a/gio/gio-tool-save.c
++++ b/gio/gio-tool-save.c
+@@ -17,7 +17,7 @@
+  * Author: Matthias Clasen <mclasen@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <gio/gio.h>
+ #include <gi18n.h>
+diff --git a/gio/gio-tool-set.c b/gio/gio-tool-set.c
+index ab3ac15..dbd559a 100644
+--- a/gio/gio-tool-set.c
++++ b/gio/gio-tool-set.c
+@@ -17,7 +17,7 @@
+  * Author: Matthias Clasen <mclasen@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <gio/gio.h>
+ #include <gi18n.h>
+diff --git a/gio/gio-tool-trash.c b/gio/gio-tool-trash.c
+index 4f9e366..6b83446 100644
+--- a/gio/gio-tool-trash.c
++++ b/gio/gio-tool-trash.c
+@@ -17,7 +17,7 @@
+  * Author: Matthias Clasen <mclasen@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <gio/gio.h>
+ #include <gi18n.h>
+diff --git a/gio/gio-tool-tree.c b/gio/gio-tool-tree.c
+index e63752e..0cba41f 100644
+--- a/gio/gio-tool-tree.c
++++ b/gio/gio-tool-tree.c
+@@ -17,7 +17,7 @@
+  * Author: Matthias Clasen <mclasen@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <gio/gio.h>
+ #include <gi18n.h>
+diff --git a/gio/gio-tool.c b/gio/gio-tool.c
+index c0aec74..c2c29ed 100644
+--- a/gio/gio-tool.c
++++ b/gio/gio-tool.c
+@@ -17,7 +17,7 @@
+  * Author: Matthias Clasen <mclasen@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <gio/gio.h>
+ #include <gi18n.h>
+diff --git a/gio/gioenumtypes.c.template b/gio/gioenumtypes.c.template
+index e9adc4a..b7e3824 100644
+--- a/gio/gioenumtypes.c.template
++++ b/gio/gioenumtypes.c.template
+@@ -1,5 +1,5 @@
+ /*** BEGIN file-header ***/
+-#include "config.h"
++#include <config_gg.h>
+ #include "gioenumtypes.h"
+ #include <gio.h>
+ 
+diff --git a/gio/gioerror.c b/gio/gioerror.c
+index 1ec120d..4bbca0b 100644
+--- a/gio/gioerror.c
++++ b/gio/gioerror.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include <errno.h>
+ #include "gioerror.h"
+ 
+diff --git a/gio/giomodule-priv.c b/gio/giomodule-priv.c
+index d4ddd36..25024ba 100644
+--- a/gio/giomodule-priv.c
++++ b/gio/giomodule-priv.c
+@@ -18,7 +18,7 @@
+  * Author: Xavier Claessens <xavier.claessens@collabora.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "giomodule.h"
+ #include "giomodule-priv.h"
+ 
+diff --git a/gio/giomodule.c b/gio/giomodule.c
+index 3de4f2f..a715a01 100644
+--- a/gio/giomodule.c
++++ b/gio/giomodule.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ /* For the #GDesktopAppInfoLookup macros; since macro deprecation is implemented
+  * in the preprocessor, we need to define this before including glib.h*/
+diff --git a/gio/gioscheduler.c b/gio/gioscheduler.c
+index c146e07..a3972de 100644
+--- a/gio/gioscheduler.c
++++ b/gio/gioscheduler.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gioscheduler.h"
+ #include "gcancellable.h"
+diff --git a/gio/giostream.c b/gio/giostream.c
+index 924e39a..7d92b60 100644
+--- a/gio/giostream.c
++++ b/gio/giostream.c
+@@ -20,7 +20,7 @@
+  *          Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include <glib.h>
+ #include "glibintl.h"
+ 
+diff --git a/gio/gkeyfilesettingsbackend.c b/gio/gkeyfilesettingsbackend.c
+index cd5765a..cfd4d04 100644
+--- a/gio/gkeyfilesettingsbackend.c
++++ b/gio/gkeyfilesettingsbackend.c
+@@ -19,7 +19,7 @@
+  *          Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <glib.h>
+ #include <glibintl.h>
+diff --git a/gio/glib-compile-resources.c b/gio/glib-compile-resources.c
+index 9b82eba..9daf784 100644
+--- a/gio/glib-compile-resources.c
++++ b/gio/glib-compile-resources.c
+@@ -17,7 +17,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <glib.h>
+ #include <gstdio.h>
+diff --git a/gio/glib-compile-schemas.c b/gio/glib-compile-schemas.c
+index 7888120..58f97de 100644
+--- a/gio/glib-compile-schemas.c
++++ b/gio/glib-compile-schemas.c
+@@ -18,7 +18,7 @@
+  */
+ 
+ /* Prologue {{{1 */
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <gstdio.h>
+ #include <gi18n.h>
+diff --git a/gio/glistmodel.c b/gio/glistmodel.c
+index 0dde9ad..103029a 100644
+--- a/gio/glistmodel.c
++++ b/gio/glistmodel.c
+@@ -20,7 +20,7 @@
+  *     Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "glistmodel.h"
+ #include "glibintl.h"
+diff --git a/gio/gliststore.c b/gio/gliststore.c
+index 7b2a453..5895ef8 100644
+--- a/gio/gliststore.c
++++ b/gio/gliststore.c
+@@ -20,7 +20,7 @@
+  *     Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gliststore.h"
+ #include "glistmodel.h"
+diff --git a/gio/gloadableicon.c b/gio/gloadableicon.c
+index 2465453..f5ea309 100644
+--- a/gio/gloadableicon.c
++++ b/gio/gloadableicon.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "gicon.h"
+ #include "gloadableicon.h"
+ #include "gasyncresult.h"
+diff --git a/gio/glocalfile.c b/gio/glocalfile.c
+index 62f30b5..8f173a0 100644
+--- a/gio/glocalfile.c
++++ b/gio/glocalfile.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <sys/types.h>
+ #include <sys/stat.h>
+diff --git a/gio/glocalfileenumerator.c b/gio/glocalfileenumerator.c
+index 4f316f7..66db77c 100644
+--- a/gio/glocalfileenumerator.c
++++ b/gio/glocalfileenumerator.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <glib.h>
+ #include <glocalfileenumerator.h>
+diff --git a/gio/glocalfileinfo.c b/gio/glocalfileinfo.c
+index 487f8cc..538440b 100644
+--- a/gio/glocalfileinfo.c
++++ b/gio/glocalfileinfo.c
+@@ -20,7 +20,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <glib.h>
+ 
+diff --git a/gio/glocalfileinputstream.c b/gio/glocalfileinputstream.c
+index 0d72c52..9556681 100644
+--- a/gio/glocalfileinputstream.c
++++ b/gio/glocalfileinputstream.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <sys/types.h>
+ #include <sys/stat.h>
+diff --git a/gio/glocalfileiostream.c b/gio/glocalfileiostream.c
+index 779137f..200613f 100644
+--- a/gio/glocalfileiostream.c
++++ b/gio/glocalfileiostream.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <glib.h>
+ #include <glib/gstdio.h>
+diff --git a/gio/glocalfilemonitor.c b/gio/glocalfilemonitor.c
+index 3212bef..a338530 100644
+--- a/gio/glocalfilemonitor.c
++++ b/gio/glocalfilemonitor.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gioenumtypes.h"
+ #include "glocalfilemonitor.h"
+diff --git a/gio/glocalfileoutputstream.c b/gio/glocalfileoutputstream.c
+index a3dd621..8569046 100644
+--- a/gio/glocalfileoutputstream.c
++++ b/gio/glocalfileoutputstream.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <sys/types.h>
+ #include <sys/stat.h>
+diff --git a/gio/glocalvfs.c b/gio/glocalvfs.c
+index c29d071..4dc6075 100644
+--- a/gio/glocalvfs.c
++++ b/gio/glocalvfs.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "glocalvfs.h"
+ #include "glocalfile.h"
+ #include "giomodule.h"
+diff --git a/gio/gmarshal-internal.c b/gio/gmarshal-internal.c
+index f9571c4..c775029 100644
+--- a/gio/gmarshal-internal.c
++++ b/gio/gmarshal-internal.c
+@@ -14,7 +14,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <glib-object.h>
+ #include "gmarshal-internal.h"
+diff --git a/gio/gmemoryinputstream.c b/gio/gmemoryinputstream.c
+index 37846b6..6764bcf 100644
+--- a/gio/gmemoryinputstream.c
++++ b/gio/gmemoryinputstream.c
+@@ -18,7 +18,7 @@
+  * Author: Christian Kellner <gicmo@gnome.org> 
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "gmemoryinputstream.h"
+ #include "gpollableinputstream.h"
+ #include "ginputstream.h"
+diff --git a/gio/gmemoryoutputstream.c b/gio/gmemoryoutputstream.c
+index de8babf..a63b1ba 100644
+--- a/gio/gmemoryoutputstream.c
++++ b/gio/gmemoryoutputstream.c
+@@ -20,7 +20,7 @@
+  *   Krzysztof Kosiński <tweenk.pl@gmail.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "gmemoryoutputstream.h"
+ #include "goutputstream.h"
+ #include "gpollableoutputstream.h"
+diff --git a/gio/gmemorysettingsbackend.c b/gio/gmemorysettingsbackend.c
+index 5bb96bf..9a6206b 100644
+--- a/gio/gmemorysettingsbackend.c
++++ b/gio/gmemorysettingsbackend.c
+@@ -17,7 +17,7 @@
+  * Author: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gsimplepermission.h"
+ #include "gsettingsbackendinternal.h"
+diff --git a/gio/gmenu.c b/gio/gmenu.c
+index 9560252..146da96 100644
+--- a/gio/gmenu.c
++++ b/gio/gmenu.c
+@@ -17,7 +17,7 @@
+  * Author: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gmenu.h"
+ 
+diff --git a/gio/gmenuexporter.c b/gio/gmenuexporter.c
+index f319b88..9f2e02d 100644
+--- a/gio/gmenuexporter.c
++++ b/gio/gmenuexporter.c
+@@ -17,7 +17,7 @@
+  * Author: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gmenuexporter.h"
+ 
+diff --git a/gio/gmenumodel.c b/gio/gmenumodel.c
+index 8ca45e0..a26131c 100644
+--- a/gio/gmenumodel.c
++++ b/gio/gmenumodel.c
+@@ -17,7 +17,7 @@
+  * Author: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gmenumodel.h"
+ 
+diff --git a/gio/gmount.c b/gio/gmount.c
+index 8dfa1d7..c9cfe63 100644
+--- a/gio/gmount.c
++++ b/gio/gmount.c
+@@ -21,7 +21,7 @@
+  *         David Zeuthen <davidz@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ 
+diff --git a/gio/gmountoperation.c b/gio/gmountoperation.c
+index 39762e5..7200fda 100644
+--- a/gio/gmountoperation.c
++++ b/gio/gmountoperation.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ 
+diff --git a/gio/gnativevolumemonitor.c b/gio/gnativevolumemonitor.c
+index 1997f2e..685005b 100644
+--- a/gio/gnativevolumemonitor.c
++++ b/gio/gnativevolumemonitor.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ 
+diff --git a/gio/gnetworkaddress.c b/gio/gnetworkaddress.c
+index f12f935..17128a1 100644
+--- a/gio/gnetworkaddress.c
++++ b/gio/gnetworkaddress.c
+@@ -19,7 +19,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include <glib.h>
+ #include "glibintl.h"
+ 
+diff --git a/gio/gnetworking.c b/gio/gnetworking.c
+index fea4309..546e870 100644
+--- a/gio/gnetworking.c
++++ b/gio/gnetworking.c
+@@ -18,7 +18,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gnetworking.h"
+ 
+diff --git a/gio/gnetworkmonitor.c b/gio/gnetworkmonitor.c
+index f9853fc..fed6a5b 100644
+--- a/gio/gnetworkmonitor.c
++++ b/gio/gnetworkmonitor.c
+@@ -16,7 +16,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "glib.h"
+ #include "glibintl.h"
+ 
+diff --git a/gio/gnetworkmonitorbase.c b/gio/gnetworkmonitorbase.c
+index 6ac37c4..d393780 100644
+--- a/gio/gnetworkmonitorbase.c
++++ b/gio/gnetworkmonitorbase.c
+@@ -16,7 +16,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gnetworkmonitorbase.h"
+ #include "ginetaddress.h"
+diff --git a/gio/gnetworkmonitornetlink.c b/gio/gnetworkmonitornetlink.c
+index 20db551..d2b68cf 100644
+--- a/gio/gnetworkmonitornetlink.c
++++ b/gio/gnetworkmonitornetlink.c
+@@ -16,7 +16,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <errno.h>
+ #include <string.h>
+diff --git a/gio/gnetworkmonitornm.c b/gio/gnetworkmonitornm.c
+index 5a36a0b..0125f56 100644
+--- a/gio/gnetworkmonitornm.c
++++ b/gio/gnetworkmonitornm.c
+@@ -16,7 +16,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <errno.h>
+ #include <string.h>
+diff --git a/gio/gnetworkmonitorportal.c b/gio/gnetworkmonitorportal.c
+index 2c0eb8a..af695a6 100644
+--- a/gio/gnetworkmonitorportal.c
++++ b/gio/gnetworkmonitorportal.c
+@@ -16,7 +16,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gnetworkmonitorportal.h"
+ #include "ginitable.h"
+diff --git a/gio/gnetworkservice.c b/gio/gnetworkservice.c
+index 40fe3ab..5df23ec 100644
+--- a/gio/gnetworkservice.c
++++ b/gio/gnetworkservice.c
+@@ -18,7 +18,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include <glib.h>
+ #include "glibintl.h"
+ 
+diff --git a/gio/gnextstepsettingsbackend.m b/gio/gnextstepsettingsbackend.m
+index 44ea845..eacbd33 100644
+--- a/gio/gnextstepsettingsbackend.m
++++ b/gio/gnextstepsettingsbackend.m
+@@ -17,7 +17,7 @@
+  * Author: William Hua <william@attente.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gsettingsbackendinternal.h"
+ #include "gsimplepermission.h"
+diff --git a/gio/gnotification.c b/gio/gnotification.c
+index 27efed3..6a44070 100644
+--- a/gio/gnotification.c
++++ b/gio/gnotification.c
+@@ -17,7 +17,7 @@
+  * Authors: Lars Uebernickel <lars@uebernic.de>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gnotification-private.h"
+ #include "gdbusutils.h"
+diff --git a/gio/gnullsettingsbackend.c b/gio/gnullsettingsbackend.c
+index 6b6f8cf..a1335bb 100644
+--- a/gio/gnullsettingsbackend.c
++++ b/gio/gnullsettingsbackend.c
+@@ -17,7 +17,7 @@
+  * Author: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gsettingsbackendinternal.h"
+ #include "giomodule.h"
+diff --git a/gio/gopenuriportal.c b/gio/gopenuriportal.c
+index be68569..666c761 100644
+--- a/gio/gopenuriportal.c
++++ b/gio/gopenuriportal.c
+@@ -16,7 +16,7 @@
+  * License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <sys/stat.h>
+ #include <fcntl.h>
+diff --git a/gio/gosxappinfo.m b/gio/gosxappinfo.m
+index 463b2da..5ca19fc 100644
+--- a/gio/gosxappinfo.m
++++ b/gio/gosxappinfo.m
+@@ -17,7 +17,7 @@
+  *
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gappinfo.h"
+ #include "gosxappinfo.h"
+diff --git a/gio/gosxcontenttype.m b/gio/gosxcontenttype.m
+index 6119bbc..73fea69 100644
+--- a/gio/gosxcontenttype.m
++++ b/gio/gosxcontenttype.m
+@@ -17,7 +17,7 @@
+  *
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gcontenttype.h"
+ #include "gicon.h"
+diff --git a/gio/goutputstream.c b/gio/goutputstream.c
+index 10f9aa7..93aea23 100644
+--- a/gio/goutputstream.c
++++ b/gio/goutputstream.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include <string.h>
+ #include "goutputstream.h"
+ #include "gcancellable.h"
+diff --git a/gio/gpermission.c b/gio/gpermission.c
+index 966fc6c..0bc0f9a 100644
+--- a/gio/gpermission.c
++++ b/gio/gpermission.c
+@@ -17,7 +17,7 @@
+  * Author: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gpermission.h"
+ 
+diff --git a/gio/gpollableinputstream.c b/gio/gpollableinputstream.c
+index 6a13f34..4973dd9 100644
+--- a/gio/gpollableinputstream.c
++++ b/gio/gpollableinputstream.c
+@@ -16,7 +16,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <errno.h>
+ 
+diff --git a/gio/gpollableoutputstream.c b/gio/gpollableoutputstream.c
+index c17cf92..903e7a2 100644
+--- a/gio/gpollableoutputstream.c
++++ b/gio/gpollableoutputstream.c
+@@ -16,7 +16,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <errno.h>
+ 
+diff --git a/gio/gpollableutils.c b/gio/gpollableutils.c
+index b77e654..11fd8ea 100644
+--- a/gio/gpollableutils.c
++++ b/gio/gpollableutils.c
+@@ -16,7 +16,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <errno.h>
+ 
+diff --git a/gio/gpollfilemonitor.c b/gio/gpollfilemonitor.c
+index bd3d78a..5524341 100644
+--- a/gio/gpollfilemonitor.c
++++ b/gio/gpollfilemonitor.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include <string.h>
+ 
+ #include "gpollfilemonitor.h"
+diff --git a/gio/gportalnotificationbackend.c b/gio/gportalnotificationbackend.c
+index b0d67aa..2d54adb 100644
+--- a/gio/gportalnotificationbackend.c
++++ b/gio/gportalnotificationbackend.c
+@@ -17,7 +17,7 @@
+ * Author: Matthias Clasen
+ */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "gnotificationbackend.h"
+ 
+ #include "giomodule-priv.h"
+diff --git a/gio/gportalsupport.c b/gio/gportalsupport.c
+index b0a94b3..7d97032 100644
+--- a/gio/gportalsupport.c
++++ b/gio/gportalsupport.c
+@@ -16,7 +16,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gportalsupport.h"
+ 
+diff --git a/gio/gpropertyaction.c b/gio/gpropertyaction.c
+index 9ce9ab5..05dd311 100644
+--- a/gio/gpropertyaction.c
++++ b/gio/gpropertyaction.c
+@@ -17,7 +17,7 @@
+  * Authors: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gpropertyaction.h"
+ 
+diff --git a/gio/gproxy.c b/gio/gproxy.c
+index 60bb5b8..a0684ca 100644
+--- a/gio/gproxy.c
++++ b/gio/gproxy.c
+@@ -18,7 +18,7 @@
+  * Author: Nicolas Dufresne <nicolas.dufresne@collabora.co.uk>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gproxy.h"
+ 
+diff --git a/gio/gproxyaddressenumerator.c b/gio/gproxyaddressenumerator.c
+index ecf04d1..9efc738 100644
+--- a/gio/gproxyaddressenumerator.c
++++ b/gio/gproxyaddressenumerator.c
+@@ -18,7 +18,7 @@
+  * Author: Nicolas Dufresne <nicolas.dufresne@collabora.co.uk>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "gproxyaddressenumerator.h"
+ 
+ #include <string.h>
+diff --git a/gio/gproxyresolver.c b/gio/gproxyresolver.c
+index bd9528d..ae6011d 100644
+--- a/gio/gproxyresolver.c
++++ b/gio/gproxyresolver.c
+@@ -18,7 +18,7 @@
+  * Author: Nicolas Dufresne <nicolas.dufresne@collabora.co.uk>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gproxyresolver.h"
+ 
+diff --git a/gio/gproxyresolverportal.c b/gio/gproxyresolverportal.c
+index 2c28a03..a5bc541 100644
+--- a/gio/gproxyresolverportal.c
++++ b/gio/gproxyresolverportal.c
+@@ -17,7 +17,7 @@
+  * <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "xdp-dbus.h"
+ #include "giomodule-priv.h"
+diff --git a/gio/gregistrysettingsbackend.c b/gio/gregistrysettingsbackend.c
+index 26de251..e198543 100644
+--- a/gio/gregistrysettingsbackend.c
++++ b/gio/gregistrysettingsbackend.c
+@@ -87,7 +87,7 @@
+  *     to use a red-black tree, but I don't currently think it's worth the time
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gregistrysettingsbackend.h"
+ #include "gsettingsbackend.h"
+diff --git a/gio/gremoteactiongroup.c b/gio/gremoteactiongroup.c
+index b8e2c0b..f3ea76b 100644
+--- a/gio/gremoteactiongroup.c
++++ b/gio/gremoteactiongroup.c
+@@ -17,7 +17,7 @@
+  * Authors: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gsimpleaction.h"
+ #include "gactiongroup.h"
+@@ -72,7 +72,7 @@
+  * Since: 2.32
+  **/
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gremoteactiongroup.h"
+ 
+diff --git a/gio/gresolver.c b/gio/gresolver.c
+index 732d217..2c0a95a 100644
+--- a/gio/gresolver.c
++++ b/gio/gresolver.c
+@@ -19,7 +19,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include <glib.h>
+ #include "glibintl.h"
+ 
+diff --git a/gio/gresource-tool.c b/gio/gresource-tool.c
+index 1914c52..c2f8950 100644
+--- a/gio/gresource-tool.c
++++ b/gio/gresource-tool.c
+@@ -17,7 +17,7 @@
+  * Author: Matthias Clasen
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <stdlib.h>
+ #include <stdio.h>
+diff --git a/gio/gresource.c b/gio/gresource.c
+index cdcb1ac..b37363c 100644
+--- a/gio/gresource.c
++++ b/gio/gresource.c
+@@ -18,7 +18,7 @@
+  * Authors: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ 
+diff --git a/gio/gresourcefile.c b/gio/gresourcefile.c
+index 429e9ef..1f6a8eb 100644
+--- a/gio/gresourcefile.c
++++ b/gio/gresourcefile.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ 
+diff --git a/gio/gseekable.c b/gio/gseekable.c
+index 6886683..eb0ac87 100644
+--- a/gio/gseekable.c
++++ b/gio/gseekable.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "gseekable.h"
+ #include "glibintl.h"
+ 
+diff --git a/gio/gsettings-mapping.c b/gio/gsettings-mapping.c
+index 8c64b02..9aa9a0b 100644
+--- a/gio/gsettings-mapping.c
++++ b/gio/gsettings-mapping.c
+@@ -17,7 +17,7 @@
+  * Author: Vincent Untz <vuntz@gnome.org>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gsettings-mapping.h"
+ 
+diff --git a/gio/gsettings-tool.c b/gio/gsettings-tool.c
+index 3096f9d..b108161 100644
+--- a/gio/gsettings-tool.c
++++ b/gio/gsettings-tool.c
+@@ -17,7 +17,7 @@
+  * Author: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <gio/gio.h>
+ #include <gi18n.h>
+diff --git a/gio/gsettings.c b/gio/gsettings.c
+index 1e46d5a..f8f4d29 100644
+--- a/gio/gsettings.c
++++ b/gio/gsettings.c
+@@ -18,7 +18,7 @@
+  */
+ 
+ /* Prelude {{{1 */
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <glib.h>
+ #include <glibintl.h>
+diff --git a/gio/gsettingsbackend.c b/gio/gsettingsbackend.c
+index f53a023..080d922 100644
+--- a/gio/gsettingsbackend.c
++++ b/gio/gsettingsbackend.c
+@@ -19,7 +19,7 @@
+  *          Matthias Clasen <mclasen@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gsettingsbackendinternal.h"
+ #include "gsimplepermission.h"
+diff --git a/gio/gsettingsschema.c b/gio/gsettingsschema.c
+index 3a60b8c..375c57a 100644
+--- a/gio/gsettingsschema.c
++++ b/gio/gsettingsschema.c
+@@ -16,7 +16,7 @@
+  * License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gsettingsschema-internal.h"
+ #include "gsettings.h"
+diff --git a/gio/gsimpleaction.c b/gio/gsimpleaction.c
+index 499adb2..b811e33 100644
+--- a/gio/gsimpleaction.c
++++ b/gio/gsimpleaction.c
+@@ -17,7 +17,7 @@
+  * Authors: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gsimpleaction.h"
+ 
+diff --git a/gio/gsimpleactiongroup.c b/gio/gsimpleactiongroup.c
+index 11bc193..9a4bf56 100644
+--- a/gio/gsimpleactiongroup.c
++++ b/gio/gsimpleactiongroup.c
+@@ -17,7 +17,7 @@
+  * Authors: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gsimpleactiongroup.h"
+ 
+diff --git a/gio/gsimpleasyncresult.c b/gio/gsimpleasyncresult.c
+index c6ddd97..86c7d90 100644
+--- a/gio/gsimpleasyncresult.c
++++ b/gio/gsimpleasyncresult.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ 
+diff --git a/gio/gsimpleiostream.c b/gio/gsimpleiostream.c
+index 77f65cc..eb871ad 100644
+--- a/gio/gsimpleiostream.c
++++ b/gio/gsimpleiostream.c
+@@ -18,7 +18,7 @@
+  */
+ 
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include <glib.h>
+ #include "glibintl.h"
+ 
+diff --git a/gio/gsimplepermission.c b/gio/gsimplepermission.c
+index 5ec88b8..b7c4599 100644
+--- a/gio/gsimplepermission.c
++++ b/gio/gsimplepermission.c
+@@ -17,7 +17,7 @@
+  * Author: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gsimplepermission.h"
+ #include "gpermission.h"
+diff --git a/gio/gsimpleproxyresolver.c b/gio/gsimpleproxyresolver.c
+index f33d49f..77d8201 100644
+--- a/gio/gsimpleproxyresolver.c
++++ b/gio/gsimpleproxyresolver.c
+@@ -17,7 +17,7 @@
+  * <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <stdlib.h>
+ #include <string.h>
+diff --git a/gio/gsocket.c b/gio/gsocket.c
+index 66073af..e415d41 100644
+--- a/gio/gsocket.c
++++ b/gio/gsocket.c
+@@ -25,7 +25,7 @@
+  *          Philip Withnall <philip.withnall@collabora.co.uk>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gsocket.h"
+ 
+diff --git a/gio/gsocketaddressenumerator.c b/gio/gsocketaddressenumerator.c
+index ebbb5de..9f05a49 100644
+--- a/gio/gsocketaddressenumerator.c
++++ b/gio/gsocketaddressenumerator.c
+@@ -16,7 +16,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "gsocketaddressenumerator.h"
+ #include "glibintl.h"
+ 
+diff --git a/gio/gsocketclient.c b/gio/gsocketclient.c
+index ad6214f..9fce109 100644
+--- a/gio/gsocketclient.c
++++ b/gio/gsocketclient.c
+@@ -21,7 +21,7 @@
+  *          Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "gsocketclient.h"
+ 
+ #include <stdlib.h>
+diff --git a/gio/gsocketconnectable.c b/gio/gsocketconnectable.c
+index e999e65..441a0c1 100644
+--- a/gio/gsocketconnectable.c
++++ b/gio/gsocketconnectable.c
+@@ -16,7 +16,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "gsocketconnectable.h"
+ #include "glibintl.h"
+ 
+diff --git a/gio/gsocketconnection.c b/gio/gsocketconnection.c
+index 37d5d33..1eb2ffc 100644
+--- a/gio/gsocketconnection.c
++++ b/gio/gsocketconnection.c
+@@ -23,7 +23,7 @@
+  *          Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gsocketconnection.h"
+ 
+diff --git a/gio/gsocketcontrolmessage.c b/gio/gsocketcontrolmessage.c
+index 7acf6b3..912909a 100644
+--- a/gio/gsocketcontrolmessage.c
++++ b/gio/gsocketcontrolmessage.c
+@@ -43,7 +43,7 @@
+  * Since: 2.22
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "gsocketcontrolmessage.h"
+ #include "gnetworkingprivate.h"
+ #include "glibintl.h"
+diff --git a/gio/gsocketinputstream.c b/gio/gsocketinputstream.c
+index b6d5c62..19ceca9 100644
+--- a/gio/gsocketinputstream.c
++++ b/gio/gsocketinputstream.c
+@@ -21,7 +21,7 @@
+  *          Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "gsocketinputstream.h"
+ #include "glibintl.h"
+ 
+diff --git a/gio/gsocketlistener.c b/gio/gsocketlistener.c
+index d11f10a..0bb0982 100644
+--- a/gio/gsocketlistener.c
++++ b/gio/gsocketlistener.c
+@@ -23,7 +23,7 @@
+  *          Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "gsocketlistener.h"
+ 
+ #include <gio/gioenumtypes.h>
+diff --git a/gio/gsocketoutputstream.c b/gio/gsocketoutputstream.c
+index 482ee39..73f81f2 100644
+--- a/gio/gsocketoutputstream.c
++++ b/gio/gsocketoutputstream.c
+@@ -21,7 +21,7 @@
+  *          Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "goutputstream.h"
+ #include "gsocketoutputstream.h"
+ #include "gsocket.h"
+diff --git a/gio/gsocketservice.c b/gio/gsocketservice.c
+index 176c122..068e471 100644
+--- a/gio/gsocketservice.c
++++ b/gio/gsocketservice.c
+@@ -57,7 +57,7 @@
+  * Since: 2.22
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "gsocketservice.h"
+ 
+ #include <gio/gio.h>
+diff --git a/gio/gsocks4aproxy.c b/gio/gsocks4aproxy.c
+index 988ddaf..3dec757 100644
+--- a/gio/gsocks4aproxy.c
++++ b/gio/gsocks4aproxy.c
+@@ -18,7 +18,7 @@
+  * Author: Nicolas Dufresne <nicolas.dufresne@collabora.co.uk>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gsocks4aproxy.h"
+ 
+diff --git a/gio/gsocks4proxy.c b/gio/gsocks4proxy.c
+index ad176ff..5ed5e9a 100644
+--- a/gio/gsocks4proxy.c
++++ b/gio/gsocks4proxy.c
+@@ -18,7 +18,7 @@
+  * Author: Nicolas Dufresne <nicolas.dufresne@collabora.co.uk>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gsocks4proxy.h"
+ 
+diff --git a/gio/gsocks5proxy.c b/gio/gsocks5proxy.c
+index a6544df..b8eb784 100644
+--- a/gio/gsocks5proxy.c
++++ b/gio/gsocks5proxy.c
+@@ -22,7 +22,7 @@
+  *	    Nicolas Dufresne <nicolas.dufresne@collabora.co.uk>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gsocks5proxy.h"
+ 
+diff --git a/gio/gsrvtarget.c b/gio/gsrvtarget.c
+index 6b4068b..6b26428 100644
+--- a/gio/gsrvtarget.c
++++ b/gio/gsrvtarget.c
+@@ -18,7 +18,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include <glib.h>
+ #include "glibintl.h"
+ 
+diff --git a/gio/gsubprocess.c b/gio/gsubprocess.c
+index b5515c7..2d7bd20 100644
+--- a/gio/gsubprocess.c
++++ b/gio/gsubprocess.c
+@@ -79,7 +79,7 @@
+  * Since: 2.40
+  **/
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gsubprocess.h"
+ #include "gsubprocesslauncher-private.h"
+diff --git a/gio/gsubprocesslauncher.c b/gio/gsubprocesslauncher.c
+index 8c2f1c1..41c0aff 100644
+--- a/gio/gsubprocesslauncher.c
++++ b/gio/gsubprocesslauncher.c
+@@ -40,7 +40,7 @@
+                                  G_SUBPROCESS_FLAGS_STDERR_SILENCE |    \
+                                  G_SUBPROCESS_FLAGS_STDERR_MERGE)
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gsubprocesslauncher-private.h"
+ #include "gioenumtypes.h"
+diff --git a/gio/gtask.c b/gio/gtask.c
+index 9950bb3..fa9cc79 100644
+--- a/gio/gtask.c
++++ b/gio/gtask.c
+@@ -16,7 +16,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "gio_trace.h"
+ 
+ #include "gtask.h"
+diff --git a/gio/gtcpconnection.c b/gio/gtcpconnection.c
+index 68ed1e1..067c8f2 100644
+--- a/gio/gtcpconnection.c
++++ b/gio/gtcpconnection.c
+@@ -23,7 +23,7 @@
+  * Since: 2.22
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "gtcpconnection.h"
+ #include "gasyncresult.h"
+ #include "gtask.h"
+diff --git a/gio/gtcpwrapperconnection.c b/gio/gtcpwrapperconnection.c
+index 9c00869..bbd9830 100644
+--- a/gio/gtcpwrapperconnection.c
++++ b/gio/gtcpwrapperconnection.c
+@@ -42,7 +42,7 @@
+  * using the following functions.
+  **/
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gtcpwrapperconnection.h"
+ 
+diff --git a/gio/gtestdbus.c b/gio/gtestdbus.c
+index 11cf029..38acce2 100644
+--- a/gio/gtestdbus.c
++++ b/gio/gtestdbus.c
+@@ -20,7 +20,7 @@
+  *          Xavier Claessens <xavier.claessens@collabora.co.uk>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <stdlib.h>
+ #include <stdio.h>
+diff --git a/gio/gthemedicon.c b/gio/gthemedicon.c
+index 35970de..8b86c9b 100644
+--- a/gio/gthemedicon.c
++++ b/gio/gthemedicon.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ 
+diff --git a/gio/gthreadedresolver.c b/gio/gthreadedresolver.c
+index 7691b91..7fe0a45 100644
+--- a/gio/gthreadedresolver.c
++++ b/gio/gthreadedresolver.c
+@@ -19,7 +19,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include <glib.h>
+ #include "glibintl.h"
+ 
+diff --git a/gio/gthreadedsocketservice.c b/gio/gthreadedsocketservice.c
+index c48a934..4663764 100644
+--- a/gio/gthreadedsocketservice.c
++++ b/gio/gthreadedsocketservice.c
+@@ -44,7 +44,7 @@
+  * or subclass and override the default handler.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "gsocketconnection.h"
+ #include "gthreadedsocketservice.h"
+ #include "glibintl.h"
+diff --git a/gio/gtlsbackend.c b/gio/gtlsbackend.c
+index d67e490..b997896 100644
+--- a/gio/gtlsbackend.c
++++ b/gio/gtlsbackend.c
+@@ -17,7 +17,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "glib.h"
+ 
+ #include "gtlsbackend.h"
+diff --git a/gio/gtlscertificate.c b/gio/gtlscertificate.c
+index 72de5eb..f23e01a 100644
+--- a/gio/gtlscertificate.c
++++ b/gio/gtlscertificate.c
+@@ -16,7 +16,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gtlscertificate.h"
+ 
+diff --git a/gio/gtlsclientconnection.c b/gio/gtlsclientconnection.c
+index b38fad6..237ed8f 100644
+--- a/gio/gtlsclientconnection.c
++++ b/gio/gtlsclientconnection.c
+@@ -16,7 +16,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "glib.h"
+ 
+ #include "gtlsclientconnection.h"
+diff --git a/gio/gtlsconnection.c b/gio/gtlsconnection.c
+index 2e431ae..bc8e13f 100644
+--- a/gio/gtlsconnection.c
++++ b/gio/gtlsconnection.c
+@@ -16,7 +16,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "glib.h"
+ 
+ #include "gtlsconnection.h"
+diff --git a/gio/gtlsdatabase.c b/gio/gtlsdatabase.c
+index f06dabf..e4f545a 100644
+--- a/gio/gtlsdatabase.c
++++ b/gio/gtlsdatabase.c
+@@ -18,7 +18,7 @@
+  * Author: Stef Walter <stefw@collabora.co.uk>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gtlsdatabase.h"
+ 
+diff --git a/gio/gtlsfiledatabase.c b/gio/gtlsfiledatabase.c
+index 75c0133..334365f 100644
+--- a/gio/gtlsfiledatabase.c
++++ b/gio/gtlsfiledatabase.c
+@@ -18,7 +18,7 @@
+  * Author: Stef Walter <stefw@collabora.co.uk>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gtlsfiledatabase.h"
+ 
+diff --git a/gio/gtlsinteraction.c b/gio/gtlsinteraction.c
+index dfb54f6..43318f5 100644
+--- a/gio/gtlsinteraction.c
++++ b/gio/gtlsinteraction.c
+@@ -18,7 +18,7 @@
+  * Author: Stef Walter <stefw@collabora.co.uk>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ 
+diff --git a/gio/gtlspassword.c b/gio/gtlspassword.c
+index 1e437a7..9a2f079 100644
+--- a/gio/gtlspassword.c
++++ b/gio/gtlspassword.c
+@@ -18,7 +18,7 @@
+  * Author: Stef Walter <stefw@collabora.co.uk>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "glib.h"
+ #include "glibintl.h"
+ 
+diff --git a/gio/gtlsserverconnection.c b/gio/gtlsserverconnection.c
+index dde9a83..0d96f70 100644
+--- a/gio/gtlsserverconnection.c
++++ b/gio/gtlsserverconnection.c
+@@ -16,7 +16,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "glib.h"
+ 
+ #include "gtlsserverconnection.h"
+diff --git a/gio/gtrashportal.c b/gio/gtrashportal.c
+index 9922be2..976c45f 100644
+--- a/gio/gtrashportal.c
++++ b/gio/gtrashportal.c
+@@ -16,7 +16,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <sys/stat.h>
+ #include <fcntl.h>
+diff --git a/gio/gunionvolumemonitor.c b/gio/gunionvolumemonitor.c
+index 93b74e5..250b692 100644
+--- a/gio/gunionvolumemonitor.c
++++ b/gio/gunionvolumemonitor.c
+@@ -21,7 +21,7 @@
+  *         David Zeuthen <davidz@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ 
+diff --git a/gio/gunixconnection.c b/gio/gunixconnection.c
+index e9e2f75..972daee 100644
+--- a/gio/gunixconnection.c
++++ b/gio/gunixconnection.c
+@@ -12,7 +12,7 @@
+  * Authors: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gunixconnection.h"
+ #include "gnetworking.h"
+diff --git a/gio/gunixcredentialsmessage.c b/gio/gunixcredentialsmessage.c
+index 02d59c8..ddbfd6e 100644
+--- a/gio/gunixcredentialsmessage.c
++++ b/gio/gunixcredentialsmessage.c
+@@ -33,7 +33,7 @@
+  * g_socket_get_credentials().
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ /* ---------------------------------------------------------------------------------------------------- */
+ 
+diff --git a/gio/gunixfdlist.c b/gio/gunixfdlist.c
+index e8c4ac5..a975dba 100644
+--- a/gio/gunixfdlist.c
++++ b/gio/gunixfdlist.c
+@@ -38,7 +38,7 @@
+  * using the following functions.
+  **/
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <unistd.h>
+ #include <fcntl.h>
+diff --git a/gio/gunixfdmessage.c b/gio/gunixfdmessage.c
+index 3324651..fbf541e 100644
+--- a/gio/gunixfdmessage.c
++++ b/gio/gunixfdmessage.c
+@@ -41,7 +41,7 @@
+  * using the following functions.
+  **/
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <unistd.h>
+ #include <string.h>
+diff --git a/gio/gunixinputstream.c b/gio/gunixinputstream.c
+index c63e4e5..26c9845 100644
+--- a/gio/gunixinputstream.c
++++ b/gio/gunixinputstream.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <sys/types.h>
+ #include <sys/stat.h>
+diff --git a/gio/gunixmount.c b/gio/gunixmount.c
+index 0a6d7f3..1cd81e7 100644
+--- a/gio/gunixmount.c
++++ b/gio/gunixmount.c
+@@ -21,7 +21,7 @@
+  *         David Zeuthen <davidz@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ #include <sys/wait.h>
+diff --git a/gio/gunixmounts.c b/gio/gunixmounts.c
+index 1880d99..ae246c3 100644
+--- a/gio/gunixmounts.c
++++ b/gio/gunixmounts.c
+@@ -22,7 +22,7 @@
+ 
+ /* Prologue {{{1 */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <sys/types.h>
+ #include <sys/stat.h>
+diff --git a/gio/gunixoutputstream.c b/gio/gunixoutputstream.c
+index 506e09a..e218c7d 100644
+--- a/gio/gunixoutputstream.c
++++ b/gio/gunixoutputstream.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <sys/types.h>
+ #include <sys/stat.h>
+diff --git a/gio/gunixvolume.c b/gio/gunixvolume.c
+index a3768e1..e411f8e 100644
+--- a/gio/gunixvolume.c
++++ b/gio/gunixvolume.c
+@@ -21,7 +21,7 @@
+  *         David Zeuthen <davidz@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ #include <sys/wait.h>
+diff --git a/gio/gunixvolumemonitor.c b/gio/gunixvolumemonitor.c
+index 4b99423..554b515 100644
+--- a/gio/gunixvolumemonitor.c
++++ b/gio/gunixvolumemonitor.c
+@@ -21,7 +21,7 @@
+  *         David Zeuthen <davidz@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ 
+diff --git a/gio/gvfs.c b/gio/gvfs.c
+index 3475624..8b05ffe 100644
+--- a/gio/gvfs.c
++++ b/gio/gvfs.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include <string.h>
+ #include "gvfs.h"
+ #include "glib-private.h"
+diff --git a/gio/gvolume.c b/gio/gvolume.c
+index 0e14dda..b892d0a 100644
+--- a/gio/gvolume.c
++++ b/gio/gvolume.c
+@@ -19,7 +19,7 @@
+  *         David Zeuthen <davidz@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "gmount.h"
+ #include "gvolume.h"
+ #include "gthemedicon.h"
+diff --git a/gio/gvolumemonitor.c b/gio/gvolumemonitor.c
+index 65ec955..135b864 100644
+--- a/gio/gvolumemonitor.c
++++ b/gio/gvolumemonitor.c
+@@ -21,7 +21,7 @@
+  *         David Zeuthen <davidz@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "gvolumemonitor.h"
+ #include "gvolume.h"
+ #include "gmount.h"
+diff --git a/gio/gwin32appinfo.c b/gio/gwin32appinfo.c
+index 9f335b3..bb33bb2 100644
+--- a/gio/gwin32appinfo.c
++++ b/gio/gwin32appinfo.c
+@@ -20,7 +20,7 @@
+  *          Руслан Ижбулатов  <lrn1986@gmail.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ 
+diff --git a/gio/gwin32inputstream.c b/gio/gwin32inputstream.c
+index 5649af1..ed83cd0 100644
+--- a/gio/gwin32inputstream.c
++++ b/gio/gwin32inputstream.c
+@@ -19,7 +19,7 @@
+  * Author: Tor Lillqvist <tml@iki.fi>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <windows.h>
+ 
+diff --git a/gio/gwin32mount.c b/gio/gwin32mount.c
+index 5b4847a..8a53c0b 100644
+--- a/gio/gwin32mount.c
++++ b/gio/gwin32mount.c
+@@ -21,7 +21,7 @@
+  *         Hans Breuer <hans@breuer.org>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ #define WIN32_MEAN_AND_LEAN
+diff --git a/gio/gwin32networkmonitor.c b/gio/gwin32networkmonitor.c
+index fd9b676..9d27207 100644
+--- a/gio/gwin32networkmonitor.c
++++ b/gio/gwin32networkmonitor.c
+@@ -18,7 +18,7 @@
+  * Boston, MA 02111-1307, USA.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <errno.h>
+ 
+diff --git a/gio/gwin32notificationbackend.c b/gio/gwin32notificationbackend.c
+index 602f3f3..b426b9b 100644
+--- a/gio/gwin32notificationbackend.c
++++ b/gio/gwin32notificationbackend.c
+@@ -21,7 +21,7 @@
+  *  - Philip Withnall <withnall@endlessm.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gnotificationbackend.h"
+ 
+diff --git a/gio/gwin32outputstream.c b/gio/gwin32outputstream.c
+index b5f70c9..652374b 100644
+--- a/gio/gwin32outputstream.c
++++ b/gio/gwin32outputstream.c
+@@ -19,7 +19,7 @@
+  * Author: Tor Lillqvist <tml@iki.fi>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <windows.h>
+ 
+diff --git a/gio/gwin32registrykey.c b/gio/gwin32registrykey.c
+index c19fede..4d859fc 100644
+--- a/gio/gwin32registrykey.c
++++ b/gio/gwin32registrykey.c
+@@ -17,7 +17,7 @@
+  *
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "ginitable.h"
+ #include "gwin32registrykey.h"
+ #include <gio/gioerror.h>
+diff --git a/gio/gwin32volumemonitor.c b/gio/gwin32volumemonitor.c
+index 5124718..681d636 100644
+--- a/gio/gwin32volumemonitor.c
++++ b/gio/gwin32volumemonitor.c
+@@ -21,7 +21,7 @@
+  *         Hans Breuer <hans@breuer.org>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ 
+diff --git a/gio/gzlibcompressor.c b/gio/gzlibcompressor.c
+index 53f3e47..cfcd236 100644
+--- a/gio/gzlibcompressor.c
++++ b/gio/gzlibcompressor.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gzlibcompressor.h"
+ 
+diff --git a/gio/gzlibdecompressor.c b/gio/gzlibdecompressor.c
+index cf2542e..8626082 100644
+--- a/gio/gzlibdecompressor.c
++++ b/gio/gzlibdecompressor.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gzlibdecompressor.h"
+ 
+diff --git a/gio/inotify/ginotifyfilemonitor.c b/gio/inotify/ginotifyfilemonitor.c
+index b2364cc..f5b2c1f 100644
+--- a/gio/inotify/ginotifyfilemonitor.c
++++ b/gio/inotify/ginotifyfilemonitor.c
+@@ -22,7 +22,7 @@
+  *          Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "ginotifyfilemonitor.h"
+ #include <gio/giomodule.h>
+diff --git a/gio/inotify/inotify-helper.c b/gio/inotify/inotify-helper.c
+index d944587..5dc4961 100644
+--- a/gio/inotify/inotify-helper.c
++++ b/gio/inotify/inotify-helper.c
+@@ -21,7 +21,7 @@
+ 		 John McCutchan <john@johnmccutchan.com>
+ */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include <errno.h>
+ #include <time.h>
+ #include <string.h>
+diff --git a/gio/inotify/inotify-kernel.c b/gio/inotify/inotify-kernel.c
+index 05cdcb1..93dac74 100644
+--- a/gio/inotify/inotify-kernel.c
++++ b/gio/inotify/inotify-kernel.c
+@@ -20,7 +20,7 @@
+      John McCutchan <john@johnmccutchan.com>
+ */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <stdio.h>
+ #include <sys/ioctl.h>
+diff --git a/gio/inotify/inotify-missing.c b/gio/inotify/inotify-missing.c
+index b71b2d3..9094969 100644
+--- a/gio/inotify/inotify-missing.c
++++ b/gio/inotify/inotify-missing.c
+@@ -21,7 +21,7 @@
+ 		 John McCutchan <john@johnmccutchan.com>
+ */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include <glib.h>
+ #include "inotify-missing.h"
+ #include "inotify-path.h"
+diff --git a/gio/inotify/inotify-path.c b/gio/inotify/inotify-path.c
+index f0528f4..bf843c2 100644
+--- a/gio/inotify/inotify-path.c
++++ b/gio/inotify/inotify-path.c
+@@ -23,7 +23,7 @@
+                  Ryan Lortie <desrt@desrt.ca>
+ */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ /* Don't put conflicting kernel types in the global namespace: */
+ #define __KERNEL_STRICT_NAMES
+diff --git a/gio/inotify/inotify-sub.c b/gio/inotify/inotify-sub.c
+index b161557..1d850bb 100644
+--- a/gio/inotify/inotify-sub.c
++++ b/gio/inotify/inotify-sub.c
+@@ -21,7 +21,7 @@
+ 		 John McCutchan <john@johnmccutchan.com>
+ */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include <string.h>
+ #include <glib.h>
+ 
+diff --git a/gio/kqueue/gkqueuefilemonitor.c b/gio/kqueue/gkqueuefilemonitor.c
+index c6e4ec4..65e3eb6 100644
+--- a/gio/kqueue/gkqueuefilemonitor.c
++++ b/gio/kqueue/gkqueuefilemonitor.c
+@@ -20,7 +20,7 @@
+   THE SOFTWARE.
+ *******************************************************************************/
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <sys/types.h>
+ #include <sys/event.h>
+diff --git a/gio/kqueue/kqueue-helper.c b/gio/kqueue/kqueue-helper.c
+index 36a5b58..35f24bb 100644
+--- a/gio/kqueue/kqueue-helper.c
++++ b/gio/kqueue/kqueue-helper.c
+@@ -20,7 +20,7 @@
+   THE SOFTWARE.
+ *******************************************************************************/
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include <sys/types.h>
+ #include <sys/event.h>
+ #include <sys/time.h>
+diff --git a/gio/tests/credentials.c b/gio/tests/credentials.c
+index 6d76099..a485997 100644
+--- a/gio/tests/credentials.c
++++ b/gio/tests/credentials.c
+@@ -20,7 +20,7 @@
+  * if advised of the possibility of such damage.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <gio/gio.h>
+ #include <gio/gcredentialsprivate.h>
+diff --git a/gio/tests/g-file-info.c b/gio/tests/g-file-info.c
+index 1fbdf71..436ebba 100644
+--- a/gio/tests/g-file-info.c
++++ b/gio/tests/g-file-info.c
+@@ -20,7 +20,7 @@
+  * if advised of the possibility of such damage.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <glib/glib.h>
+ #include <gio/gio.h>
+diff --git a/gio/tests/gdbus-daemon.c b/gio/tests/gdbus-daemon.c
+index a332699..d33e576 100644
+--- a/gio/tests/gdbus-daemon.c
++++ b/gio/tests/gdbus-daemon.c
+@@ -1,4 +1,4 @@
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gdbusdaemon.h"
+ #include <glib/gi18n.h>
+diff --git a/gio/tests/gdbus-overflow.c b/gio/tests/gdbus-overflow.c
+index 53ec9c0..ac7ec27 100644
+--- a/gio/tests/gdbus-overflow.c
++++ b/gio/tests/gdbus-overflow.c
+@@ -18,7 +18,7 @@
+  * Author: David Zeuthen <davidz@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <gio/gio.h>
+ #include <unistd.h>
+diff --git a/gio/tests/gdbus-peer-object-manager.c b/gio/tests/gdbus-peer-object-manager.c
+index 676c9f0..4c874e4 100644
+--- a/gio/tests/gdbus-peer-object-manager.c
++++ b/gio/tests/gdbus-peer-object-manager.c
+@@ -18,7 +18,7 @@
+  * Author: Stef Walter <stefw@gnome.org>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <gio/gio.h>
+ 
+diff --git a/gio/tests/gdbus-peer.c b/gio/tests/gdbus-peer.c
+index d01bc9a..0a787d5 100644
+--- a/gio/tests/gdbus-peer.c
++++ b/gio/tests/gdbus-peer.c
+@@ -18,7 +18,7 @@
+  * Author: David Zeuthen <davidz@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <gio/gio.h>
+ #include <unistd.h>
+diff --git a/gio/tests/gtlsconsoleinteraction.c b/gio/tests/gtlsconsoleinteraction.c
+index ae734ba..c3885b3 100644
+--- a/gio/tests/gtlsconsoleinteraction.c
++++ b/gio/tests/gtlsconsoleinteraction.c
+@@ -18,7 +18,7 @@
+  * Author: Stef Walter <stefw@collabora.co.uk>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <glib.h>
+ #include <glib/gprintf.h>
+diff --git a/gio/tests/inet-address.c b/gio/tests/inet-address.c
+index cae2004..e2af0c1 100644
+--- a/gio/tests/inet-address.c
++++ b/gio/tests/inet-address.c
+@@ -20,7 +20,7 @@
+  * if advised of the possibility of such damage.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <gio/gio.h>
+ #include <gio/gnetworking.h>
+diff --git a/gio/tests/modules/test-module-a.c b/gio/tests/modules/test-module-a.c
+index 0a64ea6..1fdec7d 100644
+--- a/gio/tests/modules/test-module-a.c
++++ b/gio/tests/modules/test-module-a.c
+@@ -20,7 +20,7 @@
+  * if advised of the possibility of such damage.
+  */
+ 
+-#include "config.h" /* for _GLIB_EXTERN */
++#include <config_gg.h> /* for _GLIB_EXTERN */
+ 
+ #include <gio/gio.h>
+ 
+diff --git a/gio/tests/modules/test-module-b.c b/gio/tests/modules/test-module-b.c
+index 8d3527e..7d3384e 100644
+--- a/gio/tests/modules/test-module-b.c
++++ b/gio/tests/modules/test-module-b.c
+@@ -20,7 +20,7 @@
+  * if advised of the possibility of such damage.
+  */
+ 
+-#include "config.h" /* for _GLIB_EXTERN */
++#include <config_gg.h> /* for _GLIB_EXTERN */
+ 
+ #include <gio/gio.h>
+ 
+diff --git a/gio/tests/network-address.c b/gio/tests/network-address.c
+index bda7605..f8587b4 100644
+--- a/gio/tests/network-address.c
++++ b/gio/tests/network-address.c
+@@ -1,4 +1,4 @@
+-#include "config.h"
++#include <config_gg.h>
+ #include "mock-resolver.h"
+ 
+ #include <gio/gio.h>
+diff --git a/gio/tests/proxy.c b/gio/tests/proxy.c
+index 50a2062..b02b855 100644
+--- a/gio/tests/proxy.c
++++ b/gio/tests/proxy.c
+@@ -18,7 +18,7 @@
+  * Authors: Nicolas Dufresne <nicolas.dufresne@collabora.co.uk>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
+diff --git a/gio/tests/resolver.c b/gio/tests/resolver.c
+index c57b818..586654c 100644
+--- a/gio/tests/resolver.c
++++ b/gio/tests/resolver.c
+@@ -18,7 +18,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include <glib.h>
+ #include "glibintl.h"
+ 
+diff --git a/gio/tests/testfilemonitor.c b/gio/tests/testfilemonitor.c
+index 6057958..537e1d5 100644
+--- a/gio/tests/testfilemonitor.c
++++ b/gio/tests/testfilemonitor.c
+@@ -1,4 +1,4 @@
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <errno.h>
+ #include <stdlib.h>
+diff --git a/gio/tests/tls-certificate.c b/gio/tests/tls-certificate.c
+index e1ba237..d8a44c9 100644
+--- a/gio/tests/tls-certificate.c
++++ b/gio/tests/tls-certificate.c
+@@ -18,7 +18,7 @@
+  * Author: Nicolas Dufresne <nicolas.dufresne@collabora.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <gio/gio.h>
+ 
+diff --git a/gio/tests/tls-database.c b/gio/tests/tls-database.c
+index 1bad255..8c785d3 100644
+--- a/gio/tests/tls-database.c
++++ b/gio/tests/tls-database.c
+@@ -16,7 +16,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <gio/gio.h>
+ 
+diff --git a/gio/tests/tls-interaction.c b/gio/tests/tls-interaction.c
+index 4f0737d..4deea76 100644
+--- a/gio/tests/tls-interaction.c
++++ b/gio/tests/tls-interaction.c
+@@ -18,7 +18,7 @@
+  * Author: Stef Walter <stefw@collobora.co.uk>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <gio/gio.h>
+ 
+diff --git a/gio/thumbnail-verify.c b/gio/thumbnail-verify.c
+index 1a722e4..54b62a2 100644
+--- a/gio/thumbnail-verify.c
++++ b/gio/thumbnail-verify.c
+@@ -16,7 +16,7 @@
+  * Author: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "thumbnail-verify.h"
+ 
+diff --git a/gio/win32/gwin32filemonitor.c b/gio/win32/gwin32filemonitor.c
+index 8383570..d408016 100644
+--- a/gio/win32/gwin32filemonitor.c
++++ b/gio/win32/gwin32filemonitor.c
+@@ -21,7 +21,7 @@
+  *
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gwin32filemonitor.h"
+ #include "gwin32fsmonitorutils.h"
+diff --git a/gio/win32/gwin32fsmonitorutils.c b/gio/win32/gwin32fsmonitorutils.c
+index ff8d171..f647ca6 100644
+--- a/gio/win32/gwin32fsmonitorutils.c
++++ b/gio/win32/gwin32fsmonitorutils.c
+@@ -21,7 +21,7 @@
+  *
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gwin32fsmonitorutils.h"
+ #include "gio/gfile.h"
+diff --git a/gio/win32/gwinhttpfile.c b/gio/win32/gwinhttpfile.c
+index cf5eed3..786767d 100644
+--- a/gio/win32/gwinhttpfile.c
++++ b/gio/win32/gwinhttpfile.c
+@@ -20,7 +20,7 @@
+  * Author: Tor Lillqvist <tml@novell.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <stdio.h>
+ #include <string.h>
+diff --git a/gio/win32/gwinhttpfileinputstream.c b/gio/win32/gwinhttpfileinputstream.c
+index 871274e..e8b0c31 100644
+--- a/gio/win32/gwinhttpfileinputstream.c
++++ b/gio/win32/gwinhttpfileinputstream.c
+@@ -20,7 +20,7 @@
+  * Author: Tor Lillqvist <tml@novell.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <glib.h>
+ 
+diff --git a/gio/win32/gwinhttpfileoutputstream.c b/gio/win32/gwinhttpfileoutputstream.c
+index f54f86c..9fff261 100644
+--- a/gio/win32/gwinhttpfileoutputstream.c
++++ b/gio/win32/gwinhttpfileoutputstream.c
+@@ -20,7 +20,7 @@
+  * Author: Tor Lillqvist <tml@novell.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <glib.h>
+ 
+diff --git a/gio/win32/gwinhttpvfs.c b/gio/win32/gwinhttpvfs.c
+index 3dfac25..24de80b 100644
+--- a/gio/win32/gwinhttpvfs.c
++++ b/gio/win32/gwinhttpvfs.c
+@@ -20,7 +20,7 @@
+  * Author: Tor Lillqvist <tml@novell.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <wchar.h>
+ 
+diff --git a/gio/xdgmime/xdgmime.c b/gio/xdgmime/xdgmime.c
+index 9bb93f7..9ed4a00 100644
+--- a/gio/xdgmime/xdgmime.c
++++ b/gio/xdgmime/xdgmime.c
+@@ -23,7 +23,7 @@
+  * License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "xdgmime.h"
+ #include "xdgmimeint.h"
+diff --git a/gio/xdgmime/xdgmimealias.c b/gio/xdgmime/xdgmimealias.c
+index bf95bc0..6965f46 100644
+--- a/gio/xdgmime/xdgmimealias.c
++++ b/gio/xdgmime/xdgmimealias.c
+@@ -23,7 +23,7 @@
+  * License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "xdgmimealias.h"
+ #include "xdgmimeint.h"
+diff --git a/gio/xdgmime/xdgmimecache.c b/gio/xdgmime/xdgmimecache.c
+index 769b578..86cd913 100644
+--- a/gio/xdgmime/xdgmimecache.c
++++ b/gio/xdgmime/xdgmimecache.c
+@@ -22,7 +22,7 @@
+  * License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
+diff --git a/gio/xdgmime/xdgmimeglob.c b/gio/xdgmime/xdgmimeglob.c
+index c18762e..19d0ca2 100644
+--- a/gio/xdgmime/xdgmimeglob.c
++++ b/gio/xdgmime/xdgmimeglob.c
+@@ -23,7 +23,7 @@
+  * License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "xdgmimeglob.h"
+ #include "xdgmimeint.h"
+diff --git a/gio/xdgmime/xdgmimeicon.c b/gio/xdgmime/xdgmimeicon.c
+index 272b062..fbbb9e7 100644
+--- a/gio/xdgmime/xdgmimeicon.c
++++ b/gio/xdgmime/xdgmimeicon.c
+@@ -22,7 +22,7 @@
+  * License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "xdgmimeicon.h"
+ #include "xdgmimeint.h"
+diff --git a/gio/xdgmime/xdgmimeint.c b/gio/xdgmime/xdgmimeint.c
+index 35c3635..06ab2f3 100644
+--- a/gio/xdgmime/xdgmimeint.c
++++ b/gio/xdgmime/xdgmimeint.c
+@@ -23,7 +23,7 @@
+  * License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "xdgmimeint.h"
+ #include <ctype.h>
+diff --git a/gio/xdgmime/xdgmimemagic.c b/gio/xdgmime/xdgmimemagic.c
+index 51be972..3c78685 100644
+--- a/gio/xdgmime/xdgmimemagic.c
++++ b/gio/xdgmime/xdgmimemagic.c
+@@ -23,7 +23,7 @@
+  * License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <assert.h>
+ #include "xdgmimemagic.h"
+diff --git a/gio/xdgmime/xdgmimeparent.c b/gio/xdgmime/xdgmimeparent.c
+index e87bf55..7059f58 100644
+--- a/gio/xdgmime/xdgmimeparent.c
++++ b/gio/xdgmime/xdgmimeparent.c
+@@ -23,7 +23,7 @@
+  * License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "xdgmimeparent.h"
+ #include "xdgmimeint.h"
+diff --git a/glib/deprecated/gallocator.c b/glib/deprecated/gallocator.c
+index ad9695a..5fe5c5c 100644
+--- a/glib/deprecated/gallocator.c
++++ b/glib/deprecated/gallocator.c
+@@ -13,7 +13,7 @@
+  * License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ /* we know we are deprecated here, no need for warnings */
+ #define GLIB_DISABLE_DEPRECATION_WARNINGS
+diff --git a/glib/deprecated/gcache.c b/glib/deprecated/gcache.c
+index 179ad9e..6d30a2b 100644
+--- a/glib/deprecated/gcache.c
++++ b/glib/deprecated/gcache.c
+@@ -26,7 +26,7 @@
+  * MT safe
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ /* we know we are deprecated here, no need for warnings */
+ #define GLIB_DISABLE_DEPRECATION_WARNINGS
+diff --git a/glib/deprecated/gcompletion.c b/glib/deprecated/gcompletion.c
+index 74342c6..d5bbbaa 100644
+--- a/glib/deprecated/gcompletion.c
++++ b/glib/deprecated/gcompletion.c
+@@ -26,7 +26,7 @@
+  * MT safe
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ /* we know we are deprecated here, no need for warnings */
+ #define GLIB_DISABLE_DEPRECATION_WARNINGS
+diff --git a/glib/deprecated/grel.c b/glib/deprecated/grel.c
+index 32ec37c..2cccbca 100644
+--- a/glib/deprecated/grel.c
++++ b/glib/deprecated/grel.c
+@@ -27,7 +27,7 @@
+  * MT safe
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ /* we know we are deprecated here, no need for warnings */
+ #define GLIB_DISABLE_DEPRECATION_WARNINGS
+diff --git a/glib/deprecated/gthread-deprecated.c b/glib/deprecated/gthread-deprecated.c
+index b0d67df..5812c14 100644
+--- a/glib/deprecated/gthread-deprecated.c
++++ b/glib/deprecated/gthread-deprecated.c
+@@ -19,7 +19,7 @@
+  * License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ /* we know we are deprecated here, no need for warnings */
+ #define GLIB_DISABLE_DEPRECATION_WARNINGS
+diff --git a/glib/garcbox.c b/glib/garcbox.c
+index 0fa207c..2ac23b8 100644
+--- a/glib/garcbox.c
++++ b/glib/garcbox.c
+@@ -16,7 +16,7 @@
+  * License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "grcboxprivate.h"
+ 
+diff --git a/glib/garray.c b/glib/garray.c
+index 942e74c..6ad7806 100644
+--- a/glib/garray.c
++++ b/glib/garray.c
+@@ -26,7 +26,7 @@
+  * MT safe
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ #include <stdlib.h>
+diff --git a/glib/gasyncqueue.c b/glib/gasyncqueue.c
+index 5719a54..08a2202 100644
+--- a/glib/gasyncqueue.c
++++ b/glib/gasyncqueue.c
+@@ -22,7 +22,7 @@
+  * MT safe
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gasyncqueue.h"
+ #include "gasyncqueueprivate.h"
+diff --git a/glib/gatomic.c b/glib/gatomic.c
+index c52aaad..1dbc2f5 100644
+--- a/glib/gatomic.c
++++ b/glib/gatomic.c
+@@ -17,7 +17,7 @@
+  * Author: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gatomic.h"
+ 
+diff --git a/glib/gbacktrace.c b/glib/gbacktrace.c
+index 86f8841..160a003 100644
+--- a/glib/gbacktrace.c
++++ b/glib/gbacktrace.c
+@@ -27,7 +27,7 @@
+  * then
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "glibconfig.h"
+ 
+ #include <signal.h>
+diff --git a/glib/gbase64.c b/glib/gbase64.c
+index dd7ed20..86a5426 100644
+--- a/glib/gbase64.c
++++ b/glib/gbase64.c
+@@ -21,7 +21,7 @@
+  *    Jeffrey Stedfast <fejj@ximian.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ 
+diff --git a/glib/gbitlock.c b/glib/gbitlock.c
+index 46e5f7d..6e6aa55 100644
+--- a/glib/gbitlock.c
++++ b/glib/gbitlock.c
+@@ -18,7 +18,7 @@
+  * Author: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gbitlock.h"
+ 
+diff --git a/glib/gbookmarkfile.c b/glib/gbookmarkfile.c
+index 25f1234..501df3a 100644
+--- a/glib/gbookmarkfile.c
++++ b/glib/gbookmarkfile.c
+@@ -16,7 +16,7 @@
+  * along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gbookmarkfile.h"
+ 
+diff --git a/glib/gbytes.c b/glib/gbytes.c
+index 7b72886..a207631 100644
+--- a/glib/gbytes.c
++++ b/glib/gbytes.c
+@@ -19,7 +19,7 @@
+  *         Stef Walter <stefw@collabora.co.uk>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gbytes.h"
+ 
+diff --git a/glib/gcharset.c b/glib/gcharset.c
+index 7bce2a1..8e15fd6 100644
+--- a/glib/gcharset.c
++++ b/glib/gcharset.c
+@@ -16,7 +16,7 @@
+  * License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gcharset.h"
+ #include "gcharsetprivate.h"
+diff --git a/glib/gchecksum.c b/glib/gchecksum.c
+index 1ad21ff..3240a61 100644
+--- a/glib/gchecksum.c
++++ b/glib/gchecksum.c
+@@ -16,7 +16,7 @@
+  * along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ 
+diff --git a/glib/gconvert.c b/glib/gconvert.c
+index c5857df..6960464 100644
+--- a/glib/gconvert.c
++++ b/glib/gconvert.c
+@@ -18,8 +18,8 @@
+  * License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
+-#include "glibconfig.h"
++#include <config_gg.h>
++#include <glibconfig.h>
+ 
+ #ifndef G_OS_WIN32
+ #include <iconv.h>
+diff --git a/glib/gdataset.c b/glib/gdataset.c
+index bfff3e0..ddf9c17 100644
+--- a/glib/gdataset.c
++++ b/glib/gdataset.c
+@@ -29,7 +29,7 @@
+  * MT safe ; except for g_data*_foreach()
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ 
+diff --git a/glib/gdate.c b/glib/gdate.c
+index 26b3f59..ae80e45 100644
+--- a/glib/gdate.c
++++ b/glib/gdate.c
+@@ -26,7 +26,7 @@
+  * MT safe
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "glibconfig.h"
+ 
+ #define DEBUG_MSG(x)	/* */
+diff --git a/glib/gdatetime.c b/glib/gdatetime.c
+index f8bf31c..52cda17 100644
+--- a/glib/gdatetime.c
++++ b/glib/gdatetime.c
+@@ -45,7 +45,7 @@
+ 
+ /* Prologue {{{1 */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ /* langinfo.h in glibc 2.27 defines ALTMON_* only if _GNU_SOURCE is defined.  */
+ #ifndef _GNU_SOURCE
+diff --git a/glib/gdir.c b/glib/gdir.c
+index 6b85e99..378c19d 100644
+--- a/glib/gdir.c
++++ b/glib/gdir.c
+@@ -20,7 +20,7 @@
+  * License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <errno.h>
+ #include <string.h>
+diff --git a/glib/genviron.c b/glib/genviron.c
+index c6edb83..746285a 100644
+--- a/glib/genviron.c
++++ b/glib/genviron.c
+@@ -22,7 +22,7 @@
+  * GLib at ftp://ftp.gtk.org/pub/gtk/. 
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "genviron.h"
+ 
+diff --git a/glib/gerror.c b/glib/gerror.c
+index cf20bc8..25bc15b 100644
+--- a/glib/gerror.c
++++ b/glib/gerror.c
+@@ -378,7 +378,7 @@
+  *   `g_return_if_fail (error == NULL || *error == NULL);`).
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gerror.h"
+ 
+diff --git a/glib/gfileutils.c b/glib/gfileutils.c
+index f0799e2..f42ea95 100644
+--- a/glib/gfileutils.c
++++ b/glib/gfileutils.c
+@@ -16,7 +16,7 @@
+  * along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "glibconfig.h"
+ 
+ #include <sys/stat.h>
+diff --git a/glib/ggettext.c b/glib/ggettext.c
+index b34521f..e8e912f 100644
+--- a/glib/ggettext.c
++++ b/glib/ggettext.c
+@@ -22,7 +22,7 @@
+  * GLib at ftp://ftp.gtk.org/pub/gtk/. 
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "ggettext.h"
+ #include "glibintl.h"
+@@ -40,7 +40,7 @@
+ 
+ #include <string.h>
+ #include <locale.h>
+-#include <libintl.h>
++//#include <libintl.h>
+ 
+ #ifdef G_OS_WIN32
+ 
+diff --git a/glib/ghash.c b/glib/ghash.c
+index e61b037..19638f3 100644
+--- a/glib/ghash.c
++++ b/glib/ghash.c
+@@ -26,7 +26,7 @@
+  * MT safe
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>  /* memset */
+ 
+diff --git a/glib/ghmac.c b/glib/ghmac.c
+index 49fd272..56c6253 100644
+--- a/glib/ghmac.c
++++ b/glib/ghmac.c
+@@ -18,7 +18,7 @@
+  * Author: Stef Walter <stefw@collabora.co.uk>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ 
+diff --git a/glib/ghook.c b/glib/ghook.c
+index 00187bf..dff3cb7 100644
+--- a/glib/ghook.c
++++ b/glib/ghook.c
+@@ -29,7 +29,7 @@
+  * MT safe
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "ghook.h"
+ 
+diff --git a/glib/ghostutils.c b/glib/ghostutils.c
+index 1b49720..05be950 100644
+--- a/glib/ghostutils.c
++++ b/glib/ghostutils.c
+@@ -17,7 +17,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ 
+diff --git a/glib/gi18n.h b/glib/gi18n.h
+index 5f996d2..c3d369c 100644
+--- a/glib/gi18n.h
++++ b/glib/gi18n.h
+@@ -20,7 +20,7 @@
+ 
+ #include <glib.h>
+ 
+-#include <libintl.h>
++//#include <libintl.h>
+ #include <string.h>
+ 
+ #define  _(String) gettext (String)
+diff --git a/glib/giochannel.c b/glib/giochannel.c
+index 1956e9d..60b12b8 100644
+--- a/glib/giochannel.c
++++ b/glib/giochannel.c
+@@ -29,7 +29,7 @@
+  * MT safe
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ #include <errno.h>
+diff --git a/glib/giounix.c b/glib/giounix.c
+index 6ba442f..05f5fa8 100644
+--- a/glib/giounix.c
++++ b/glib/giounix.c
+@@ -29,7 +29,7 @@
+  * MT safe
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #define _POSIX_SOURCE		/* for SSIZE_MAX */
+ 
+diff --git a/glib/giowin32.c b/glib/giowin32.c
+index 3e38e2a..b536865 100644
+--- a/glib/giowin32.c
++++ b/glib/giowin32.c
+@@ -65,7 +65,7 @@
+  * above bugs continue to work.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "glib.h"
+ 
+diff --git a/glib/gkeyfile.c b/glib/gkeyfile.c
+index e486f69..3d3b397 100644
+--- a/glib/gkeyfile.c
++++ b/glib/gkeyfile.c
+@@ -21,7 +21,7 @@
+  * along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gkeyfile.h"
+ #include "gutils.h"
+diff --git a/glib/glib-init.c b/glib/glib-init.c
+index ed800dc..cfc355b 100644
+--- a/glib/glib-init.c
++++ b/glib/glib-init.c
+@@ -17,7 +17,7 @@
+  * Author: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "glib-init.h"
+ #include "gmacros.h"
+diff --git a/glib/glib-private.c b/glib/glib-private.c
+index d2aea9f..120fa0e 100644
+--- a/glib/glib-private.c
++++ b/glib/glib-private.c
+@@ -17,7 +17,7 @@
+  * Author: Colin Walters <walters@verbum.org>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "glib-private.h"
+ #include "glib-init.h"
+diff --git a/glib/glib-unix.c b/glib/glib-unix.c
+index 9328e70..40741cb 100644
+--- a/glib/glib-unix.c
++++ b/glib/glib-unix.c
+@@ -19,7 +19,7 @@
+  * Authors: Colin Walters <walters@verbum.org>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ /* To make bionic export pipe2() */
+ #ifndef _GNU_SOURCE
+diff --git a/glib/glist.c b/glib/glist.c
+index 39143fa..87abdc0 100644
+--- a/glib/glist.c
++++ b/glib/glist.c
+@@ -26,7 +26,7 @@
+  * MT safe
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "glist.h"
+ #include "gslice.h"
+diff --git a/glib/gmain.c b/glib/gmain.c
+index b1df470..dae0e68 100644
+--- a/glib/gmain.c
++++ b/glib/gmain.c
+@@ -29,7 +29,7 @@
+  * MT safe
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "glibconfig.h"
+ #include "glib_trace.h"
+ 
+diff --git a/glib/gmappedfile.c b/glib/gmappedfile.c
+index 36e7ca5..24b3103 100644
+--- a/glib/gmappedfile.c
++++ b/glib/gmappedfile.c
+@@ -17,7 +17,7 @@
+  * License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <errno.h>
+ #include <sys/types.h> 
+diff --git a/glib/gmarkup.c b/glib/gmarkup.c
+index 5b70cef..b40fa30 100644
+--- a/glib/gmarkup.c
++++ b/glib/gmarkup.c
+@@ -17,7 +17,7 @@
+  * along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <stdarg.h>
+ #include <string.h>
+diff --git a/glib/gmem.c b/glib/gmem.c
+index 09cd041..b81f474 100644
+--- a/glib/gmem.c
++++ b/glib/gmem.c
+@@ -26,7 +26,7 @@
+  * MT safe
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gmem.h"
+ 
+diff --git a/glib/gmessages.c b/glib/gmessages.c
+index bb1ab8f..1bbac6c 100644
+--- a/glib/gmessages.c
++++ b/glib/gmessages.c
+@@ -165,7 +165,7 @@
+  * than the one under test).
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <stdlib.h>
+ #include <stdarg.h>
+diff --git a/glib/gnode.c b/glib/gnode.c
+index de98fd5..2ecde1b 100644
+--- a/glib/gnode.c
++++ b/glib/gnode.c
+@@ -29,7 +29,7 @@
+  * MT safe
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gnode.h"
+ 
+diff --git a/glib/gnulib/g-gnulib.h b/glib/gnulib/g-gnulib.h
+index 41d414c..69efc45 100644
+--- a/glib/gnulib/g-gnulib.h
++++ b/glib/gnulib/g-gnulib.h
+@@ -16,7 +16,7 @@
+  */
+ #ifndef __G_GNULIB_H__
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include <stdlib.h>
+ #include "glib/glib.h"
+ 
+diff --git a/glib/gnulib/isinf.c b/glib/gnulib/isinf.c
+index e7b44b9..5e17518 100644
+--- a/glib/gnulib/isinf.c
++++ b/glib/gnulib/isinf.c
+@@ -2,7 +2,7 @@
+ #error "This implementation is currently supported for Visual Studio only!"
+ #endif
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include <gnulib_math.h>
+ #include <float.h>
+ #include <math.h>
+diff --git a/glib/goption.c b/glib/goption.c
+index 7868363..4873a0c 100644
+--- a/glib/goption.c
++++ b/glib/goption.c
+@@ -177,7 +177,7 @@
+  * ]|
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ #include <stdlib.h>
+diff --git a/glib/gosxutils.m b/glib/gosxutils.m
+index 7a0d84d..831d90b 100644
+--- a/glib/gosxutils.m
++++ b/glib/gosxutils.m
+@@ -15,7 +15,7 @@
+  * License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #ifndef HAVE_COCOA
+ #error "Can only build gutils-macos.m on MacOS"
+diff --git a/glib/gpattern.c b/glib/gpattern.c
+index a43d866..10cc9ea 100644
+--- a/glib/gpattern.c
++++ b/glib/gpattern.c
+@@ -15,7 +15,7 @@
+  * License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ 
+diff --git a/glib/gpoll.c b/glib/gpoll.c
+index 290c64c..f676dc9 100644
+--- a/glib/gpoll.c
++++ b/glib/gpoll.c
+@@ -30,7 +30,7 @@
+  * MT safe
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "glibconfig.h"
+ #include "giochannel.h"
+ 
+diff --git a/glib/gprimes.c b/glib/gprimes.c
+index 1f6a315..2bd5919 100644
+--- a/glib/gprimes.c
++++ b/glib/gprimes.c
+@@ -26,7 +26,7 @@
+  * MT safe
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gprimes.h"
+ 
+diff --git a/glib/gprintf.c b/glib/gprintf.c
+index fc0a02a..ef9beb0 100644
+--- a/glib/gprintf.c
++++ b/glib/gprintf.c
+@@ -15,7 +15,7 @@
+  * License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <stdarg.h>
+ #include <stdlib.h>
+diff --git a/glib/gqsort.c b/glib/gqsort.c
+index 90e65ae..6d7657c 100644
+--- a/glib/gqsort.c
++++ b/glib/gqsort.c
+@@ -17,7 +17,7 @@
+  * License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <limits.h>
+ #include <stdlib.h>
+diff --git a/glib/gquark.c b/glib/gquark.c
+index 2a08610..b9fc7fe 100644
+--- a/glib/gquark.c
++++ b/glib/gquark.c
+@@ -29,7 +29,7 @@
+  * MT safe
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ 
+diff --git a/glib/gqueue.c b/glib/gqueue.c
+index 0cc7ab2..8c26eb6 100644
+--- a/glib/gqueue.c
++++ b/glib/gqueue.c
+@@ -50,7 +50,7 @@
+  *
+  * To free the entire queue, use g_queue_free().
+  */
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gqueue.h"
+ 
+diff --git a/glib/grand.c b/glib/grand.c
+index b5b1b71..8c458a9 100644
+--- a/glib/grand.c
++++ b/glib/grand.c
+@@ -34,7 +34,7 @@
+  * MT safe
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #define _CRT_RAND_S
+ 
+ #include <math.h>
+diff --git a/glib/grcbox.c b/glib/grcbox.c
+index 68bb73d..42c7d15 100644
+--- a/glib/grcbox.c
++++ b/glib/grcbox.c
+@@ -16,7 +16,7 @@
+  * License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "grcboxprivate.h"
+ 
+diff --git a/glib/grefcount.c b/glib/grefcount.c
+index 7cb12fc..b9caf9f 100644
+--- a/glib/grefcount.c
++++ b/glib/grefcount.c
+@@ -39,7 +39,7 @@
+  * Since: 2.58
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "grefcount.h"
+ 
+diff --git a/glib/grefstring.c b/glib/grefstring.c
+index 56a6181..6e728e8 100644
+--- a/glib/grefstring.c
++++ b/glib/grefstring.c
+@@ -84,7 +84,7 @@
+  * Since: 2.58
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "grefstring.h"
+ 
+diff --git a/glib/gregex.c b/glib/gregex.c
+index cef091e..ad877b9 100644
+--- a/glib/gregex.c
++++ b/glib/gregex.c
+@@ -18,7 +18,7 @@
+  * along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ 
+diff --git a/glib/gscanner.c b/glib/gscanner.c
+index e093bb8..d4bb98f 100644
+--- a/glib/gscanner.c
++++ b/glib/gscanner.c
+@@ -29,7 +29,7 @@
+  * MT safe
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <errno.h>
+ #include <stdlib.h>
+diff --git a/glib/gsequence.c b/glib/gsequence.c
+index c0fa9d6..49bc28c 100644
+--- a/glib/gsequence.c
++++ b/glib/gsequence.c
+@@ -16,7 +16,7 @@
+  * License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gsequence.h"
+ 
+diff --git a/glib/gshell.c b/glib/gshell.c
+index 0c6dc85..31204d8 100644
+--- a/glib/gshell.c
++++ b/glib/gshell.c
+@@ -18,7 +18,7 @@
+  * along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ 
+diff --git a/glib/gslice.c b/glib/gslice.c
+index 4c758c3..d052945 100644
+--- a/glib/gslice.c
++++ b/glib/gslice.c
+@@ -16,7 +16,7 @@
+  */
+ /* MT safe */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "glibconfig.h"
+ 
+ #if defined(HAVE_POSIX_MEMALIGN) && !defined(_XOPEN_SOURCE)
+diff --git a/glib/gslist.c b/glib/gslist.c
+index 8f616cb..2bb49a4 100644
+--- a/glib/gslist.c
++++ b/glib/gslist.c
+@@ -26,7 +26,7 @@
+  * MT safe
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gslist.h"
+ 
+diff --git a/glib/gspawn-private.h b/glib/gspawn-private.h
+index 16f816c..9c7c4ef 100644
+--- a/glib/gspawn-private.h
++++ b/glib/gspawn-private.h
+@@ -18,7 +18,7 @@
+  * along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <errno.h>
+ 
+diff --git a/glib/gspawn-win32-helper.c b/glib/gspawn-win32-helper.c
+index 293d6c0..a0011c6 100644
+--- a/glib/gspawn-win32-helper.c
++++ b/glib/gspawn-win32-helper.c
+@@ -17,7 +17,7 @@
+  * along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <fcntl.h>
+ 
+diff --git a/glib/gspawn-win32.c b/glib/gspawn-win32.c
+index c1b024c..83cb66e 100644
+--- a/glib/gspawn-win32.c
++++ b/glib/gspawn-win32.c
+@@ -40,7 +40,7 @@
+ /* Define this to get some logging all the time */
+ /* #define G_SPAWN_WIN32_DEBUG */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "glib.h"
+ #include "glib-private.h"
+diff --git a/glib/gspawn.c b/glib/gspawn.c
+index 3acd173..e1771ff 100644
+--- a/glib/gspawn.c
++++ b/glib/gspawn.c
+@@ -18,7 +18,7 @@
+  * along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <sys/time.h>
+ #include <sys/types.h>
+diff --git a/glib/gstdio.c b/glib/gstdio.c
+index e9c3f1b..6fe63c0 100644
+--- a/glib/gstdio.c
++++ b/glib/gstdio.c
+@@ -16,7 +16,7 @@
+  * along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "glibconfig.h"
+ 
+ /* Don’t redefine (for example) g_open() to open(), since we actually want to
+diff --git a/glib/gstrfuncs.c b/glib/gstrfuncs.c
+index a37ef89..fc1f298 100644
+--- a/glib/gstrfuncs.c
++++ b/glib/gstrfuncs.c
+@@ -26,7 +26,7 @@
+  * MT safe
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <stdarg.h>
+ #include <stdio.h>
+diff --git a/glib/gstring.c b/glib/gstring.c
+index 24692f1..47c9619 100644
+--- a/glib/gstring.c
++++ b/glib/gstring.c
+@@ -26,7 +26,7 @@
+  * MT safe
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <stdarg.h>
+ #include <stdlib.h>
+diff --git a/glib/gstringchunk.c b/glib/gstringchunk.c
+index 524eadc..e23169f 100644
+--- a/glib/gstringchunk.c
++++ b/glib/gstringchunk.c
+@@ -26,7 +26,7 @@
+  * MT safe
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ 
+diff --git a/glib/gtester.c b/glib/gtester.c
+index fdcdaca..776ba6e 100644
+--- a/glib/gtester.c
++++ b/glib/gtester.c
+@@ -15,7 +15,7 @@
+  * You should have received a copy of the GNU Lesser General Public
+  * License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <glib.h>
+ #include <glib-unix.h>
+diff --git a/glib/gtestutils.c b/glib/gtestutils.c
+index dd78948..e641ad8 100644
+--- a/glib/gtestutils.c
++++ b/glib/gtestutils.c
+@@ -16,7 +16,7 @@
+  * License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gtestutils.h"
+ #include "gfileutils.h"
+diff --git a/glib/gthread-posix.c b/glib/gthread-posix.c
+index 5a30b6d..1eb7aa1 100644
+--- a/glib/gthread-posix.c
++++ b/glib/gthread-posix.c
+@@ -37,7 +37,7 @@
+  * more freedom -- they can do as they please.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gthread.h"
+ 
+@@ -52,6 +52,7 @@
+ #include <stdio.h>
+ #include <string.h>
+ #include <errno.h>
++#define _GNU_SOURCE
+ #include <pthread.h>
+ 
+ #include <sys/time.h>
+diff --git a/glib/gthread-win32.c b/glib/gthread-win32.c
+index 89df0da..63202e1 100644
+--- a/glib/gthread-win32.c
++++ b/glib/gthread-win32.c
+@@ -38,7 +38,7 @@
+  * more freedom -- they can do as they please.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "glib.h"
+ #include "glib-init.h"
+diff --git a/glib/gthread.c b/glib/gthread.c
+index 66e4a1f..e461178 100644
+--- a/glib/gthread.c
++++ b/glib/gthread.c
+@@ -36,7 +36,7 @@
+ #define G_IMPLEMENT_INLINES 1
+ #define __G_THREAD_C__
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gthread.h"
+ #include "gthreadprivate.h"
+diff --git a/glib/gthreadpool.c b/glib/gthreadpool.c
+index 0a5f751..d62a4ba 100644
+--- a/glib/gthreadpool.c
++++ b/glib/gthreadpool.c
+@@ -22,7 +22,7 @@
+  * MT safe
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gthreadpool.h"
+ 
+diff --git a/glib/gtimer.c b/glib/gtimer.c
+index 7d21ba8..7dc7a51 100644
+--- a/glib/gtimer.c
++++ b/glib/gtimer.c
+@@ -26,7 +26,7 @@
+  * MT safe
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include "glibconfig.h"
+ 
+ #include <stdlib.h>
+diff --git a/glib/gtimezone.c b/glib/gtimezone.c
+index e3fec1b..f2061ce 100644
+--- a/glib/gtimezone.c
++++ b/glib/gtimezone.c
+@@ -19,7 +19,7 @@
+ 
+ /* Prologue {{{1 */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gtimezone.h"
+ 
+diff --git a/glib/gtrashstack.c b/glib/gtrashstack.c
+index 8d52268..f7dc578 100644
+--- a/glib/gtrashstack.c
++++ b/glib/gtrashstack.c
+@@ -22,7 +22,7 @@
+  * GLib at ftp://ftp.gtk.org/pub/gtk/. 
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ /* we know we are deprecated here, no need for warnings */
+ #define GLIB_DISABLE_DEPRECATION_WARNINGS
+diff --git a/glib/gtree.c b/glib/gtree.c
+index e8d4e20..f5dc1ba 100644
+--- a/glib/gtree.c
++++ b/glib/gtree.c
+@@ -26,7 +26,7 @@
+  * MT safe
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gtree.h"
+ 
+diff --git a/glib/gunibreak.c b/glib/gunibreak.c
+index 334acd3..2eda26a 100644
+--- a/glib/gunibreak.c
++++ b/glib/gunibreak.c
+@@ -16,7 +16,7 @@
+  * along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <stdlib.h>
+ 
+diff --git a/glib/gunicollate.c b/glib/gunicollate.c
+index f6599f1..dfe889b 100644
+--- a/glib/gunicollate.c
++++ b/glib/gunicollate.c
+@@ -16,7 +16,7 @@
+  * along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <locale.h>
+ #include <string.h>
+diff --git a/glib/gunidecomp.c b/glib/gunidecomp.c
+index 19ecdae..ddd2478 100644
+--- a/glib/gunidecomp.c
++++ b/glib/gunidecomp.c
+@@ -40,7 +40,7 @@
+  * GLib 2.30 supports Unicode 6.0.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <stdlib.h>
+ 
+diff --git a/glib/guniprop.c b/glib/guniprop.c
+index 3d876a5..c787f4e 100644
+--- a/glib/guniprop.c
++++ b/glib/guniprop.c
+@@ -17,7 +17,7 @@
+  * License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <stdlib.h>
+ #include <stddef.h>
+diff --git a/glib/gurifuncs.c b/glib/gurifuncs.c
+index a613c04..f2a2a85 100644
+--- a/glib/gurifuncs.c
++++ b/glib/gurifuncs.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gurifuncs.h"
+ 
+@@ -29,7 +29,7 @@
+ 
+ #include <string.h>
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ /**
+  * SECTION:gurifuncs
+diff --git a/glib/gutf8.c b/glib/gutf8.c
+index 01cb446..2e4f8fa 100644
+--- a/glib/gutf8.c
++++ b/glib/gutf8.c
+@@ -17,7 +17,7 @@
+  * License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <stdlib.h>
+ #ifdef HAVE_CODESET
+diff --git a/glib/gutils.c b/glib/gutils.c
+index 988d0a5..17b4bff 100644
+--- a/glib/gutils.c
++++ b/glib/gutils.c
+@@ -26,7 +26,7 @@
+  * MT safe for the unix part, FIXME: make the win32 part MT safe as well.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gutils.h"
+ #include "gutilsprivate.h"
+diff --git a/glib/guuid.c b/glib/guuid.c
+index 1adc6c8..35c8c0d 100644
+--- a/glib/guuid.c
++++ b/glib/guuid.c
+@@ -20,7 +20,7 @@
+  * Authors: Marc-André Lureau <marcandre.lureau@redhat.com>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include <string.h>
+ 
+ #include "gi18n.h"
+diff --git a/glib/gvariant-core.c b/glib/gvariant-core.c
+index 9397573..c9e3a4e 100644
+--- a/glib/gvariant-core.c
++++ b/glib/gvariant-core.c
+@@ -16,7 +16,7 @@
+  * License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <glib/gvariant-core.h>
+ 
+diff --git a/glib/gvariant-parser.c b/glib/gvariant-parser.c
+index 7d481f4..74ba7c3 100644
+--- a/glib/gvariant-parser.c
++++ b/glib/gvariant-parser.c
+@@ -17,7 +17,7 @@
+  * Author: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <stdlib.h>
+ #include <string.h>
+diff --git a/glib/gvariant-serialiser.c b/glib/gvariant-serialiser.c
+index 83e9d85..d63fa5c 100644
+--- a/glib/gvariant-serialiser.c
++++ b/glib/gvariant-serialiser.c
+@@ -19,7 +19,7 @@
+  */
+ 
+ /* Prologue {{{1 */
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gvariant-serialiser.h"
+ 
+diff --git a/glib/gvariant.c b/glib/gvariant.c
+index b61bf72..4e44bb4 100644
+--- a/glib/gvariant.c
++++ b/glib/gvariant.c
+@@ -20,7 +20,7 @@
+ 
+ /* Prologue {{{1 */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <glib/gvariant-serialiser.h>
+ #include "gvariant-internal.h"
+diff --git a/glib/gvarianttype.c b/glib/gvarianttype.c
+index 1a228f7..217efac 100644
+--- a/glib/gvarianttype.c
++++ b/glib/gvarianttype.c
+@@ -18,7 +18,7 @@
+  * Author: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gvarianttype.h"
+ 
+diff --git a/glib/gvarianttypeinfo.c b/glib/gvarianttypeinfo.c
+index 087294a..ef9debd 100644
+--- a/glib/gvarianttypeinfo.c
++++ b/glib/gvarianttypeinfo.c
+@@ -18,7 +18,7 @@
+  * Author: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gvarianttypeinfo.h"
+ 
+diff --git a/glib/gversion.c b/glib/gversion.c
+index 02acb7d..ace8737 100644
+--- a/glib/gversion.c
++++ b/glib/gversion.c
+@@ -22,7 +22,7 @@
+  * GLib at ftp://ftp.gtk.org/pub/gtk/. 
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gversion.h"
+ 
+diff --git a/glib/gwakeup.c b/glib/gwakeup.c
+index f106248..36b154f 100644
+--- a/glib/gwakeup.c
++++ b/glib/gwakeup.c
+@@ -17,7 +17,7 @@
+  * Author: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ 
+ /* gwakeup.c is special -- GIO and some test cases include it.  As such,
+diff --git a/glib/gwin32.c b/glib/gwin32.c
+index 2f2fe05..e4194aa 100644
+--- a/glib/gwin32.c
++++ b/glib/gwin32.c
+@@ -27,7 +27,7 @@
+  * MT safe for the unix part, FIXME: make the win32 part MT safe as well.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "glibconfig.h"
+ 
+diff --git a/glib/libcharset/localcharset.c b/glib/libcharset/localcharset.c
+index ab3a267..f105aa5 100644
+--- a/glib/libcharset/localcharset.c
++++ b/glib/libcharset/localcharset.c
+@@ -19,7 +19,7 @@
+ 
+ /* Written by Bruno Haible <bruno@clisp.org>.  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ /* Specification.  */
+ #include "localcharset.h"
+diff --git a/glib/pcre/pcre_byte_order.c b/glib/pcre/pcre_byte_order.c
+index 4f21433..2cdcd5e 100644
+--- a/glib/pcre/pcre_byte_order.c
++++ b/glib/pcre/pcre_byte_order.c
+@@ -43,7 +43,7 @@ see if it was compiled with the opposite endianness. If so, it uses an
+ auxiliary local function to flip the appropriate bytes. */
+ 
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "pcre_internal.h"
+ 
+diff --git a/glib/pcre/pcre_chartables.c b/glib/pcre/pcre_chartables.c
+index 293b16b..1965791 100644
+--- a/glib/pcre/pcre_chartables.c
++++ b/glib/pcre/pcre_chartables.c
+@@ -20,7 +20,7 @@ and dead code stripping is activated. This leads to link errors. Pulling in the
+ header ensures that the array gets flagged as "someone outside this compilation
+ unit might reference this" and so it will always be supplied to the linker. */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "pcre_internal.h"
+ 
+diff --git a/glib/pcre/pcre_compile.c b/glib/pcre/pcre_compile.c
+index 12e09c4..2884cc5 100644
+--- a/glib/pcre/pcre_compile.c
++++ b/glib/pcre/pcre_compile.c
+@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
+ supporting internal functions that are not used by other modules. */
+ 
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #define NLBLOCK cd             /* Block containing newline information */
+ #define PSSTART start_pattern  /* Field containing processed string start */
+diff --git a/glib/pcre/pcre_config.c b/glib/pcre/pcre_config.c
+index 3471959..4741b08 100644
+--- a/glib/pcre/pcre_config.c
++++ b/glib/pcre/pcre_config.c
+@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
+ /* This module contains the external function pcre_config(). */
+ 
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ /* Keep the original link size. */
+ static int real_link_size = LINK_SIZE;
+diff --git a/glib/pcre/pcre_dfa_exec.c b/glib/pcre/pcre_dfa_exec.c
+index 9cc8232..e28cbe1 100644
+--- a/glib/pcre/pcre_dfa_exec.c
++++ b/glib/pcre/pcre_dfa_exec.c
+@@ -72,7 +72,7 @@ in others, so I abandoned this code. */
+ 
+ 
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #define NLBLOCK md             /* Block containing newline information */
+ #define PSSTART start_subject  /* Field containing processed string start */
+diff --git a/glib/pcre/pcre_exec.c b/glib/pcre/pcre_exec.c
+index 4ba3eda..ae84ca2 100644
+--- a/glib/pcre/pcre_exec.c
++++ b/glib/pcre/pcre_exec.c
+@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
+ pattern matching using an NFA algorithm, trying to mimic Perl as closely as
+ possible. There are also some static supporting functions. */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #define NLBLOCK md             /* Block containing newline information */
+ #define PSSTART start_subject  /* Field containing processed string start */
+diff --git a/glib/pcre/pcre_fullinfo.c b/glib/pcre/pcre_fullinfo.c
+index 2fe785a..c8dac89 100644
+--- a/glib/pcre/pcre_fullinfo.c
++++ b/glib/pcre/pcre_fullinfo.c
+@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
+ information about a compiled pattern. */
+ 
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "pcre_internal.h"
+ 
+diff --git a/glib/pcre/pcre_get.c b/glib/pcre/pcre_get.c
+index 61147ef..e5bdbdc 100644
+--- a/glib/pcre/pcre_get.c
++++ b/glib/pcre/pcre_get.c
+@@ -43,7 +43,7 @@ from the subject string after a regex match has succeeded. The original idea
+ for these functions came from Scott Wimer. */
+ 
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "pcre_internal.h"
+ 
+diff --git a/glib/pcre/pcre_globals.c b/glib/pcre/pcre_globals.c
+index 383ec73..bfe3d47 100644
+--- a/glib/pcre/pcre_globals.c
++++ b/glib/pcre/pcre_globals.c
+@@ -52,7 +52,7 @@ a local function is used.
+ Also, when compiling for Virtual Pascal, things are done differently, and
+ global variables are not used. */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "pcre_internal.h"
+ 
+diff --git a/glib/pcre/pcre_jit_compile.c b/glib/pcre/pcre_jit_compile.c
+index d723383..672ba49 100644
+--- a/glib/pcre/pcre_jit_compile.c
++++ b/glib/pcre/pcre_jit_compile.c
+@@ -40,7 +40,7 @@ POSSIBILITY OF SUCH DAMAGE.
+ -----------------------------------------------------------------------------
+ */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "pcre_internal.h"
+ 
+diff --git a/glib/pcre/pcre_newline.c b/glib/pcre/pcre_newline.c
+index ddd7708..a5f7e65 100644
+--- a/glib/pcre/pcre_newline.c
++++ b/glib/pcre/pcre_newline.c
+@@ -47,7 +47,7 @@ and NLTYPE_ANY. The full list of Unicode newline characters is taken from
+ http://unicode.org/unicode/reports/tr18/. */
+ 
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "pcre_internal.h"
+ 
+diff --git a/glib/pcre/pcre_ord2utf8.c b/glib/pcre/pcre_ord2utf8.c
+index 71fd587..976d09e 100644
+--- a/glib/pcre/pcre_ord2utf8.c
++++ b/glib/pcre/pcre_ord2utf8.c
+@@ -41,7 +41,7 @@ POSSIBILITY OF SUCH DAMAGE.
+ /* This file contains a private PCRE function that converts an ordinal
+ character value into a UTF8 string. */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "pcre_internal.h"
+ 
+diff --git a/glib/pcre/pcre_string_utils.c b/glib/pcre/pcre_string_utils.c
+index 38cc2f9..f6e7d1b 100644
+--- a/glib/pcre/pcre_string_utils.c
++++ b/glib/pcre/pcre_string_utils.c
+@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
+ class. It is used by both pcre_exec() and pcre_def_exec(). */
+ 
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "pcre_internal.h"
+ 
+diff --git a/glib/pcre/pcre_study.c b/glib/pcre/pcre_study.c
+index ee09307..11cf4fa 100644
+--- a/glib/pcre/pcre_study.c
++++ b/glib/pcre/pcre_study.c
+@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
+ supporting functions. */
+ 
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "pcre_internal.h"
+ 
+diff --git a/glib/pcre/pcre_tables.c b/glib/pcre/pcre_tables.c
+index abcc96e..836a863 100644
+--- a/glib/pcre/pcre_tables.c
++++ b/glib/pcre/pcre_tables.c
+@@ -45,7 +45,7 @@ uses macros to change their names from _pcre_xxx to xxxx, thereby avoiding name
+ clashes with the library. */
+ 
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "pcre_internal.h"
+ 
+diff --git a/glib/pcre/pcre_valid_utf8.c b/glib/pcre/pcre_valid_utf8.c
+index cecaf34..5b22c9f 100644
+--- a/glib/pcre/pcre_valid_utf8.c
++++ b/glib/pcre/pcre_valid_utf8.c
+@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
+ strings. */
+ 
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "pcre_internal.h"
+ 
+diff --git a/glib/pcre/pcre_version.c b/glib/pcre/pcre_version.c
+index 3dd60a5..61cebf9 100644
+--- a/glib/pcre/pcre_version.c
++++ b/glib/pcre/pcre_version.c
+@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
+ string that identifies the PCRE version that is in use. */
+ 
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "pcre_internal.h"
+ 
+diff --git a/glib/pcre/pcre_xclass.c b/glib/pcre/pcre_xclass.c
+index 89ad09f..cab36a5 100644
+--- a/glib/pcre/pcre_xclass.c
++++ b/glib/pcre/pcre_xclass.c
+@@ -42,7 +42,7 @@ POSSIBILITY OF SUCH DAMAGE.
+ class. It is used by both pcre_exec() and pcre_def_exec(). */
+ 
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "pcre_internal.h"
+ 
+diff --git a/glib/tests/1bit-mutex.c b/glib/tests/1bit-mutex.c
+index 9a5252c..576f4ac 100644
+--- a/glib/tests/1bit-mutex.c
++++ b/glib/tests/1bit-mutex.c
+@@ -10,7 +10,7 @@
+  * See the included COPYING file for more information.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ /* LOCKS should be more than the number of contention
+  * counters in gthread.c in order to ensure we exercise
+diff --git a/glib/tests/collate.c b/glib/tests/collate.c
+index 0c0e1bb..38abb5c 100644
+--- a/glib/tests/collate.c
++++ b/glib/tests/collate.c
+@@ -1,4 +1,4 @@
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <glib.h>
+ #include <locale.h>
+diff --git a/glib/tests/date.c b/glib/tests/date.c
+index ff13ad1..8cb3ecd 100644
+--- a/glib/tests/date.c
++++ b/glib/tests/date.c
+@@ -4,7 +4,7 @@
+ /* We are testing some deprecated APIs here */
+ #define GLIB_DISABLE_DEPRECATION_WARNINGS
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "glib.h"
+ 
+diff --git a/glib/tests/fileutils.c b/glib/tests/fileutils.c
+index 6a4c268..894cd4c 100644
+--- a/glib/tests/fileutils.c
++++ b/glib/tests/fileutils.c
+@@ -19,7 +19,7 @@
+  * if advised of the possibility of such damage.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include <string.h>
+ #include <errno.h>
+ 
+diff --git a/glib/tests/gdatetime.c b/glib/tests/gdatetime.c
+index 2f0be31..a26636b 100644
+--- a/glib/tests/gdatetime.c
++++ b/glib/tests/gdatetime.c
+@@ -16,7 +16,7 @@
+  * along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ #include <time.h>
+diff --git a/glib/tests/guuid.c b/glib/tests/guuid.c
+index 41e2c81..4b31765 100644
+--- a/glib/tests/guuid.c
++++ b/glib/tests/guuid.c
+@@ -17,7 +17,7 @@
+  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #undef G_DISABLE_ASSERT
+ 
+diff --git a/glib/tests/gvariant.c b/glib/tests/gvariant.c
+index 0e5ec8e..ad8aa14 100644
+--- a/glib/tests/gvariant.c
++++ b/glib/tests/gvariant.c
+@@ -11,7 +11,7 @@
+  * Author: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <glib/gvariant-internal.h>
+ #include <string.h>
+diff --git a/glib/tests/option-argv0.c b/glib/tests/option-argv0.c
+index 5b626df..e2ddc0c 100644
+--- a/glib/tests/option-argv0.c
++++ b/glib/tests/option-argv0.c
+@@ -21,7 +21,7 @@
+  * Authors: Colin Walters <walters@verbum.org>
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ #include <glib.h>
+ 
+ #include <stdlib.h>
+diff --git a/glib/tests/regex.c b/glib/tests/regex.c
+index 56bd2d5..855e3d4 100644
+--- a/glib/tests/regex.c
++++ b/glib/tests/regex.c
+@@ -19,7 +19,7 @@
+ #undef G_DISABLE_ASSERT
+ #undef G_LOG_DOMAIN
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ #include <locale.h>
+diff --git a/glib/tests/search-utils.c b/glib/tests/search-utils.c
+index 54926d5..5f8e019 100644
+--- a/glib/tests/search-utils.c
++++ b/glib/tests/search-utils.c
+@@ -1,4 +1,4 @@
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <locale.h>
+ #include <glib.h>
+diff --git a/glib/tests/spawn-multithreaded.c b/glib/tests/spawn-multithreaded.c
+index 99f99b4..5f2203d 100644
+--- a/glib/tests/spawn-multithreaded.c
++++ b/glib/tests/spawn-multithreaded.c
+@@ -21,7 +21,7 @@
+  * Author: Colin Walters <walters@verbum.org> 
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <glib.h>
+ #include <string.h>
+diff --git a/glib/tests/spawn-singlethread.c b/glib/tests/spawn-singlethread.c
+index 15f03a0..9a9148a 100644
+--- a/glib/tests/spawn-singlethread.c
++++ b/glib/tests/spawn-singlethread.c
+@@ -21,7 +21,7 @@
+  * Author: Colin Walters <walters@verbum.org> 
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <glib.h>
+ #include <string.h>
+diff --git a/glib/tests/test-spawn-echo.c b/glib/tests/test-spawn-echo.c
+index cb387ba..d6bc97d 100644
+--- a/glib/tests/test-spawn-echo.c
++++ b/glib/tests/test-spawn-echo.c
+@@ -21,7 +21,7 @@
+  * Author: Colin Walters <walters@verbum.org> 
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "glib.h"
+ 
+diff --git a/glib/tests/testing.c b/glib/tests/testing.c
+index 98fe66f..a3c698e 100644
+--- a/glib/tests/testing.c
++++ b/glib/tests/testing.c
+@@ -20,7 +20,7 @@
+  * if advised of the possibility of such damage.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ /* We want to distinguish between messages originating from libglib
+  * and messages originating from this program.
+diff --git a/glib/tests/unix.c b/glib/tests/unix.c
+index 82ffd0f..a1eafe9 100644
+--- a/glib/tests/unix.c
++++ b/glib/tests/unix.c
+@@ -21,7 +21,7 @@
+  * Author: Colin Walters <walters@verbum.org> 
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "glib-unix.h"
+ #include <string.h>
+diff --git a/glib/tests/win32.c b/glib/tests/win32.c
+index a6ba4e2..378fc6c 100644
+--- a/glib/tests/win32.c
++++ b/glib/tests/win32.c
+@@ -19,7 +19,7 @@
+  * if advised of the possibility of such damage.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <glib.h>
+ #include <gprintf.h>
+diff --git a/gmodule/gmodule-ar.c b/gmodule/gmodule-ar.c
+index 3301c47..291c4f5 100644
+--- a/gmodule/gmodule-ar.c
++++ b/gmodule/gmodule-ar.c
+@@ -23,7 +23,7 @@
+ 
+ #define __AR_BIG__
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <ar.h>
+ #include <stdlib.h>
+diff --git a/gmodule/gmodule-dl.c b/gmodule/gmodule-dl.c
+index 5d0200c..978d241 100644
+--- a/gmodule/gmodule-dl.c
++++ b/gmodule/gmodule-dl.c
+@@ -25,7 +25,7 @@
+ /* 
+  * MT safe
+  */
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <dlfcn.h>
+ 
+diff --git a/gmodule/gmodule-dyld.c b/gmodule/gmodule-dyld.c
+index 764ac83..1f306df 100644
+--- a/gmodule/gmodule-dyld.c
++++ b/gmodule/gmodule-dyld.c
+@@ -17,7 +17,7 @@
+  * You should have received a copy of the GNU Lesser General Public
+  * License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <mach-o/dyld.h>
+ 
+diff --git a/gmodule/gmodule-win32.c b/gmodule/gmodule-win32.c
+index 795dc09..f344d46 100644
+--- a/gmodule/gmodule-win32.c
++++ b/gmodule/gmodule-win32.c
+@@ -28,7 +28,7 @@
+ /* 
+  * MT safe
+  */
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <stdio.h>
+ #include <windows.h>
+diff --git a/gmodule/gmodule.c b/gmodule/gmodule.c
+index 886eb85..7956eba 100644
+--- a/gmodule/gmodule.c
++++ b/gmodule/gmodule.c
+@@ -26,7 +26,7 @@
+  * MT safe
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "glib.h"
+ #include "gmodule.h"
+diff --git a/gobject/gatomicarray.c b/gobject/gatomicarray.c
+index 5ebf6b8..0c42172 100644
+--- a/gobject/gatomicarray.c
++++ b/gobject/gatomicarray.c
+@@ -15,7 +15,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ 
+diff --git a/gobject/gbinding.c b/gobject/gbinding.c
+index 16942c2..55884bc 100644
+--- a/gobject/gbinding.c
++++ b/gobject/gbinding.c
+@@ -102,7 +102,7 @@
+  * #GBinding is available since GObject 2.26
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ 
+diff --git a/gobject/gboxed.c b/gobject/gboxed.c
+index 4404de3..73295f9 100644
+--- a/gobject/gboxed.c
++++ b/gobject/gboxed.c
+@@ -15,7 +15,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ 
+diff --git a/gobject/gclosure.c b/gobject/gclosure.c
+index 472f037..22f1558 100644
+--- a/gobject/gclosure.c
++++ b/gobject/gclosure.c
+@@ -20,7 +20,7 @@
+  * MT safe with regards to reference counting.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "../glib/gvalgrind.h"
+ #include <string.h>
+diff --git a/gobject/genums.c b/gobject/genums.c
+index f783700..5752fd2 100644
+--- a/gobject/genums.c
++++ b/gobject/genums.c
+@@ -19,7 +19,7 @@
+  * MT safe
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ 
+diff --git a/gobject/glib-enumtypes.c.template b/gobject/glib-enumtypes.c.template
+index b7d3672..637f33c 100644
+--- a/gobject/glib-enumtypes.c.template
++++ b/gobject/glib-enumtypes.c.template
+@@ -1,5 +1,5 @@
+ /*** BEGIN file-header ***/
+-#include "config.h"
++#include <config_gg.h>
+ #include "glib-enumtypes.h"
+ #include <glib-object.h>
+ 
+diff --git a/gobject/gmarshal.c b/gobject/gmarshal.c
+index 0c729b4..0356b6e 100644
+--- a/gobject/gmarshal.c
++++ b/gobject/gmarshal.c
+@@ -14,7 +14,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gobject.h"
+ #include "genums.h"
+diff --git a/gobject/gobject-query.c b/gobject/gobject-query.c
+index fd45fba..a878bb3 100644
+--- a/gobject/gobject-query.c
++++ b/gobject/gobject-query.c
+@@ -15,7 +15,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <stdlib.h>
+ #include <string.h>
+diff --git a/gobject/gobject.c b/gobject/gobject.c
+index df27c36..0670706 100644
+--- a/gobject/gobject.c
++++ b/gobject/gobject.c
+@@ -19,7 +19,7 @@
+  * MT safe with regards to reference counting.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ #include <signal.h>
+diff --git a/gobject/gparam.c b/gobject/gparam.c
+index 5aa54c0..3078238 100644
+--- a/gobject/gparam.c
++++ b/gobject/gparam.c
+@@ -19,7 +19,7 @@
+  * MT safe
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ 
+diff --git a/gobject/gparamspecs.c b/gobject/gparamspecs.c
+index 5d15c26..09685e2 100644
+--- a/gobject/gparamspecs.c
++++ b/gobject/gparamspecs.c
+@@ -20,7 +20,7 @@
+  * MT safe
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ 
+diff --git a/gobject/gsignal.c b/gobject/gsignal.c
+index 77d8f21..cb8b42d 100644
+--- a/gobject/gsignal.c
++++ b/gobject/gsignal.c
+@@ -22,7 +22,7 @@
+  * MT safe
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ #include <signal.h>
+diff --git a/gobject/gsourceclosure.c b/gobject/gsourceclosure.c
+index 0d0d2e8..ba821a4 100644
+--- a/gobject/gsourceclosure.c
++++ b/gobject/gsourceclosure.c
+@@ -15,7 +15,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gsourceclosure.h"
+ #include "gboxed.h"
+diff --git a/gobject/gtype.c b/gobject/gtype.c
+index 7d37894..a0f4bdf 100644
+--- a/gobject/gtype.c
++++ b/gobject/gtype.c
+@@ -19,7 +19,7 @@
+  * MT safe
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "../glib/gvalgrind.h"
+ #include <string.h>
+diff --git a/gobject/gtypemodule.c b/gobject/gtypemodule.c
+index 4ecaf8c..7123587 100644
+--- a/gobject/gtypemodule.c
++++ b/gobject/gtypemodule.c
+@@ -15,7 +15,7 @@
+  * License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <stdlib.h>
+ 
+diff --git a/gobject/gtypeplugin.c b/gobject/gtypeplugin.c
+index 9068b05..3981a7f 100644
+--- a/gobject/gtypeplugin.c
++++ b/gobject/gtypeplugin.c
+@@ -15,7 +15,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include "gtypeplugin.h"
+ 
+diff --git a/gobject/gvalue.c b/gobject/gvalue.c
+index 6d10f61..e1214ae 100644
+--- a/gobject/gvalue.c
++++ b/gobject/gvalue.c
+@@ -19,7 +19,7 @@
+  * FIXME: MT-safety
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ 
+diff --git a/gobject/gvaluearray.c b/gobject/gvaluearray.c
+index 83e03f7..1a8b91f 100644
+--- a/gobject/gvaluearray.c
++++ b/gobject/gvaluearray.c
+@@ -19,7 +19,7 @@
+  * MT safe
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ #include <stdlib.h>  /* qsort() */
+diff --git a/gobject/gvaluetransform.c b/gobject/gvaluetransform.c
+index a346a54..692f291 100644
+--- a/gobject/gvaluetransform.c
++++ b/gobject/gvaluetransform.c
+@@ -15,7 +15,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ 
+diff --git a/gobject/gvaluetypes.c b/gobject/gvaluetypes.c
+index 35b85c6..9c1b080 100644
+--- a/gobject/gvaluetypes.c
++++ b/gobject/gvaluetypes.c
+@@ -20,7 +20,7 @@
+  * MT safe
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <string.h>
+ #include <stdlib.h> /* qsort() */
+diff --git a/gthread/gthread-impl.c b/gthread/gthread-impl.c
+index 266dd84..d1a69f6 100644
+--- a/gthread/gthread-impl.c
++++ b/gthread/gthread-impl.c
+@@ -29,7 +29,7 @@
+  * MT safe
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <glib.h>
+ 
+diff --git a/tests/gio-test.c b/tests/gio-test.c
+index 03472ac..b204bfd 100644
+--- a/tests/gio-test.c
++++ b/tests/gio-test.c
+@@ -22,7 +22,7 @@
+ #undef G_DISABLE_ASSERT
+ #undef G_LOG_DOMAIN
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <glib.h>
+ 
+diff --git a/tests/memchunks.c b/tests/memchunks.c
+index fae7c41..790c945 100644
+--- a/tests/memchunks.c
++++ b/tests/memchunks.c
+@@ -26,7 +26,7 @@
+  * MT safe
+  */
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <stdlib.h>
+ #include <string.h>
+diff --git a/tests/threadpool-test.c b/tests/threadpool-test.c
+index 1c8aa06..21fb44e 100644
+--- a/tests/threadpool-test.c
++++ b/tests/threadpool-test.c
+@@ -1,7 +1,7 @@
+ #undef G_DISABLE_ASSERT
+ #undef G_LOG_DOMAIN
+ 
+-#include "config.h"
++#include <config_gg.h>
+ 
+ #include <glib.h>
+ 
