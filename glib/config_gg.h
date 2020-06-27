@@ -5,6 +5,19 @@
 
 #pragma once
 
+
+#define __USE_UNIX98
+#define _USE_UNIX98
+
+
+//#define USE_NATIVE_MUTEX
+
+
+#ifndef HOST_NAME_MAX                     
+    #define HOST_NAME_MAX 255
+#endif                                   
+
+
 #define ALIGNOF_GUINT32 4
 
 #define ALIGNOF_GUINT64 8
@@ -55,7 +68,7 @@
 
 #define HAVE_EVENTFD 1
 
-#define HAVE_FALLOCATE 1
+//#define HAVE_FALLOCATE 1
 
 #define HAVE_FCHMOD 1
 
@@ -227,7 +240,7 @@
 
 #define HAVE_STATVFS 1
 
-//#define HAVE_STDINT_H 1
+#define HAVE_STDINT_H 1
 
 #define HAVE_STDINT_H_WITH_UINTMAX 1
 
@@ -386,7 +399,7 @@
 
 #define _GLIB_EXTERN __attribute__((visibility("default"))) extern
 
-#define _GNU_SOURCE 1
+//#define _GNU_SOURCE 1
 
 #define gl_extern_inline 
 
