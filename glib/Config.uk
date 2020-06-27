@@ -5,5 +5,5 @@ config LIBGLIB
            select LIBUKMMAP       
            select LIBPOSIX_SYSINFO
            select LIBNEWLIBC      
-           select LIBPTHREAD-EMBEDDED
+           select LIBPTHREAD_EMBEDDED
 
