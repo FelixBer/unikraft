@@ -32,8 +32,8 @@ CINCLUDES-$(CONFIG_LIBJSONC) += -I$(LIBJSONC_SRC)
 LIBJSONC_FLAGS = -D_GNU_SOURCE 
 
 # Suppress some warnings to make the build process look neater
-LIBJSONC_SUPPRESS_FLAGS-y += -Wcast-qual -Wno-error=deprecated-declarations -Wextra  \
- -Wwrite-strings -Wno-unused-parameter -Wstrict-prototypes
+LIBJSONC_SUPPRESS_FLAGS-y += -Wno-cast-qual -Wno-error=deprecated-declarations \
+ -Wno-write-strings -Wno-unused-parameter -Wno-strict-prototypes
 
 LIBJSONC_CFLAGS-y += $(LIBJSONC_FLAGS)
 LIBJSONC_CFLAGS-y += $(LIBJSONC_SUPPRESS_FLAGS-y)
