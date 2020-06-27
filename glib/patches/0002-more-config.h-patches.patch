@@ -1,0 +1,376 @@
+diff --git a/gio/gemblem.c b/gio/gemblem.c
+index e8c4d4e..2b21881 100644
+--- a/gio/gemblem.c
++++ b/gio/gemblem.c
+@@ -16,7 +16,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include <config.h>
++#include <config_gg.h>
+ 
+ #include "gicon.h"
+ #include "gemblem.h"
+diff --git a/gio/gemblemedicon.c b/gio/gemblemedicon.c
+index 42d013d..cb07744 100644
+--- a/gio/gemblemedicon.c
++++ b/gio/gemblemedicon.c
+@@ -21,7 +21,7 @@
+  *         Clemens N. Buss <cebuzz@gmail.com>
+  */
+ 
+-#include <config.h>
++#include <config_gg.h>
+ 
+ #include <string.h>
+ 
+diff --git a/gio/ginetaddress.c b/gio/ginetaddress.c
+index 787c757..b281257 100644
+--- a/gio/ginetaddress.c
++++ b/gio/ginetaddress.c
+@@ -19,7 +19,7 @@
+  *          Samuel Cormier-Iijima <sciyoshi@gmail.com>
+  */
+ 
+-#include <config.h>
++#include <config_gg.h>
+ 
+ #include <string.h>
+ 
+diff --git a/gio/ginetaddressmask.c b/gio/ginetaddressmask.c
+index 058595e..50d5d52 100644
+--- a/gio/ginetaddressmask.c
++++ b/gio/ginetaddressmask.c
+@@ -16,7 +16,7 @@
+  * Public License along with this library; if not, see <http://www.gnu.org/licenses/>.
+  */
+ 
+-#include <config.h>
++#include <config_gg.h>
+ 
+ #include <stdlib.h>
+ #include <string.h>
+diff --git a/gio/ginetsocketaddress.c b/gio/ginetsocketaddress.c
+index 81a527f..89ad9f2 100644
+--- a/gio/ginetsocketaddress.c
++++ b/gio/ginetsocketaddress.c
+@@ -19,7 +19,7 @@
+  *          Samuel Cormier-Iijima <sciyoshi@gmail.com>
+  */
+ 
+-#include <config.h>
++#include <config_gg.h>
+ #include <glib.h>
+ #include <string.h>
+ 
+diff --git a/gio/gnativesocketaddress.c b/gio/gnativesocketaddress.c
+index ac2ce62..d1eeea8 100644
+--- a/gio/gnativesocketaddress.c
++++ b/gio/gnativesocketaddress.c
+@@ -19,7 +19,7 @@
+  *          Samuel Cormier-Iijima <sciyoshi@gmail.com>
+  */
+ 
+-#include <config.h>
++#include <config_gg.h>
+ #include <glib.h>
+ #include <string.h>
+ 
+diff --git a/gio/gproxyaddress.c b/gio/gproxyaddress.c
+index 0b78caa..95b02a5 100644
+--- a/gio/gproxyaddress.c
++++ b/gio/gproxyaddress.c
+@@ -18,7 +18,7 @@
+  * Authors: Nicolas Dufresne <nicolas.dufresne@collabora.co.uk>
+  */
+ 
+-#include <config.h>
++#include <config_gg.h>
+ #include <glib.h>
+ #include <string.h>
+ 
+diff --git a/gio/gsocketaddress.c b/gio/gsocketaddress.c
+index 848e37b..ced94fb 100644
+--- a/gio/gsocketaddress.c
++++ b/gio/gsocketaddress.c
+@@ -19,7 +19,7 @@
+  *          Samuel Cormier-Iijima <sciyoshi@gmail.com>
+  */
+ 
+-#include <config.h>
++#include <config_gg.h>
+ #include <glib.h>
+ #include <string.h>
+ 
+diff --git a/gio/gunixsocketaddress.c b/gio/gunixsocketaddress.c
+index 27e195e..817daf4 100644
+--- a/gio/gunixsocketaddress.c
++++ b/gio/gunixsocketaddress.c
+@@ -19,7 +19,7 @@
+  *          Samuel Cormier-Iijima <sciyoshi@gmail.com>
+  */
+ 
+-#include <config.h>
++#include <config_gg.h>
+ #include <glib.h>
+ #include <string.h>
+ 
+diff --git a/gio/tests/filter-cat.c b/gio/tests/filter-cat.c
+index 2cd02b7..16d8472 100644
+--- a/gio/tests/filter-cat.c
++++ b/gio/tests/filter-cat.c
+@@ -18,7 +18,7 @@
+  * Author: Alexander Larsson <alexl@redhat.com>
+  */
+ 
+-#include <config.h>
++#include <config_gg.h>
+ 
+ #include <stdio.h>
+ #include <locale.h>
+diff --git a/gio/tests/gdbus-close-pending.c b/gio/tests/gdbus-close-pending.c
+index d2c5b62..c1ff9e3 100644
+--- a/gio/tests/gdbus-close-pending.c
++++ b/gio/tests/gdbus-close-pending.c
+@@ -19,7 +19,7 @@
+  * Author: Simon McVittie <simon.mcvittie@collabora.co.uk>
+  */
+ 
+-#include <config.h>
++#include <config_gg.h>
+ 
+ #include <stdlib.h>
+ #include <string.h>
+diff --git a/gio/tests/gdbus-connection-flush.c b/gio/tests/gdbus-connection-flush.c
+index 39f08e8..3f1bf84 100644
+--- a/gio/tests/gdbus-connection-flush.c
++++ b/gio/tests/gdbus-connection-flush.c
+@@ -19,7 +19,7 @@
+  * Author: Simon McVittie <simon.mcvittie@collabora.co.uk>
+  */
+ 
+-#include <config.h>
++#include <config_gg.h>
+ 
+ #include <unistd.h>
+ #include <string.h>
+diff --git a/gio/tests/gdbus-proxy-threads.c b/gio/tests/gdbus-proxy-threads.c
+index 75ed21d..f55217c 100644
+--- a/gio/tests/gdbus-proxy-threads.c
++++ b/gio/tests/gdbus-proxy-threads.c
+@@ -19,7 +19,7 @@
+  * Author: Simon McVittie <simon.mcvittie@collabora.co.uk>
+  */
+ 
+-#include <config.h>
++#include <config_gg.h>
+ 
+ #include <unistd.h>
+ #include <string.h>
+diff --git a/glib/gnulib/asnprintf.c b/glib/gnulib/asnprintf.c
+index 37ecbf6..21be35f 100644
+--- a/glib/gnulib/asnprintf.c
++++ b/glib/gnulib/asnprintf.c
+@@ -14,7 +14,7 @@
+    You should have received a copy of the GNU Lesser General Public License along
+    with this program; if not, see <https://www.gnu.org/licenses/>.  */
+ 
+-#include <config.h>
++#include <config_gg.h>
+ 
+ #include "g-gnulib.h"
+ 
+diff --git a/glib/gnulib/frexp.c b/glib/gnulib/frexp.c
+index c26d82c..5430afb 100644
+--- a/glib/gnulib/frexp.c
++++ b/glib/gnulib/frexp.c
+@@ -1,4 +1,4 @@
+-#include <config.h>
++#include <config_gg.h>
+ 
+ /* Specification.  */
+ #include <gnulib_math.h>
+diff --git a/glib/gnulib/frexpl.c b/glib/gnulib/frexpl.c
+index cd6a81c..6276129 100644
+--- a/glib/gnulib/frexpl.c
++++ b/glib/gnulib/frexpl.c
+@@ -1,4 +1,4 @@
+-#include <config.h>
++#include <config_gg.h>
+ #include <gnulib_math.h>
+ #include <float.h>
+ #include <math.h>
+diff --git a/glib/gnulib/glib-gnulib.patch b/glib/gnulib/glib-gnulib.patch
+index 9cdce0a..66ffde0 100644
+--- a/glib/gnulib/glib-gnulib.patch
++++ b/glib/gnulib/glib-gnulib.patch
+@@ -26,7 +26,7 @@ Here are explanations for some of them:
+ +++ glib-82c3e92/glib/gnulib/asnprintf.c	2019-02-09 10:08:46.444859600 +0000
+ @@ -16,6 +16,8 @@
+  
+- #include <config.h>
++ #include <config_gg.h>
+  
+ +#include "g-gnulib.h"
+ +
+@@ -39,7 +39,7 @@ Here are explanations for some of them:
+  
+  /* Written by Bruno Haible <bruno@clisp.org>, 2008.  */
+  
+-+#include <config.h>
+++#include <config_gg.h>
+ +#include "gnulib_math.h"
+ +#include "isnand-nolibm.h"
+  #include "isnan.c"
+@@ -60,7 +60,7 @@ Here are explanations for some of them:
+  /* Written by Bruno Haible <bruno@clisp.org>, 2007.  */
+  
+  #define USE_LONG_DOUBLE
+-+#include <config.h>
+++#include <config_gg.h>
+ +#include "gnulib_math.h"
+ +#include "isnanl-nolibm.h"
+  #include "isnan.c"
+diff --git a/glib/gnulib/isnan.c b/glib/gnulib/isnan.c
+index c3e81ac..87fe213 100644
+--- a/glib/gnulib/isnan.c
++++ b/glib/gnulib/isnan.c
+@@ -16,7 +16,7 @@
+ 
+ /* Written by Bruno Haible <bruno@clisp.org>, 2007.  */
+ 
+-#include <config.h>
++#include <config_gg.h>
+ 
+ /* Specification.  */
+ #ifdef USE_LONG_DOUBLE
+diff --git a/glib/gnulib/isnand.c b/glib/gnulib/isnand.c
+index 552b9af..aec2a0a 100644
+--- a/glib/gnulib/isnand.c
++++ b/glib/gnulib/isnand.c
+@@ -16,7 +16,7 @@
+ 
+ /* Written by Bruno Haible <bruno@clisp.org>, 2008.  */
+ 
+-#include <config.h>
++#include <config_gg.h>
+ #include "gnulib_math.h"
+ #include "isnand-nolibm.h"
+ #include "isnan.c"
+diff --git a/glib/gnulib/isnanl.c b/glib/gnulib/isnanl.c
+index 76c1ee5..1ea23f6 100644
+--- a/glib/gnulib/isnanl.c
++++ b/glib/gnulib/isnanl.c
+@@ -17,7 +17,7 @@
+ /* Written by Bruno Haible <bruno@clisp.org>, 2007.  */
+ 
+ #define USE_LONG_DOUBLE
+-#include <config.h>
++#include <config_gg.h>
+ #include "gnulib_math.h"
+ #include "isnanl-nolibm.h"
+ #include "isnan.c"
+diff --git a/glib/gnulib/printf-frexpl.c b/glib/gnulib/printf-frexpl.c
+index 81cbc2c..8be48f5 100644
+--- a/glib/gnulib/printf-frexpl.c
++++ b/glib/gnulib/printf-frexpl.c
+@@ -14,7 +14,7 @@
+    You should have received a copy of the GNU Lesser General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.  */
+ 
+-#include <config.h>
++#include <config_gg.h>
+ 
+ #if HAVE_SAME_LONG_DOUBLE_AS_DOUBLE
+ 
+diff --git a/glib/gnulib/printf.c b/glib/gnulib/printf.c
+index 242740a..eeaa926 100644
+--- a/glib/gnulib/printf.c
++++ b/glib/gnulib/printf.c
+@@ -22,7 +22,7 @@
+  * GLib at ftp://ftp.gtk.org/pub/gtk/. 
+  */
+ 
+-#include <config.h>
++#include <config_gg.h>
+ #include <string.h>
+ #include <stdlib.h>
+ #include <stdio.h>
+diff --git a/glib/gnulib/signbitd.c b/glib/gnulib/signbitd.c
+index dfc1c90..5a9ed56 100644
+--- a/glib/gnulib/signbitd.c
++++ b/glib/gnulib/signbitd.c
+@@ -14,7 +14,7 @@
+    You should have received a copy of the GNU Lesser General PublicLicense
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.  */
+ 
+-#include <config.h>
++#include <config_gg.h>
+ 
+ /* Specification.  */
+ #include <gnulib_math.h>
+diff --git a/glib/gnulib/signbitf.c b/glib/gnulib/signbitf.c
+index 573d6d9..ced85e5 100644
+--- a/glib/gnulib/signbitf.c
++++ b/glib/gnulib/signbitf.c
+@@ -14,7 +14,7 @@
+    You should have received a copy of the GNU Lesser General PublicLicense
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.  */
+ 
+-#include <config.h>
++#include <config_gg.h>
+ 
+ /* Specification.  */
+ #include <gnulib_math.h>
+diff --git a/glib/gnulib/signbitl.c b/glib/gnulib/signbitl.c
+index 11b3e66..57e3b7f 100644
+--- a/glib/gnulib/signbitl.c
++++ b/glib/gnulib/signbitl.c
+@@ -14,7 +14,7 @@
+    You should have received a copy of the GNU Lesser General PublicLicense
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.  */
+ 
+-#include <config.h>
++#include <config_gg.h>
+ 
+ /* Specification.  */
+ #include <gnulib_math.h>
+diff --git a/glib/gtranslit.c b/glib/gtranslit.c
+index 4d83ee9..12398a3 100644
+--- a/glib/gtranslit.c
++++ b/glib/gtranslit.c
+@@ -17,7 +17,7 @@
+  * Author: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+-#include <config.h>
++#include <config_gg.h>
+ 
+ #include "gstrfuncs.h"
+ 
+diff --git a/glib/tests/hash.c b/glib/tests/hash.c
+index 6b01971..e3c3b8a 100644
+--- a/glib/tests/hash.c
++++ b/glib/tests/hash.c
+@@ -26,7 +26,7 @@
+ #undef G_DISABLE_ASSERT
+ #undef G_LOG_DOMAIN
+ 
+-#include <config.h>
++#include <config_gg.h>
+ 
+ #include <stdio.h>
+ #include <string.h>
+diff --git a/glib/tests/thread.c b/glib/tests/thread.c
+index 579ce1f..216b18b 100644
+--- a/glib/tests/thread.c
++++ b/glib/tests/thread.c
+@@ -20,7 +20,7 @@
+  * if advised of the possibility of such damage.
+  */
+ 
+-#include <config.h>
++#include <config_gg.h>
+ #include <errno.h>
+ 
+ #ifdef HAVE_SYS_TIME_H
