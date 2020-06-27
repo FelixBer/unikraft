@@ -1,0 +1,1 @@
+ grep -rl "#include \"config.h\"" | xargs sed -i s@#include\ \"config.h\"@#include\ \<config_gg.h\>@g
