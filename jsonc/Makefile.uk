@@ -6,7 +6,7 @@ LIBJSONC_BASENAME = json-c-$(LIBJSONC_VERSION)
 LIBJSONC_URL = https://github.com/json-c/json-c/archive/$(LIBJSONC_BASENAME).zip
 LIBJSONC_PATCHDIR = $(LIBJSONC_BASE)/patches
 $(eval $(call fetch,libjsonc,$(LIBJSONC_URL)))
-$(eval $(call patch,libjsonc,$(LIBJSONC_PATCHDIR),$(LIBJSONC_BASENAME)))
+$(eval $(call patch,libjsonc,$(LIBJSONC_PATCHDIR),json-c-$(LIBJSONC_BASENAME)))
 
 LIBJSONC_SRC = $(LIBJSONC_ORIGIN)/json-c-$(LIBJSONC_BASENAME)
 
