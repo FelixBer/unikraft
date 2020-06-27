@@ -1,3 +1,4 @@
 config LIBJSONC
            bool "jsonc lib"
-           default n
+           select LIBNEWLIB if !HAVE_LIBC
+           default y
