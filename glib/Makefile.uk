@@ -148,10 +148,11 @@ CINCLUDES-$(CONFIG_LIBGLIB) += -I$(LIBGLIB_SRC)/glib/pcre
 LIBGLIB_FLAGS = -D_GNU_SOURCE -DHAVE_MEMMOVE -DSUPPORT_UCP -DSUPPORT_UTF -DSUPPORT_UTF8 -DNEWLINE=-1 -DMATCH_LIMIT=10000000 -DMATCH_LIMIT_RECURSION=8192 -DMAX_NAME_SIZE=32 -DMAX_NAME_COUNT=10000 -DMAX_DUPLENGTH=30000 -DLINK_SIZE=2 -DPOSIX_MALLOC_THRESHOLD=10 -DPCRE_STATIC -UBSR_ANYCRLF -UEBCDIC -DGLIB_COMPILATION "-DGLIB_CHARSETALIAS_DIR=\"$(LIB_GLIBSRC)/glib/libcharset\""
 
 # Suppress some warnings to make the build process look neater
-#LIBJSONC_SUPPRESS_FLAGS-y += -Wcast-qual -Wno-error=deprecated-declarations -Wextra  \
- -Wwrite-strings -Wno-unused-parameter -Wstrict-prototypes
+LIBGLIB_SUPPRESS_FLAGS = -Wno-cast-qual -Wno-error=deprecated-declarations \
+ -Wno-write-strings -Wno-unused-parameter -Wno-strict-prototypes -Wno-unused-value -Wno-type-limits \
+ -Wno-sign-compare -Wno-implicit-fallthrough -Wno-int-in-bool-context 
 
-LIBGLIB_SUPPRESS_FLAGS-y += -Wno-unused-parameter
+LIBGLIB_SUPPRESS_FLAGS-y += $(LIBGLIB_SUPPRESS_FLAGS)
 
 LIBGLIB_CFLAGS-y += $(LIBGLIB_FLAGS)
 LIBGLIB_CFLAGS-y += $(LIBGLIB_SUPPRESS_FLAGS-y)
