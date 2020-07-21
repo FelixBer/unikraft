@@ -125,7 +125,7 @@ LIBXENTOOLS_CFLAGS-y += -D_GNU_SOURCE
 
 # Suppress some warnings to make the build process look neater
 LIBXENTOOLS_SUPPRESS_FLAGS-y += -Wno-cast-qual -Wno-error=deprecated-declarations \
- -Wno-write-strings -Wno-unused-parameter -Wno-strict-prototypes
+ -Wno-write-strings -Wno-unused-parameter -Wno-strict-prototypes -Wno-sign-compare
 LIBXENTOOLS_FLAGS = #-D_GNU_SOURCE 
 
 LIBXENTOOLS_CFLAGS-y += $(LIBXENTOOLS_FLAGS)
