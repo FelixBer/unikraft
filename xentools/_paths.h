@@ -1,3 +1,6 @@
+#ifndef _unik_paths_h_
+#define _unik_paths_h_
+
 #define sbindir "/usr/local/sbin"
 #define bindir "/usr/local/bin"
 #define LIBEXEC "/usr/local/lib/xen"
@@ -14,3 +17,9 @@
 #define XEN_LOG_DIR "/var/log/xen"
 #define XEN_LIB_DIR "/var/lib/xen"
 #define XEN_RUN_STORED "/var/run/xenstored"
+
+//manually added...
+#define XEN_LIB_STORED "/var/lib/xenstored"
+
+
+#endif
