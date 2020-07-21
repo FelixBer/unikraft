@@ -32,3 +32,26 @@ LIBXENTOOLS_FLAGS = #-D_GNU_SOURCE
 LIBXENTOOLS_CFLAGS-y += $(LIBXENTOOLS_FLAGS)
 LIBXENTOOLS_CFLAGS-y += $(LIBXENTOOLS_SUPPRESS_FLAGS-y)
 
+
+# massaging extracted archive...
+
+$(LIBXENTOOLS_SRC)/Makefile: $(LIBXENTOOLS_BUILD)/.origin
+	@# empty recipe to enforce dependency to archive extraction
+
+#.PRECIOUS: $(LIBXENTOOLS_BASE)/Makefile
+
+$(LIBXENTOOLS_BASE)/Makefile: $(LIBXENTOOLS_SRC)/Makefile
+	#$(call mk_sub_build_dir,libxentools/xen/include/xen/libelf)
+	#$(call mk_sub_build_dir,$(LIBXENTOOLS_SRC)/xen/include/xen/libelf)
+	#$(call build_cmd,LN,libxentools,$@, ln -sf $(LIBXENTOOLS_SRC) $(LIBXENTOOLS_BUILD)/xxxsss)
+	$(call build_cmd,LN,libxentools,$@, cp -r $(LIBXENTOOLS_SRC)/xen/include/public/* $(LIBXENTOOLS_SRC)/xen/include/xen)
+	$(call build_cmd,LN,libxentools,$@, cp -r $(LIBXENTOOLS_SRC)/tools/include/xen-foreign $(LIBXENTOOLS_SRC)/xen/include/xen/foreign)
+	$(call build_cmd,LN,libxentools,$@, ln -sf $(LIBXENTOOLS_SRC)/tools/include/xen-sys/Linux/ $(LIBXENTOOLS_SRC)/xen/include/xen/sys)
+	$(call build_cmd,LN,libxentools,$@, cp $(LIBXENTOOLS_BASE)/_xentoolcore_list.h $(LIBXENTOOLS_SRC)/tools/libs/toolcore/include/_xentoolcore_list.h)
+	$(call build_cmd,LN,libxentools,$@, cp $(LIBXENTOOLS_BASE)/_paths.h $(LIBXENTOOLS_SRC)/tools/libxc/_paths.h)
+	$(call build_cmd,LN,libxentools,$@, mkdir $(LIBXENTOOLS_SRC)/xen/include/xen/libelf)
+	$(call build_cmd,LN,libxentools,$@, cp $(LIBXENTOOLS_SRC)/xen/include/xen/elfstructs.h $(LIBXENTOOLS_SRC)/xen/include/xen/libelf/elfstructs.h)
+	$(call build_cmd,LN,libxentools,$@, cp $(LIBXENTOOLS_SRC)/xen/include/xen/libelf.h $(LIBXENTOOLS_SRC)/xen/include/xen/libelf/libelf.h)
+
+
+UK_PREPARE += $(LIBXENTOOLS_BASE)/Makefile
