@@ -1,0 +1,4 @@
+config LIBXENTOOLS
+           bool "libxentools"
+           select LIBNEWLIB if !HAVE_LIBC
+           default y

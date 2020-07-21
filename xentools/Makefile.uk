@@ -1,0 +1,34 @@
+# Register lib to Unikraft's build system
+$(eval $(call addlib_s,libxentools,$(CONFIG_LIBXENTOOLS)))
+
+LIBXENTOOLS_VERSION = 4.13.1
+LIBXENTOOLS_BASENAME = xen-$(LIBXENTOOLS_VERSION)
+LIBXENTOOLS_URL = https://downloads.xenproject.org/release/xen/$(LIBXENTOOLS_VERSION)/$(LIBXENTOOLS_BASENAME).tar.gz
+LIBXENTOOLS_PATCHDIR = $(LIBXENTOOLS_BASE)/patches
+$(eval $(call fetch,libxentools,$(LIBXENTOOLS_URL)))
+$(eval $(call patch,libxentools,$(LIBXENTOOLS_PATCHDIR),$(LIBXENTOOLS_BASENAME)))
+
+LIBXENTOOLS_SRC = $(LIBXENTOOLS_ORIGIN)/$(LIBXENTOOLS_BASENAME)
+
+# Add library source code to compilation
+
+# core files
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/libxentools/accessors.c
+
+
+# Extend the global include paths with library's folder
+CINCLUDES-$(CONFIG_LIBXENTOOLS) += -I$(LIBXENTOOLS_BASE)
+CINCLUDES-$(CONFIG_LIBXENTOOLS) += -I$(LIBXENTOOLS_SRC)
+
+LIBXENTOOLS_CFLAGS-y += -DENABLE_ADDRESS_CACHE
+
+
+
+# Suppress some warnings to make the build process look neater
+LIBXENTOOLS_SUPPRESS_FLAGS-y += -Wno-cast-qual -Wno-error=deprecated-declarations \
+ -Wno-write-strings -Wno-unused-parameter -Wno-strict-prototypes
+LIBXENTOOLS_FLAGS = #-D_GNU_SOURCE 
+
+LIBXENTOOLS_CFLAGS-y += $(LIBXENTOOLS_FLAGS)
+LIBXENTOOLS_CFLAGS-y += $(LIBXENTOOLS_SUPPRESS_FLAGS-y)
+
