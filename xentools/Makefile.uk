@@ -13,15 +13,112 @@ LIBXENTOOLS_SRC = $(LIBXENTOOLS_ORIGIN)/$(LIBXENTOOLS_BASENAME)
 # Add library source code to compilation
 
 # core files
-LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/libxentools/accessors.c
+#xenstore
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/xenstore/xenstored_core.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/xenstore/xenstored_watch.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/xenstore/xenstored_domain.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/xenstore/xenstored_transaction.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/xenstore/xenstored_posix.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/xenstore/xenstored_control.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/xenstore/xs_lib.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/xenstore/talloc.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/xenstore/utils.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/xenstore/tdb.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/xenstore/hashtable.c
+#toolcore
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/toolcore/handlereg.c
+#gnttab
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/gnttab/linux.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/gnttab/gntshr_core.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/gnttab/gnttab_core.c
+#evtchn
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/evtchn/core.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/evtchn/linux.c
+#toollog
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/toollog/xtl_core.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/toollog/xtl_logger_stdio.c
+#libxc
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_altp2m.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_core.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_cpupool.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_domain.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_evtchn.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_gnttab.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_misc.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_flask.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_physdev.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_private.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_csched.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_csched2.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_arinc653.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_rt.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_tbuf.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_pm.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_cpu_hotplug.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_resume.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_vm_event.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_monitor.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_mem_paging.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_mem_access.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_memshr.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_hcall_buf.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_foreign_memory.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_kexec.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_resource.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_linux.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_psr.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_pagetab.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_core_x86.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_evtchn_compat.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_gnttab_compat.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_devicemodel_compat.c
+#call
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/call/buffer.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/call/core.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/call/linux.c
+#foreignmemory
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/foreignmemory/core.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/foreignmemory/linux.c
+#devicemodel
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/devicemodel/core.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/devicemodel/linux.c
+
+
+
+
+
 
 
 # Extend the global include paths with library's folder
 CINCLUDES-$(CONFIG_LIBXENTOOLS) += -I$(LIBXENTOOLS_BASE)
 CINCLUDES-$(CONFIG_LIBXENTOOLS) += -I$(LIBXENTOOLS_SRC)
 
-LIBXENTOOLS_CFLAGS-y += -DENABLE_ADDRESS_CACHE
+CINCLUDES-$(CONFIG_LIBXENTOOLS) += -I$(LIBXENTOOLS_SRC)/tools/xenstore
+CINCLUDES-$(CONFIG_LIBXENTOOLS) += -I$(LIBXENTOOLS_SRC)/tools/xenstore/include
+CINCLUDES-$(CONFIG_LIBXENTOOLS) += -I$(LIBXENTOOLS_SRC)/tools/config.h
+CINCLUDES-$(CONFIG_LIBXENTOOLS) += -I$(LIBXENTOOLS_SRC)/tools/libs/foreignmemory/include
+CINCLUDES-$(CONFIG_LIBXENTOOLS) += -I$(LIBXENTOOLS_SRC)/tools/libs/devicemodel/include
+CINCLUDES-$(CONFIG_LIBXENTOOLS) += -I$(LIBXENTOOLS_SRC)/tools/libs/call/include
+CINCLUDES-$(CONFIG_LIBXENTOOLS) += -I$(LIBXENTOOLS_SRC)/tools/libxc
+CINCLUDES-$(CONFIG_LIBXENTOOLS) += -I$(LIBXENTOOLS_SRC)/tools/libxc/include
+CINCLUDES-$(CONFIG_LIBXENTOOLS) += -I$(LIBXENTOOLS_SRC)/tools/libs/toollog/include
+CINCLUDES-$(CONFIG_LIBXENTOOLS) += -I$(LIBXENTOOLS_SRC)/tools/libs/evtchn/include
+CINCLUDES-$(CONFIG_LIBXENTOOLS) += -I$(LIBXENTOOLS_SRC)/tools/libs/toolcore/include
+CINCLUDES-$(CONFIG_LIBXENTOOLS) += -I$(LIBXENTOOLS_SRC)/tools/libs/gnttab/include
+CINCLUDES-$(CONFIG_LIBXENTOOLS) += -I$(LIBXENTOOLS_SRC)/tools/include/xen-sys/Linux
+CINCLUDES-$(CONFIG_LIBXENTOOLS) += -I$(LIBXENTOOLS_SRC)/tools/include
+CINCLUDES-$(CONFIG_LIBXENTOOLS) += -I$(LIBXENTOOLS_SRC)/tools/libxc/include
+CINCLUDES-$(CONFIG_LIBXENTOOLS) += -I$(LIBXENTOOLS_SRC)/tools/libs/evtchn/include
+CINCLUDES-$(CONFIG_LIBXENTOOLS) += -I$(LIBXENTOOLS_SRC)/tools/libs/toollog/include
+CINCLUDES-$(CONFIG_LIBXENTOOLS) += -I$(LIBXENTOOLS_SRC)/tools/libs/gnttab/include
+CINCLUDES-$(CONFIG_LIBXENTOOLS) += -I$(LIBXENTOOLS_SRC)/xen/include
 
+
+
+
+
+LIBXENTOOLS_CFLAGS-y += -D__XEN_TOOLS__
+LIBXENTOOLS_CFLAGS-y += -D_GNU_SOURCE
 
 
 # Suppress some warnings to make the build process look neater
