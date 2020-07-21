@@ -44,7 +44,7 @@ $(LIBJSONC_SRC)/%.h: $(LIBJSONC_BUILD)/.origin
 	@# empty recipe to enforce dependency to archive extraction
 
 $(LIBJSONC_BUILD)/json-c/%.h: $(LIBJSONC_SRC)/%.h
-	$(call build_cmd,MKDIR,libjsonc,$@, mkdir $(LIBJSONC_SRC)/json-c)
+	$(call build_cmd,MKDIR,libjsonc,$@, mkdir -p $(LIBJSONC_SRC)/json-c)
 	$(call build_cmd,CP,libjsonc,$@, cp -r $(LIBJSONC_SRC)/*.h $(LIBJSONC_SRC)/json-c)
 	#$(call build_cmd,LN,libjsonc,$@, ln -sf $(LIBJSONC_SRC) $(LIBJSONC_BUILD)/include/sssrc)
 
