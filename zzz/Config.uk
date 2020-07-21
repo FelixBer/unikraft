@@ -5,7 +5,7 @@ config APPZZZ_DEPENDENCIES
     select LIBGLIB
     select LIBJSONC
     select LIBZZZ
-    select LIBVMI
     select LIBXENTOOLS
+    select LIBVMI
 	select LIBNEWLIB if !HAVE_LIBC
 
