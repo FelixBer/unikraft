@@ -1,0 +1,13 @@
+diff --git a/tools/libxc/xc_linux.c b/tools/libxc/xc_linux.c
+index c67c71c..1d65300 100644
+--- a/tools/libxc/xc_linux.c
++++ b/tools/libxc/xc_linux.c
+@@ -44,7 +44,7 @@ void discard_file_cache(xc_interface *xch, int fd, int flush)
+     }
+ 
+     /* Discard from the buffer cache. */
+-    if ( posix_fadvise64(fd, 0, cur, POSIX_FADV_DONTNEED) < 0 )
++    if ( posix_fadvise(fd, 0, cur, POSIX_FADV_DONTNEED) < 0 )
+     {
+         /*PERROR("Failed to discard cache: %s", strerror(errno));*/
+         goto out;
