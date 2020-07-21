@@ -1,0 +1,24 @@
+diff --git a/tools/xenstore/xenstored_posix.c b/tools/xenstore/xenstored_posix.c
+index 1f9603f..99b2703 100644
+--- a/tools/xenstore/xenstored_posix.c
++++ b/tools/xenstore/xenstored_posix.c
+@@ -32,14 +32,17 @@ void write_pidfile(const char *pidfile)
+ 	char buf[100];
+ 	int len;
+ 	int fd;
++ 	struct flock lock;
+ 
+ 	fd = open(pidfile, O_RDWR | O_CREAT, 0600);
+ 	if (fd == -1)
+ 		barf_perror("Opening pid file %s", pidfile);
+ 
+ 	/* We exit silently if daemon already running. */
+-	if (lockf(fd, F_TLOCK, 0) == -1)
+-		exit(0);
++ 	memset (&lock, 0, sizeof(lock));
++ 	lock.l_type = F_WRLCK;
++ 	if (fcntl(fd, F_SETLK, &lock) == -1)
++		exit(0);
+ 
+ 	len = snprintf(buf, sizeof(buf), "%ld\n", (long)getpid());
+ 	if (write(fd, buf, len) != len)
