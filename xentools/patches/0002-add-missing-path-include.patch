@@ -1,0 +1,12 @@
+diff --git a/tools/xenstore/xs_lib.c b/tools/xenstore/xs_lib.c
+index 3e43f88..661d28c 100644
+--- a/tools/xenstore/xs_lib.c
++++ b/tools/xenstore/xs_lib.c
+@@ -22,6 +22,7 @@
+ #include <stdlib.h>
+ #include <errno.h>
+ #include "xenstore_lib.h"
++#include "_paths.h"
+ 
+ /* Common routines for the Xen store daemon and client library. */
+ 
