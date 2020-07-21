@@ -28,18 +28,18 @@ LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/xenstore/hashtable.c
 #toolcore
 LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/toolcore/handlereg.c
 #gnttab
-LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/gnttab/linux.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/gnttab/linux.c|gnttab
 LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/gnttab/gntshr_core.c
 LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/gnttab/gnttab_core.c
 #evtchn
-LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/evtchn/core.c
-LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/evtchn/linux.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/evtchn/core.c|evtchn
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/evtchn/linux.c|evtchn
 #toollog
 LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/toollog/xtl_core.c
 LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/toollog/xtl_logger_stdio.c
 #libxc
 LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_altp2m.c
-LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_core.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_core.c|libxc
 LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_cpupool.c
 LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_domain.c
 LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_evtchn.c
@@ -65,7 +65,7 @@ LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_hcall_buf.c
 LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_foreign_memory.c
 LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_kexec.c
 LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_resource.c
-LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_linux.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_linux.c|libxc
 LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_psr.c
 LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_pagetab.c
 LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_core_x86.c
@@ -74,14 +74,14 @@ LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_gnttab_compat.c
 LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libxc/xc_devicemodel_compat.c
 #call
 LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/call/buffer.c
-LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/call/core.c
-LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/call/linux.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/call/core.c|libcall
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/call/linux.c|libcall
 #foreignmemory
-LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/foreignmemory/core.c
-LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/foreignmemory/linux.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/foreignmemory/core.c|foreignmemory
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/foreignmemory/linux.c|foreignmemory
 #devicemodel
-LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/devicemodel/core.c
-LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/devicemodel/linux.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/devicemodel/core.c|devicemodel
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/devicemodel/linux.c|devicemodel
 
 
 
