@@ -1,0 +1,17 @@
+diff --git a/tools/xenstore/xenstored_core.c b/tools/xenstore/xenstored_core.c
+index 97ceabf..523b963 100644
+--- a/tools/xenstore/xenstored_core.c
++++ b/tools/xenstore/xenstored_core.c
+@@ -899,12 +899,6 @@ static void delete_node_single(struct connection *conn, struct node *node)
+ 	domain_entry_dec(conn, node);
+ }
+ 
+-/* Must not be / */
+-static char *basename(const char *name)
+-{
+-	return strrchr(name, '/') + 1;
+-}
+-
+ static struct node *construct_node(struct connection *conn, const void *ctx,
+ 				   const char *name)
+ {
