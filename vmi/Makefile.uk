@@ -83,7 +83,7 @@ LIBVMI_CFLAGS-y += -DENABLE_CONFIGFILE -DCONFIGFILE
 # if WITH_FILE
 CINCLUDES-$(CONFIG_LIBVMI) += -I$(LIBVMI_SRC)/libvmi/driver/file
 LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/driver/file/file.c
-LIBVMI_FLAGS += -DWITH_FILE
+LIBVMI_FLAGS += -DWITH_FILE -DENABLE_FILE
 #endif
 
 # if WITH_KVM
@@ -129,7 +129,6 @@ LIBVMI_CFLAGS-y += -DENABLE_FREEBSD -DFREEBSD
 # Suppress some warnings to make the build process look neater
 LIBVMI_SUPPRESS_FLAGS-y += -Wno-cast-qual -Wno-error=deprecated-declarations \
  -Wno-write-strings -Wno-unused-parameter -Wno-strict-prototypes
-LIBVMI_FLAGS = #-D_GNU_SOURCE 
 
 LIBVMI_CFLAGS-y += $(LIBVMI_FLAGS)
 LIBVMI_CFLAGS-y += $(LIBVMI_SUPPRESS_FLAGS-y)
