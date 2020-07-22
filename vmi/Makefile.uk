@@ -128,7 +128,7 @@ LIBVMI_CFLAGS-y += -DENABLE_FREEBSD -DFREEBSD
 
 # Suppress some warnings to make the build process look neater
 LIBVMI_SUPPRESS_FLAGS-y += -Wno-cast-qual -Wno-error=deprecated-declarations \
- -Wno-write-strings -Wno-unused-parameter -Wno-strict-prototypes
+ -Wno-write-strings -Wno-unused-parameter -Wno-strict-prototypes -Wno-unused-but-set-variable
 
 LIBVMI_CFLAGS-y += $(LIBVMI_FLAGS)
 LIBVMI_CFLAGS-y += $(LIBVMI_SUPPRESS_FLAGS-y)
