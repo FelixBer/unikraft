@@ -2,4 +2,6 @@ config LIBXENTOOLS
            bool "libxentools"
            select LIBNEWLIB if !HAVE_LIBC
            select LIBPTHREAD_EMBEDDED
+           select LIBPOSIX_LIBDL
+           select LIBLWIP
            default y
