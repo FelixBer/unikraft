@@ -25,6 +25,7 @@ LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/xenstore/talloc.c
 LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/xenstore/utils.c
 LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/xenstore/tdb.c
 LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/xenstore/hashtable.c
+LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/xenstore/xs.c
 #toolcore
 LIBXENTOOLS_SRCS-y += $(LIBXENTOOLS_SRC)/tools/libs/toolcore/handlereg.c
 #gnttab
