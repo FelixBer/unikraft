@@ -7,5 +7,6 @@ config APPZZZ_DEPENDENCIES
     select LIBZZZ
     select LIBXENTOOLS
     select LIBVMI
+    select LIBLWIP
 	select LIBNEWLIB if !HAVE_LIBC
 
