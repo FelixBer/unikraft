@@ -3,4 +3,5 @@ config LIBVMI
            select LIBNEWLIB if !HAVE_LIBC
            select LIBJSONC
            select LIBGLIB
+           select LIBXENTOOLS
            default y
