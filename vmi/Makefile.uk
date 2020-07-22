@@ -95,6 +95,18 @@ LIBVMI_FLAGS += -DWITH_FILE -DENABLE_FILE
 #LIBVMI_FLAGS += -DWITH_KVM
 #endif
 
+# if xen
+CINCLUDES-$(CONFIG_LIBVMI) += -I$(LIBVMI_SRC)/libvmi/driver/xen
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/driver/xen/altp2m.c
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/driver/xen/libxc_wrapper.c
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/driver/xen/libxs_wrapper.c
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/driver/xen/xen.c
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/driver/xen/xen_events.c
+LIBVMI_FLAGS += -DWITH_FILE -DENABLE_XEN
+LIBVMI_FLAGS += -DHAVE_LIBXENSTORE -DHAVE_XENSTORE_H -DHAVE_XS_H
+LIBVMI_FLAGS += -DX86_64
+# endif
+
 
 # os
 
