@@ -89,7 +89,8 @@ static status_t sanity_check(xen_instance_t *xen)
                 break;
         /* Fall-through */
         case 10:
-            if ( !w->xc_monitor_descriptor_access || !w->xc_monitor_write_ctrlreg2 )
+            if ( !w->xc_monitor_descriptor_access || !w->xc_monitor_write_ctrlreg2 ||
+                    !w->xc_monitor_guest_request2 )
                 break;
         /* Fall-through */
         case 9:
@@ -187,7 +188,8 @@ wrapper->xc_mem_access_resume = 0;
     wrapper->xc_monitor_mov_to_msr2 = xc_monitor_mov_to_msr;
     wrapper->xc_monitor_singlestep = xc_monitor_singlestep;
     wrapper->xc_monitor_software_breakpoint = xc_monitor_software_breakpoint;
-    wrapper->xc_monitor_guest_request = xc_monitor_guest_request;  // ????????????????????? potential libvmi bug
+    wrapper->xc_monitor_guest_request = xc_monitor_guest_request;
+  wrapper->xc_monitor_guest_request2 = xc_monitor_guest_request;
     wrapper->xc_monitor_privileged_call = xc_monitor_privileged_call;
     wrapper->xc_monitor_descriptor_access = xc_monitor_descriptor_access;
     wrapper->xc_monitor_emul_unimplemented = xc_monitor_emul_unimplemented;
