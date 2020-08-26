@@ -4,7 +4,6 @@ config APPZZZ_DEPENDENCIES
 	default y
     select LIBGLIB
     select LIBJSONC
-    select LIBZZZ
     select LIBXENTOOLS
     select LIBVMI
     select LIBLWIP

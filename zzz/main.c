@@ -248,7 +248,6 @@ error_exit:
 
 /* Import user configuration: */
 #include <uk/config.h>
-#include  <zzz.h>
 
 
 #include <libvmi/libvmi.h>
