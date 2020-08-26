@@ -1,7 +1,15 @@
-config LIBVMI
+menuconfig LIBVMI
            bool "libvmi"
            select LIBNEWLIB if !HAVE_LIBC
            select LIBJSONC
            select LIBGLIB
            select LIBXENTOOLS
            default y
+
+if LIBVMI
+
+menuconfig LIBVMI_SAFETY_CHECKS
+    bool "enable libvmi safety checks -DENABLE_SAFETY_CHECKS"
+    default y
+
+endif
