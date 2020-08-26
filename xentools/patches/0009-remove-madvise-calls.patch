@@ -1,0 +1,22 @@
+diff --git a/tools/libs/call/linux.c b/tools/libs/call/linux.c
+index 51fa489..a53383e 100644
+--- a/tools/libs/call/linux.c
++++ b/tools/libs/call/linux.c
+@@ -117,7 +117,7 @@ static void *alloc_pages_nobufdev(xencall_handle *xcall, size_t npages)
+ 
+     /* Do not copy the VMA to child process on fork. Avoid the page being COW
+         on hypercall. */
+-    rc = madvise(p, npages * PAGE_SIZE, MADV_DONTFORK);
++    rc = 0; //madvise(p, npages * PAGE_SIZE, MADV_DONTFORK);
+     if ( rc < 0 )
+     {
+         PERROR("alloc_pages: madvise (,%zu*%lu,) [nobufdev] failed",
+@@ -165,7 +165,7 @@ void osdep_free_pages(xencall_handle *xcall, void *ptr, size_t npages)
+     if ( xcall->buf_fd < 0 )
+     {
+         /* Recover the VMA flags. Maybe it's not necessary */
+-        madvise(ptr, npages * PAGE_SIZE, MADV_DOFORK);
++        //madvise(ptr, npages * PAGE_SIZE, MADV_DOFORK);
+     }
+ 
+     munmap(ptr, npages * PAGE_SIZE);
