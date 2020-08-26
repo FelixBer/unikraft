@@ -13,6 +13,7 @@ LIBVMI_SRC = $(LIBVMI_ORIGIN)/$(LIBVMI_BASENAME)
 # Add library source code to compilation
 
 # core files
+LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/msr-index.c
 LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/accessors.c
 LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/convenience.c
 LIBVMI_SRCS-y += $(LIBVMI_SRC)/libvmi/core.c
